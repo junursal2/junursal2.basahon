@@ -25,7 +25,34 @@
 	html {
   		scroll-behavior: smooth;
   		scroll-padding-top: 60px; /* equal to header height */
-	}	
+	}
+		
+abbr[title] {
+  border-bottom: 1px dotted #555;   /* subtle underline */
+  cursor: help;                     /* shows a help cursor on hover */
+  text-decoration: none;            /* remove default underline */
+  position: relative;
+  z-index: 10;
+}
+
+/* Custom tooltip */
+abbr[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: auto;                     /* show above the text */
+  top 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 11px;
+  opacity: 0.95;
+  z-index: 9999;                    /* bring tooltip above header and other elements */
+  pointer-events: none;             /* prevents blocking text hover */
+}
     </style>
 </head>
 
@@ -939,4 +966,5 @@ $(document).ready(function() {
 </body>
 
 </html>
+
 
