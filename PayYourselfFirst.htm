@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html  lang="en-US">
+<head>
+    <title>Pay Yourself First</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="pay yourself first" />
+    <meta name="keywords" content="pay, yourself, first" />
+
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements 
+    in versions of Internet Explorer prior to version 9 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+    * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+    header, section, footer, aside, nav, main, article, figure {display:block;}
+    a {text-decoration: none; color: cyan;}
+    a:hover {color: gray;}
+    h1 {font-family: Times New Roman, serif; font-size: 32px; font-weight: bold; text-align: left; color: #e08119; text-shadow: 1px 1px 1px #000000;}
+    p {font-family: Verdana, sans-serif; font-size: 14px; text-align: justify;}
+    .fa-home {position: relative; float: right; top: 15px; font-size: 24px;}
+    .fa-star-half-o {color: #8B0000; font-size: 14px;}
+    #charstart {color: #8B0000; float: left; font-family: Times New Roman, serif; font-size: 400%; font-weight: bold; line-height: 90%; width: 0.5em;}
+    /* #img1 {float: left; width:100%; max-width:50%;} */
+    /* #img2 {float: right; margin-bottom: 16px; width:100%;max-width:50%;} */
+    #posted {font-size: 11px; text-align: center;}
+
+    /* Responsive image layout */
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .image-row img {
+      flex: 1 1 48%;
+      max-width: 48%;
+      height: auto;
+      border-radius: 6px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+    }
+
+    /* Slight enlargement as screen grows */
+    @media (min-width: 1200px) {
+      .image-row img {
+        max-width: 45%;
+      }
+    }
+
+    /* Stack images on mobile */
+    @media (max-width: 767px) {
+      .image-row {
+        flex-direction: column;
+      }
+      .image-row img {
+        max-width: 100%;
+      }
+    }
+
+
+    </style>
+</head>
+
+<body class="w3-container">
+    <h1>Pay Yourself First
+        <a id="home" title="Go to Basahon page" href="basahon.html#goFinances"><i class="fa fa-home"></i></a>
+    </h1>
+    <hr />
+    <p>If you are like the majority of the Filipinos, saving money is a habit that is easier said than done.  
+        The reasons usually range from a meager take-home pay, to an unexpectedly high utility bill, to a foot-long credit card tab.
+        Or sometimes, one just doesn't realize that the “I must have my cup of coffee” every day can result to as much as &#x20B1;1,000 drain every month.
+        Whatever the reason, at the end of the month, the typical Filipino usually wonders:  Where has my money gone?</p>
+    <p>The solution for this quite simple.  Say this mantra:  I WILL PAY MYSELF FIRST.  
+        Regularly set aside an amount, say &#x20B1;2,000, and consider this as a debt you owe to yourself.  
+        Along with paying your electricity, water, telephone, and credit card charges, deposit this amount in your savings account every month 
+        and before you know it, voila, you have acquired the habit of saving regularly.</p>
+    <p>So now you’re saving &#x20B1;2,000 every month, and hence &#x20B1;24,000 every year.  The next step is to put this in an instrument where it can grow.
+        You have two options here:  one is to keep you money in the bank where you earn approximately 2% per annum, 
+        or, you may choose to transfer part of your savings to a potentially higher-yielding investment instrument 
+        like bonds, stocks, funds and other portfolios.</p>
+    <p>Making savings and investing a regular habit.  Filipinos usually spend first and save whatever is left. 
+        Reverse that mindset and pay yourself first.  This way, you’re not only saving for a rainy day, 
+        but also building up your wealth for the future.&nbsp;&nbsp;<i class="fa fa-user-circle-o" aria-hidden="true"></i></p>
+    <hr/>
+    <div class="w3-container">
+        <p>See below for some comic strips.</p>
+	<div class="image-row">
+        <img id="img1" src="../_images/PayYourselfFirst-1.png" alt="?" />
+        <img id="img2" src="../_images/PayYourselfFirst-2.png" alt="?" />   
+	</div>    
+    </div>
+    <hr />
+    <footer> 
+        <p id="posted">C. Ursal Jr., 2020 May 19</p>
+    </footer>
+</body>
+</html>
