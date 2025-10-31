@@ -356,19 +356,16 @@ table {
 }
 th {
     background-color: gray;
-    border: 1px solid #dddddd;
+    border: 1px solid #000000;
     color: white;
     text-align: center;
     padding: 8px;
 }
 td {
-    border: 1px solid #dddddd;
+    border: 1px solid #000000;
     text-align: left;
     padding: 8px;
 }
 tr:nth-child(odd) {
-    background-color: #dddddd;
+    background-color: #000000;
 }
-
-
-
