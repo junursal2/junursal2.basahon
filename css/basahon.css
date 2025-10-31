@@ -352,7 +352,7 @@ table {
     font-family: arial, sans-serif;
     font-size: 12px;
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
 }
 th {
     background-color: gray;
@@ -369,3 +369,4 @@ td {
 tr:nth-child(odd) {
     background-color: #000000;
 }
+
