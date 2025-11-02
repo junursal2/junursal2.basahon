@@ -13,128 +13,115 @@
 
   <style>
     * {
-      box-sizing: border-box;
-    }
-    header, section, footer, aside, nav, main, article, figure {
-      display: block;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
     body {
-      background: url("files/country_road.jpg") no-repeat center fixed;
-      background-size: cover;
-      background-origin: content-box;
-      margin: 0;
-      font-family: Verdana, sans-serif;
+        font-family: Verdana, sans-serif;
+        background: url("files/country_road.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        line-height: 1.6;
     }
 
-    /* HEADER */
-    header {
-      width: 100%;
-      z-index: 2;
-      position: relative;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 10px 0;
+    header, footer {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        width: 100%;
     }
 
-    h1 {
-      color: white;
-      font-family: Georgia, serif;
-      font-weight: bold;
-      text-align: center;
-      margin: 0;
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    }
-
-    #home {
-      color: yellow;
-      float: right;
-      font-size: 24px;
-      padding-top: 8px;
-      text-decoration: none;
-      margin-right: 12px;
-    }
-
-    #home:hover {
-      color: grey;
+    header h1 {
+        font-family: Georgia, serif;
+        font-weight: bold;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
 
     #green {
-      color: #00ff00;
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        color: #00ff00;
     }
 
-    /* ARTICLE */
+    #home {
+        color: yellow;
+        font-size: 24px;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+    #home:hover {
+        color: grey;
+    }
+
     #article {
-      color: white;
-      font-family: Verdana, sans-serif;
-      font-size: 1.5vw;
-      margin: 0 auto;
-      width: 100%;
-      text-align: justify;
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 30px 10%;
-      box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.6);
+        margin: 40px auto;
+        padding: 60px 10%;
+        max-width: 1000px;
+        text-align: justify;
+        border-radius: 12px;
     }
 
-    /* IMAGE */
     img {
-      float: right;
-      margin: 5px 0 5px 16px;
-      max-width: 150px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+        float: right;
+        margin: 5px 0 5px 16px;
+        max-width: 150px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.4);
     }
 
     #charStart {
-      float: left;
-      font-family: Georgia, serif;
-      font-size: 450%;
-      line-height: 100%;
-      width: 0.6em;
+        float: left;
+        font-family: Georgia, serif;
+        font-size: 450%;
+        line-height: 100%;
+        width: 0.6em;
     }
 
     #author {
-      font-size: 1.2vw;
+        font-size: 1.5vw;
+        text-align: right;
+        font-style: italic;
     }
 
     #quote {
-      font-family: Georgia, serif;
-      font-size: 1vw;
-      text-align: center;
+        text-align: center;
+        font-family: Georgia, serif;
+        font-size: 1.1em;
+        margin-top: 30px;
     }
 
-    /* FOOTER */
-    footer {
-      width: 100%;
-      color: white;
-      font-size: 10px;
-      background: rgba(0, 0, 0, 0.6);
-      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-      padding: 10px 0;
-      text-align: center;
+    footer p {
+        font-size: 12px;
     }
 
-    /* RESPONSIVE ADJUSTMENTS */
     @media screen and (max-width: 600px) {
-      #article {
-        font-size: 3.8vw;
-        padding: 20px 8%;
-      }
+        header, footer {
+            padding: 15px;
+        }
 
-      #author {
-        font-size: 3.5vw;
-      }
+        #article {
+            padding: 40px 8%;
+            font-size: 3.8vw;
+        }
 
-      #quote {
-        font-size: 3vw;
-      }
+        img {
+            float: none;
+            display: block;
+            margin: 0 auto 15px;
+        }
 
-      img {
-        max-width: 100px;
-        margin: 0 0 8px 12px;
-      }
+        #author {
+            font-size: 3vw;
+        }
+
+        #quote {
+            font-size: 3.2vw;
+        }
     }
   </style>
 </head>
@@ -152,7 +139,7 @@
     <img src="files/traffic-green_red-man.png" alt="Traffic green & red man">
     <p><span id="charStart">I</span> was waiting at a traffic light to cross the road with Haruki, a Japanese friend. 
       It was a lazy Sunday afternoon in a small town on the Tokyo outskirts and there was not a vehicle or soul in sight. 
-      So I turned to Haruki and said, "Hey, I know it's a red man but should we just cross?"</p>
+      So I turned to Haruki and said, "Hey, I know it's a <span style="color:red;">red</span> man but should we just cross?"</p>
     <p>Haruki looked at me and shook his head. "No, we wait for the green man."</p>
     <p>I was a bit perplexed - it did not seem to me that it would make any difference whether we waited or not. 
       "There aren't any cars. Why do we need to wait?"</p>
@@ -168,4 +155,5 @@
   </footer>
 </body>
 </html>
+
 
