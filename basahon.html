@@ -42,6 +42,24 @@
 	  }
 	}
 		
+#page-footer {
+  display: flex;
+  justify-content: space-between;  /* Left and right alignment */
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+#page-footer img {
+  vertical-align: middle;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+#page-footer img:hover {
+  opacity: 1;
+}
+		
 /* Custom tooltip */
 /* abbr[title]:hover::after {
   content: attr(title);
@@ -821,21 +839,19 @@
             <span id="emdates">2025 October 16 ~ </span>
 		</p>
 	</footer> -->
-<footer>
+<footer id="page-footer">
   <p id="bottom">
     &nbsp; Maintained by 
     <a id="owner" title="aka Climaco C. Ursal Jr., Climaco C. Ursal II, Sir U, Jun Ursal 2, Jun-jun, Junix, Jun, C. Ursal II, Climax, Ursing">
       Jun Ursal II
     </a>, 
     <span id="emdates">2025 October 16 ~ </span>
-
-    <!-- 👇 Page view counter -->
-    <a href="https://hits.sh/junursal2.github.io/junursal2.basahon/basahon.html/">
-      <img src="https://hits.sh/junursal2.github.io/junursal2.basahon/basahon.html.svg?label=visits&color=blue&style=flat-square" 
-           alt="page views" 
-           style="vertical-align:middle; margin-left:8px;">
-    </a>
   </p>
+
+  <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/basahon.html/">
+    <img src="https://hits.sh/junursal2.github.io/junursal2.basahon/basahon.html.svg?label=visits&color=blue&style=flat-square" 
+         alt="page views">
+  </a>
 </footer>
 	
     <!-- The Modal -->
@@ -997,3 +1013,4 @@ $(document).ready(function() {
 </body>
 
 </html>
+
