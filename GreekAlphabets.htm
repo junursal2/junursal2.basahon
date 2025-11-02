@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html  lang="en-US">
+<head>
+    <title>Greek Alphabet</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="Greek alphabet list" />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="Greek, alphabet" />
+
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements 
+    in versions of Internet Explorer prior to version 9 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+        * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+        header, section, footer, aside, nav, main, article, figure {display:block;}
+        a {text-decoration: none;}
+        a:hover {color: yellow;}
+        body {font-family: Verdana, serif;}
+        p {font-size: 12px; text-align: justify;}
+        section {overflow-x:auto; margin: auto;}
+        /*header & footer*/
+        .fa-home {position: relative; float: right; top: 5px; font-size: 24px;}
+        h2 {font: bold 32px Georgia, serif;}
+        #posted {float: right;}
+        /*table*/
+        table, th, tr, td {text-align: center !important; vertical-align: middle !important;}
+        td:first-child, td:nth-child(2) {font: 24px Calibri, sans-serif;}
+        th:nth-child(5), td:nth-child(5) {text-align: left !important;}
+        tr:hover {color: red;}
+        /*modal*/
+        #modalGreek {display:none; position:fixed;}
+        #modalContent {width: 100%; max-width: 250px; text-align: center;}
+        #greekText {font: bold 100px Calibri, sans-serif; text-align: center;}
+
+/* ✅ Responsive layout for tables and header/footer */
+@media screen and (max-width:800px) {
+    .w3-cell-row {
+        display: block;
+    }
+
+    .w3-cell {
+        display: block;
+        width: 100% !important;
+        margin: 0 auto 20px auto;
+    }
+
+    table {
+        width: 100% !important;
+        margin: auto;
+        border-collapse: collapse;
+        table-layout: fixed;
+        word-wrap: break-word;
+    }
+
+    th, td {
+        font-size: 13px;
+        padding: 6px 4px;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    /* Header styling */
+    h2 {
+        font-size: 26px;
+        margin: 10px 0;
+        text-align: left; /* keep title aligned */
+        position: relative;
+    }
+
+    /* Keep home icon on the right */
+    .fa-home {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        font-size: 24px;
+        float: none;
+    }
+
+    /* Footer stays in one line */
+    footer p {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #posted {
+        float: none;
+        margin: 0;
+    }
+}
+
+/* Center modal properly */
+#modalGreek {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+#modalContent {
+  position: relative;   /* ensures top-right button is positioned within */
+  width: 90%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  padding: 16px 16px 24px 16px; /* extra bottom padding for breathing room */
+}
+
+/* move heading down so the close button doesn’t overlap */
+#greekHead {
+  font-size: 24px;
+  margin-top: 36px;   /* 👈 add top margin to push below the icon */
+  margin-bottom: 8px;
+}
+
+#greekText {
+  font: bold 100px Calibri, sans-serif;
+  line-height: 1;
+}
+
+/* ✅ Make modal responsive on smaller screens */
+@media screen and (max-width: 600px) {
+  #modalContent {
+    width: 95%;
+    max-width: none;
+    padding: 12px;
+  }
+
+  #greekHead {
+    font-size: 18px;
+  }
+
+  #greekText {
+    font-size: 60px;   /* Shrinks Greek letter on small screens */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #greekText {
+    font-size: 48px;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+    <header class="w3-container w3-teal">
+        <h2 class="w3-text-shadow">Greek alphabets
+            <a id="home" title="Go to Charts page" href="basahon.html#goLifehacks">
+            <i class="fa fa-home"></i></a>
+        </h2>
+    </header>
+
+    <article class="w3-container">
+        <p>The Greek alphabet consists of 24 letters, each with an uppercase and lowercase form. 
+           The letter sigma has an additional lowercase form (&sigmaf;) used in the final position.
+           It is also the language in which many of the foundational texts in science, 
+           especially astronomy, mathematics and logic, and Western philosophy are composed.</p>
+        <p style="text-align:center"><i>Hover to highlight a row, then click to enlarge the Greek letter.</i></p>
+    </article>
+
+    <div class="w3-container w3-cell-row w3-responsive">
+    <section class="w3-container w3-cell">
+        <table class="w3-table-all w3-small w3-hoverable w3-card-4" style="width: 400px; margin-left: auto;">
+            <tr class="w3-gray">
+              <th>Upper</th>
+              <th>Lower</th>
+              <th>Name</th>
+              <th>Equivalent</th>
+              <th>Sound when spoken</th>
+            </tr>
+            <tr onclick="showGreek('Alpha','&Alpha;','&alpha;')">
+              <td>&Alpha;</td>
+              <td>&alpha;</td>
+              <td>Alpha</td>
+              <td>A</td>
+              <td>al-fah</td>
+            </tr>
+            <tr onclick="showGreek('Beta','&Beta;','&beta;')">
+              <td>&Beta;</td>
+              <td>&beta;</td>
+              <td>Beta</td>
+              <td>B</td>
+              <td>bay-tah</td>
+            </tr>
+            <tr onclick="showGreek('Gamma','&Gamma;','&gamma;')">
+              <td>&Gamma;</td>
+              <td>&gamma;</td>
+              <td>Gamma</td>
+              <td>G</td>
+              <td>gam-ah</td>
+            </tr>
+            <tr onclick="showGreek('Delta','&Delta;','&delta;')">
+              <td>&Delta;</td>
+              <td>&delta;</td>
+              <td>Delta</td>
+              <td>D</td>
+              <td>del-tah</td>
+            </tr>
+            <tr onclick="showGreek('Epsilon','&Epsilon;','&epsilon;')">
+              <td>&Epsilon;</td>
+              <td>&epsilon;</td>
+              <td>Epsilon</td>
+              <td>E</td>
+              <td>ep-si-lon</td>
+            </tr>
+            <tr onclick="showGreek('Zeta','&Zeta;','&zeta;')">
+              <td>&Zeta;</td>
+              <td>&zeta;</td>
+              <td>Zeta</td>
+              <td>Z</td>
+              <td>zay-tah</td>
+            </tr>
+            <tr onclick="showGreek('Eta','&Eta;','&eta;')">
+              <td>&Eta;</td>
+              <td>&eta;</td>
+              <td>Eta</td>
+              <td>E</td>
+              <td>ay-tay</td>
+            </tr>
+            <tr onclick="showGreek('Theta','&Theta;','&theta;')">
+              <td>&Theta;</td>
+              <td>&theta;</td>
+              <td>Theta</td>
+              <td>Th</td>
+              <td>thay-tah</td>
+            </tr>
+            <tr onclick="showGreek('Iota','&Iota;','&iota;')">
+              <td>&Iota;</td>
+              <td>&iota;</td>
+              <td>Iota</td>
+              <td>I</td>
+              <td>eye-o-tah</td>
+            </tr>
+            <tr onclick="showGreek('Kappa','&Kappa;','&kappa;')">
+              <td>&Kappa;</td>
+              <td>&kappa;</td>
+              <td>Kappa</td>
+              <td>K</td>
+              <td>cap-ah</td>
+            </tr>
+            <tr onclick="showGreek('Lambda','&Lambda;','&lambda;')">
+              <td>&Lambda;</td>
+              <td>&lambda;</td>
+              <td>Lambda</td>
+              <td>L</td>
+              <td>lamb-dah</td>
+            </tr>
+            <tr onclick="showGreek('Mu','&Mu;','&mu;')">
+              <td>&Mu;</td>
+              <td>&mu;</td>
+              <td>Mu</td>
+              <td>M</td>
+              <td>mew</td>
+            </tr>
+        </table>
+    </section>    
+    <section class="w3-container w3-cell">
+        <table class="w3-table-all w3-small w3-hoverable w3-card-4" style="width: 400px; margin-right: auto;">
+            <tr class="w3-gray">
+              <th>Upper</th>
+              <th>Lower</th>
+              <th>Name</th>
+              <th>Equivalent</th>
+              <th>Sound when spoken</th>
+            </tr>
+            <tr onclick="showGreek('Nu','&Nu;','&nu;')">
+              <td>&Nu;</td>
+              <td>&nu;</td>
+              <td>Nu</td>
+              <td>N</td>
+              <td>new</td>
+            </tr>
+            <tr onclick="showGreek('Xi','&Xi;','&xi;')">
+              <td>&Xi;</td>
+              <td>&xi;</td>
+              <td>Xi</td>
+              <td>X</td>
+              <td>zzEye</td>
+            </tr>
+            <tr onclick="showGreek('Omicron','&Omicron;','&omicron;')">
+              <td>&Omicron;</td>
+              <td>&omicron;</td>
+              <td>Omicron</td>
+              <td>O</td>
+              <td>om-ah-cron</td>
+            </tr>
+            <tr onclick="showGreek('Pi','&Pi;','&pi;')">
+              <td>&Pi;</td>
+              <td>&pi;</td>
+              <td>Pi</td>
+              <td>P</td>
+              <td>pie</td>
+            </tr>
+            <tr onclick="showGreek('Rho','&Rho;','&rho;')">
+              <td>&Rho;</td>
+              <td>&rho;</td>
+              <td>Rho</td>
+              <td>R</td>
+              <td>row</td>
+            </tr>
+            <tr onclick="showGreek('Sigma','&Sigma;','&sigma;')">
+              <td>&Sigma;</td>
+              <td>&sigma; &sigmaf;</td>
+              <td>Sigma</td>
+              <td>S</td>
+              <td>sig-ma</td>
+            </tr>
+            <tr onclick="showGreek('Tau','&Tau;','&tau;')">
+              <td>&Tau;</td>
+              <td>&tau;</td>
+              <td>Tau</td>
+              <td>T</td>
+              <td>tawh</td>
+            </tr>
+            <tr onclick="showGreek('Upsilon','&Upsilon;','&upsilon;')">
+              <td>&Upsilon;</td>
+              <td>&upsilon;</td>
+              <td>Upsilon</td>
+              <td>U</td>
+              <td>oop-si-lon</td>
+            </tr>
+            <tr onclick="showGreek('Phi','&Phi;','&phi;')">
+              <td>&Phi;</td>
+              <td>&phi;</td>
+              <td>Phi</td>
+              <td>Ph</td>
+              <td>figh or fie</td>
+            </tr>
+            <tr onclick="showGreek('Chi','&Chi;','&chi;')">
+              <td>&Chi;</td>
+              <td>&chi;</td>
+              <td>Chi</td>
+              <td>Ch</td>
+              <td>kigh</td>
+            </tr>
+            <tr onclick="showGreek('Psi','&Psi;','&psi;')">
+              <td>&Psi;</td>
+              <td>&psi;</td>
+              <td>Psi</td>
+              <td>Ps</td>
+              <td>sigh</td>
+            </tr>
+            <tr onclick="showGreek('Omega','&Omega;','&omega;')">
+              <td>&Omega;</td>
+              <td>&omega;</td>
+              <td>Omega</td>
+              <td>O</td>
+              <td>o-may-gah</td>
+            </tr>
+        </table>
+    </section>
+    </div>
+    <br />
+    
+<!-- modal -->
+<div id="modalGreek" class="w3-modal">
+    <div id="modalContent" class="w3-modal-content w3-animate-zoom w3-card">
+        <span class="w3-button w3-yellow w3-display-topright" onclick="closeModal()">
+            <i class="fa fa-close"></i>
+        </span>
+        <h4 id="greekHead">&nbsp;</h4>
+        <p id="greekText">&nbsp;</p>
+    </div>
+</div>
+
+<footer class="w3-container w3-teal w3-tiny">
+    <p>C. Ursal Jr. <span id="posted">2017 April 24</span></p>
+</footer>
+
+<script>
+var modal = document.getElementById('modalGreek');
+
+function showGreek(n, txtUC, txtLC) {
+    document.getElementById("greekHead").innerHTML = n;
+    if (n === "Sigma") {
+        txtLC = txtLC + " " + '\u03C2';
+    }
+    document.getElementById("greekText").innerHTML = txtUC + " " + txtLC;
+    modal.style.display = "flex"; // ✅ Use flex to center it
+}
+
+function closeModal() {
+    modal.style.display = "none";
+}
+
+// ✅ Close when clicking outside
+window.onclick = function(event) {
+    if (event.target === modal) {
+        closeModal();
+    }
+};
+</script>
+</body>
+</html> 
