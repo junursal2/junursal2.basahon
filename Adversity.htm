@@ -49,43 +49,49 @@
            font-weight: bold;}
         #endChar {color: #210934;}
 
-#page-footer.w3-container {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
+  /* Remove default W3.CSS padding from footer */
+  #page-footer.w3-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 
-#page-footer {
-  background-color: #210934;
-  color: white;
-  display: flex;
-  justify-content: space-between;  /* pushes items to opposite ends */
-  align-items: center;             /* vertical centering */
-  height: 32px;
-  padding: 0 10px;                 /* optional tiny spacing */
-  box-sizing: border-box;
-}
+  #page-footer {
+    background-color: #210934;
+    color: white;
+    display: flex;
+    justify-content: space-between;   /* leftmost + rightmost */
+    align-items: center;              /* vertical center */
+    height: 32px;
+    width: 100vw;                     /* full viewport width */
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-#footer-date {
-  margin: 0;
-  padding-left: 10px;              /* optional small inset */
-  text-align: left;
-}
+  #footer-date {
+    margin-left: 0;
+    padding-left: 0;
+  }
 
-#counter-link {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  margin-right: 10px;              /* optional small inset */
-}
+  #counter-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 0;
+    padding-right: 0;
+  }
 
-#counter-img {
-  height: 100%;
-  border-radius: 4px;
-  padding: 0 !important;
-  margin: 0;
-  box-sizing: border-box;
-}
+  #counter-img {
+    height: 100%;
+    border-radius: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+  }
 
+  /* Ensure no global image padding affects this one */
+  img#counter-img {
+    padding: 0 !important;
+  }
 
 		
     </style>
@@ -379,15 +385,16 @@
     </div>
 </div>
 
-<footer id="page-footer" class="w3-container w3-text-white w3-tiny"><span id="footer-date">October 21, 2025</span>
-	<a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm/">
-    	<img src="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm.svg?label=views&color=blue&style=for-the-badge"
-        	 alt="page views"
-         	  id="counter-img">
-  	</a>
+<footer id="page-footer" class="w3-container w3-text-white w3-tiny">
+  <span id="footer-date">October 21, 2025</span>
+  <a id="counter-link"
+     href="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm/">
+    <img src="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm.svg?label=views&color=blue&style=for-the-badge"
+         alt="page views"
+         id="counter-img">
+  </a>
 </footer>
-
+	
 </body>
 
 </html>
-
