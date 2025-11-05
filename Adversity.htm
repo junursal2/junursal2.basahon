@@ -21,6 +21,17 @@
         * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
         header, section, footer, aside, nav, main, article, figure {display:block;}
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.w3-container, .w3-row-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+}
+
         a {text-decoration: none;}
         a:hover {color: yellow;}
         article {overflow-x:auto;}
@@ -55,43 +66,31 @@
     padding-right: 0 !important;
   }
 
-  #page-footer {
-    background-color: #210934;
-    color: white;
-    display: flex;
-    justify-content: space-between;   /* leftmost + rightmost */
-    align-items: center;              /* vertical center */
-    height: 32px;
-    width: 100vw;                     /* full viewport width */
-    margin: 0;
-    box-sizing: border-box;
-  }
+#page-footer {
+  background-color: #210934;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  width: 100%;
+  margin: 0;
+  padding: 0 8px; /* slight breathing space for text and counter */
+  box-sizing: border-box;
+}
 
-  #footer-date {
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  #counter-link {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-right: 0;
-    padding-right: 0;
-  }
-
-  #counter-img {
-    height: 100%;
-    border-radius: 0;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-sizing: border-box;
-  }
-
-  /* Ensure no global image padding affects this one */
-  img#counter-img {
-    padding: 0 !important;
-  }
+#footer-date { margin: 0; }
+#counter-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+#counter-img {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 
 		
     </style>
@@ -398,3 +397,4 @@
 </body>
 
 </html>
+
