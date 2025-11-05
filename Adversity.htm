@@ -52,19 +52,24 @@
 #page-footer {
   background-color: #210934;
   display: flex;
-  justify-content: flex-end;   /* push content to the right */
-  align-items: center;
-  padding: 6px 10px;
-  float: left;
+  justify-content: flex-end;    /* align to the right */
+  align-items: center;          /* center vertically */
+  height: 32px;                 /* control footer height */
+  padding: 0 10px;              /* right/left spacing */
 }
 
 #counter-link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 #counter-img {
-  height: 100%;                /* make sure it’s visible */
-  background-color: white;     /* strong contrast */
+  height: 100%;                 /* match footer height */
+  background-color: white;      /* ensure contrast */
+  border-radius: 4px;
+  padding: 2px 4px;
+  box-sizing: border-box;
 }
 		
     </style>
@@ -369,3 +374,4 @@
 </body>
 
 </html>
+
