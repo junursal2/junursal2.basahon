@@ -53,10 +53,15 @@
   background-color: #210934;
   color: white;
   display: flex;
-  justify-content: space-between;  /* date on left, counter on right */
+  justify-content: space-between;  /* left + right sides */
   align-items: center;
-  height: 32px;                    /* footer height */
+  height: 32px;
   padding: 0 10px;
+}
+
+#footer-date {
+  flex: 1;                         /* push counter to the right */
+  text-align: left;
 }
 
 #counter-link {
@@ -66,8 +71,8 @@
 }
 
 #counter-img {
-  height: 100%;                    /* matches footer height */
-  background-color: white;         /* ensures visibility */
+  height: 100%;                    /* match footer height */
+  /* background-color: white; */
   border-radius: 4px;
   padding: 2px 4px;
   box-sizing: border-box;
@@ -364,7 +369,7 @@
     </div>
 </div>
 
-<footer id="page-footer" class="w3-container w3-text-white w3-tiny">October 21, 2025
+<footer id="page-footer" class="w3-container w3-text-white w3-tiny"><span id="footer-date">October 21, 2025</span>
 	<a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm/">
     	<img src="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm.svg?label=views&color=blue&style=for-the-badge"
         	 alt="page views"
@@ -375,5 +380,6 @@
 </body>
 
 </html>
+
 
 
