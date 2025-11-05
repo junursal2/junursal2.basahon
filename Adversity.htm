@@ -53,30 +53,35 @@
   background-color: #210934;
   color: white;
   display: flex;
-  justify-content: space-between;  /* leftmost + rightmost layout */
+  justify-content: space-between;  /* pushes items to opposite ends */
   align-items: center;             /* vertical centering */
-  height: 32px;                    /* footer height */
-  /*padding: 0 10px;                 /* small spacing left/right */
+  height: 32px;
+  padding: 0 10px;                 /* keeps spacing from edges */
+  box-sizing: border-box;
 }
 
 #footer-date {
+  margin: 0;
+  padding: 0;
   text-align: left;
 }
 
 #counter-link {
   display: flex;
-	float: right;
-  /*lign-items: center;*/
+  align-items: center;             /* vertical alignment */
   height: 100%;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 #counter-img {
-  height: 100%;                    /* same height as footer */
-  /*background-color: white;         /* visible contrast */
+  height: 100%;
   border-radius: 4px;
-  padding: 2px 0px;
+  padding: 2px 0;
   box-sizing: border-box;
 }
+
 		
     </style>
 </head>
@@ -380,11 +385,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
