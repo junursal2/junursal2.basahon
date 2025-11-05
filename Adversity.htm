@@ -60,33 +60,51 @@ html, body {
            font-weight: bold;}
         #endChar {color: #210934;}
 
-  /* Remove default W3.CSS padding from footer */
- /* #page-footer.w3-container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }*/
+/* --- Reset unwanted spacing --- */
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
+/* Remove container padding that pushes footer inward */
+.w3-container, .w3-row-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+}
+
+/* --- Footer layout --- */
 #page-footer {
   background-color: #210934;
   color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* date on left, counter on right */
+  align-items: center;            /* vertical centering */
   height: 32px;
   width: 100%;
   margin: 0;
-  padding: 0 8px; /* slight breathing space for text and counter */
+  padding: 0 10px;                /* small space from edges */
   box-sizing: border-box;
 }
 
-#footer-date { margin: 0; }
+/* --- Left side (date) --- */
+#footer-date {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* --- Right side (counter) --- */
 #counter-link {
   display: flex;
   align-items: center;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 #counter-img {
-  height: 100%;
+  height: 100%;  /* fills footer vertically */
   margin: 0;
   padding: 0;
   display: block;
@@ -386,17 +404,16 @@ html, body {
 
 <footer id="page-footer" class="w3-container w3-text-white w3-tiny">
   <span id="footer-date">October 21, 2025</span>
-  <a id="counter-link"
-     href="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm/">
+  <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm/">
     <img src="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm.svg?label=views&color=blue&style=for-the-badge"
-         alt="page views"
-         id="counter-img">
+         alt="page views" id="counter-img">
   </a>
 </footer>
 	
 </body>
 
 </html>
+
 
 
 
