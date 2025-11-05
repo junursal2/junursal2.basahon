@@ -49,6 +49,11 @@
            font-weight: bold;}
         #endChar {color: #210934;}
 
+#page-footer.w3-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 #page-footer {
   background-color: #210934;
   color: white;
@@ -56,31 +61,31 @@
   justify-content: space-between;  /* pushes items to opposite ends */
   align-items: center;             /* vertical centering */
   height: 32px;
-  padding: 0 10px;                 /* keeps spacing from edges */
+  padding: 0 10px;                 /* optional tiny spacing */
   box-sizing: border-box;
 }
 
 #footer-date {
   margin: 0;
-  padding: 0;
+  padding-left: 10px;              /* optional small inset */
   text-align: left;
 }
 
 #counter-link {
   display: flex;
-  align-items: center;             /* vertical alignment */
+  align-items: center;
   height: 100%;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+  margin-right: 10px;              /* optional small inset */
 }
 
 #counter-img {
   height: 100%;
   border-radius: 4px;
-  padding: 2px 0;
+  padding: 0 !important;
+  margin: 0;
   box-sizing: border-box;
 }
+
 
 		
     </style>
@@ -385,3 +390,4 @@
 </body>
 
 </html>
+
