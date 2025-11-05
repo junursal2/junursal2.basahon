@@ -53,14 +53,13 @@
   background-color: #210934;
   color: white;
   display: flex;
-  justify-content: space-between;  /* left + right sides */
-  align-items: center;
-  height: 32px;
-  padding: 0 10px;
+  justify-content: space-between;  /* leftmost + rightmost layout */
+  align-items: center;             /* vertical centering */
+  height: 32px;                    /* footer height */
+  padding: 0 10px;                 /* small spacing left/right */
 }
 
 #footer-date {
-  flex: 1;                         /* push counter to the right */
   text-align: left;
 }
 
@@ -71,8 +70,8 @@
 }
 
 #counter-img {
-  height: 100%;                    /* match footer height */
-  /* background-color: white; */
+  height: 100%;                    /* same height as footer */
+  /*background-color: white;         /* visible contrast */
   border-radius: 4px;
   padding: 2px 4px;
   box-sizing: border-box;
@@ -380,6 +379,7 @@
 </body>
 
 </html>
+
 
 
 
