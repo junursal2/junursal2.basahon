@@ -338,6 +338,8 @@
       <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/SovereigntyAndSuffering.htm/">
         views: <span id="views-count">...</span>
       </a>
+      <!-- invisible image that triggers hit increment -->
+      <img src="https://hits.sh/junursal2.github.io/junursal2.basahon/SovereigntyAndSuffering.htm.svg" alt="hit" style="display:none;">
     </span>
   </div>
 </footer>
@@ -347,7 +349,11 @@ fetch('https://hits.sh/junursal2.github.io/junursal2.basahon/SovereigntyAndSuffe
   .then(r => r.json())
   .then(data => {
     const c = document.getElementById('views-count');
-    c.textContent = data.hits?.toLocaleString() ?? '0';
+    if (data && data.hits) {
+      c.textContent = data.hits.toLocaleString();
+    } else {
+      c.textContent = '0';
+    }
   })
   .catch(() => {
     document.getElementById('views-count').textContent = '0';
@@ -356,11 +362,3 @@ fetch('https://hits.sh/junursal2.github.io/junursal2.basahon/SovereigntyAndSuffe
 	
 </body>
 </html>
-
-
-
-
-
-
-
-
