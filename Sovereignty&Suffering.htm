@@ -335,7 +335,7 @@
   <div id="footer-flex">
     <span id="author">C. Ursal Jr. 2025 November 6</span>
     <span id="counter-text">
-      <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/Sovereignty%26Suffering.htm">
+      <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/Sovereignty%26Suffering.htm/">
         views: <span id="views-count">...</span>
       </a>
     </span>
@@ -343,24 +343,20 @@
 </footer>
 
 <script>
-fetch('https://hits.sh/junursal2.github.io/junursal2.basahon/Sovereignty%26Suffering.htm?json')
-  .then(response => response.json())
+fetch('https://hits.sh/junursal2.github.io/junursal2.basahon/Sovereignty%26Suffering.htm/?json')
+  .then(r => r.json())
   .then(data => {
-    const counter = document.getElementById('views-count');
-    if (counter && data && data.hits !== undefined) {
-      counter.textContent = data.hits.toLocaleString();
-    } else {
-      counter.textContent = '0';
-    }
+    const c = document.getElementById('views-count');
+    c.textContent = data.hits?.toLocaleString() ?? '0';
   })
-  .catch(error => {
-    console.warn('Hit counter could not load:', error);
+  .catch(() => {
     document.getElementById('views-count').textContent = '0';
   });
 </script>
-
+	
 </body>
 </html>
+
 
 
 
