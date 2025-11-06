@@ -17,101 +17,109 @@
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <![endif]-->
-    <style>
-        * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
-        header, section, footer, aside, nav, main, article, figure {display:block;}
+<style>
+	* {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+	header, section, footer, aside, nav, main, article, figure {display:block;}
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
+	html, body {
+		margin: 0;
+	  	padding: 0;
+	}
+	.w3-container, .w3-row-padding {
+		padding-left: 0 !important;
+	  	padding-right: 0 !important;
+	 	 margin: 0 !important;
+	}
 
-.w3-container, .w3-row-padding {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin: 0 !important;
-}
+	a {text-decoration: none;}
+	a:hover {color: yellow;}
+	article {overflow-x:auto;}
+	#author {font-style: italic;}
+	body {font-family: Verdana, serif; font-size: 12px; text-align: justify;}
+	#endmark {font-size: 12px;}
+	.fa-home {position: relative; float: right; top: 5px; font-size: 18px; padding-right:5px;}
+	h2 {font: bold 32px Georgia, serif; text-align: center;}
+	header, footer {background-color: #210934;}
+	#highlight {color: red;}
+	img {max-width: 100%; padding: 8px 0px 8px 8px;}
+	#imgCross {float: right; width: 40%;}
+	#imgEndmark {display: block; width: 50%; margin-left: auto; margin-right: auto;}
+	#imgGrave {float: right; width: 50%;}
+	#imgGrief {float: right; width: 40%;}
+	#imgRomans8 {float: right; width: 60%;}
+	#imgPsalm115 {float: right; width: 60%;}
+	#posted {float:left;}
+	#startChar {
+	   color: #210934;
+	   float: left;
+	   line-height: 90%;
+	   width: 0.6em;
+	   font-family: Georgia, serif;
+	   font-size: 500%;
+	   font-weight: bold;}
+	#endChar {color: #210934;}
+	
+	/* --- Reset unwanted spacing --- */
+	html, body {
+	  margin: 0;
+	  padding: 0;
+	}
+	
+	/* Remove container padding that pushes footer inward */
+	.w3-container, .w3-row-padding {
+	  padding-left: 0 !important;
+	  padding-right: 0 !important;
+	  margin: 0 !important;
+	}
+	
+	/* --- Footer layout --- */
+	#page-footer {
+	  background-color: #210934;
+	  color: white;
+	  display: flex;
+	  justify-content: space-between; /* date on left, counter on right */
+	  align-items: center;            /* vertical centering */
+	  height: 32px;
+	  width: 100%;
+	  margin: 0;
+	  padding: 0 10px;                /* small space from edges */
+	  box-sizing: border-box;
+	}
+	
+	/* --- Left side (date) --- */
+	#footer-date {
+	  margin: 0;
+	  padding: 0;
+	  text-align: left;
+	}
+	
+	/* --- Right side (counter) --- */
+	#counter-link {
+	  display: flex;
+	  align-items: center;
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	}
 
-        a {text-decoration: none;}
-        a:hover {color: yellow;}
-        article {overflow-x:auto;}
-        #author {font-style: italic;}
-        body {font-family: Verdana, serif; font-size: 12px; text-align: justify;}
-        #endmark {font-size: 12px;}
-        .fa-home {position: relative; float: right; top: 5px; font-size: 18px; padding-right:5px;}
-        h2 {font: bold 32px Georgia, serif; text-align: center;}
-        header, footer {background-color: #210934;}
-        #highlight {color: red;}
-        img {max-width: 100%; padding: 8px 0px 8px 8px;}
-        #imgCross {float: right; width: 40%;}
-        #imgEndmark {display: block; width: 50%; margin-left: auto; margin-right: auto;}
-        #imgGrave {float: right; width: 50%;}
-        #imgGrief {float: right; width: 40%;}
-        #imgRomans8 {float: right; width: 60%;}
-        #imgPsalm115 {float: right; width: 60%;}
-		#posted {float:left;}
-        #startChar {
-           color: #210934;
-           float: left;
-           line-height: 90%;
-           width: 0.6em;
-           font-family: Georgia, serif;
-           font-size: 500%;
-           font-weight: bold;}
-        #endChar {color: #210934;}
-
-/* --- Reset unwanted spacing --- */
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-/* Remove container padding that pushes footer inward */
-.w3-container, .w3-row-padding {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin: 0 !important;
-}
-
-/* --- Footer layout --- */
-#page-footer {
-  background-color: #210934;
-  color: white;
-  display: flex;
-  justify-content: space-between; /* date on left, counter on right */
-  align-items: center;            /* vertical centering */
-  height: 32px;
-  width: 100%;
-  margin: 0;
-  padding: 0 10px;                /* small space from edges */
-  box-sizing: border-box;
-}
-
-/* --- Left side (date) --- */
-#footer-date {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
-/* --- Right side (counter) --- */
-#counter-link {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-#counter-img {
-  height: 100%;  /* fills footer vertically */
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-
-		
-    </style>
+	/* #counter-img {
+	  height: 100%;  /* fills footer vertically
+	  margin: 0;
+	  padding: 0;
+	  display: block;
+	} */
+	#counter-text {
+	  color: black;
+	  font-family: inherit;
+	}
+	#counter-img {
+	  text-decoration: none; /* optional */
+	  color: inherit;        /* match footer text */
+	  height: 21px;
+	  margin: 0;
+	  padding: 0;
+	}			
+</style>
 </head>
 <body>
 
@@ -405,11 +413,15 @@ html, body {
 <footer id="page-footer" class="w3-container w3-text-white w3-tiny">
   <span id="footer-date">October 20, 2025</span>
   <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm/">
-    <img src="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm.svg?label=views&color=blue&style=for-the-badge"
-         alt="page views" id="counter-img">
+    <!-- <img src="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm.svg?label=views&color=blue&style=for-the-badge"
+         alt="page views" id="counter-img"> -->
+		<img id="counter-img" alt="Hits"
+            src="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent"
+          style="filter: invert(1) brightness(2);" />
   </a>
 </footer>
 	
 </body>
 
 </html>
+
