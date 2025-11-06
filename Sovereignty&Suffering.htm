@@ -343,16 +343,25 @@
 </footer>
 
 <script>
-fetch('https://hits.sh/junursal2.github.io/junursal2.basahon/Attitude.htm?json')
-  .then(r => r.json())
+fetch('https://hits.sh/junursal2.github.io/junursal2.basahon/Sovereignty%26Suffering.htm?json')
+  .then(response => response.json())
   .then(data => {
-    document.getElementById('views-count').textContent = data.hits.toLocaleString();
+    const counter = document.getElementById('views-count');
+    if (counter && data && data.hits !== undefined) {
+      counter.textContent = data.hits.toLocaleString();
+    } else {
+      counter.textContent = '0';
+    }
   })
-  .catch(err => console.warn('Could not load hit counter:', err));
+  .catch(error => {
+    console.warn('Hit counter could not load:', error);
+    document.getElementById('views-count').textContent = '0';
+  });
 </script>
 
 </body>
 </html>
+
 
 
 
