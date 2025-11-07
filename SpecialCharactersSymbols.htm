@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html  lang="en-US">
+<head>
+  <title>Special characters &amp; symbols</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <meta name="description" content="Inserting special characters" />
+  <meta name="author" content="Jun Ursal II" />
+  <meta name="keywords" content="insert, special characters" />
+  
+  <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+  <link rel="stylesheet" href="css/w3.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements 
+  in versions of Internet Explorer prior to version 9 -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <![endif]-->
+  <style>
+  * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+  header, section, footer, aside, nav, main, article, figure {display:block;}
+  
+  a:hover {color: blue;}
+  article, section {
+    overflow-x:auto;
+    color: #003300;
+    font-family: Verdana, sans-serif;
+    font-size: 12px; 
+    text-align: justify;
+  }
+  #charStart {
+     float: left;
+	 font-family: Georgia, serif;
+     font-size: 450%;
+     line-height: 90%;
+     width: 0.6em;
+  }
+  .fa-home {position: relative; float: right; top: 15px; font-size: 24px;}
+  footer {background-color: black; color: white; font: Consolas, monospace;}
+  foot {font-size: 8px;}
+  header {background-color: black;}
+  h2 {font-family: Georgia, serif; text-align: left; color: white; text-shadow:1px 1px black;}
+  .figLeft {float: left; margin: 10px 25px 25px 0px;}
+  .figRight {float: right; margin: 10px 0px 15px 15px;}
+  #imgCharMap {max-width: 450px; width: 100%;}
+  #imgCharInternational {max-width: 400px; width: 100%;}
+  #imgSymbol, #imgSpecial {max-width: 450px; width: 100%;}
+  figcaption {font-size: 10px; text-align: center;}
+  #posted {float: right;}
+  .subtitle {font-family: 'Trebuchet MS',sans-serif;}
+  #myTopBtn {
+     display: none;
+     position: fixed;
+     bottom: 30px;
+     right: 20px;
+     z-index: 99;
+     border: none;
+     outline: none;
+     background-color: #DC143C;
+     color: white;
+     cursor: pointer;
+     padding: 3px 5px;
+     border-radius: 5px;
+     font-size: 10px;
+   }
+   #myTopBtn:hover {background-color:#555;}
+  </style>
+</head>
+
+<body>
+<header class="w3-container">
+  <button id="myTopBtn" title="Go to top" onclick="topFunction()">Top of page</button> 
+  <h2><b>Special characters &amp; symbols</b>
+    <a id="home" title="Go to Basahon page" href="basahon.html#goComputers"><i class="fa fa-home"></i></a></h2>
+</header>
+<section class="w3-container">
+    <h3>What do you want to do?</h3>
+    <div class="w3-half">
+    <a href="#Type">Type &cent;, &pound;, &yen;, &reg;, and other characters not on the keyboard</a><br />
+    <a href="#InsertSymbolSpecial">Insert a symbol or special character</a><br />
+    <a href="#InsertSymbol">Insert a symbol</a><br />
+    <a href="#InsertSpecial">Insert a special character</a><br />
+    <a href="#InsertUnicode">Insert a Unicode character</a><br />
+    <a href="#KeyboardUnicode">Use the keyboard to insert a Unicode character code in a document</a><br />
+    </div>
+    <div class="w3-half">
+    <a href="#FindUnicode">Find a Unicode character code</a><br />
+    <a href="#TypeSpecial">Type character codes to create special characters</a><br />
+    <a href="#TypeInternational">Type international characters</a><br />
+    <a href="#AssignShort">Assign a symbol to a shortcut key</a><br />
+    <a href="#CreateArrows">Create arrows, faces, and other symbols automatically</a><br />
+    </div>
+</section>
+<hr />
+<article class="w3-container">
+    <h3 class="subtitle" id="Type">Type &cent;, &pound;, &yen;, &reg;, and other characters not on the keyboard</h3>
+    <p>Use the <b>Character Map</b> utility (<i>available to almost all Windows-based programs</i>)</p>
+    <p><i>Character Map</i> is a utility included with Microsoft Windows operating systems 
+    and is used to view the characters in any installed font, to check what keyboard input (Alt code) 
+    is used to enter those characters, and to copy characters to the clipboard in lieu of typing them.
+    The tool is usually useful for entering special characters.</p>
+    <figure class="figRight">
+        <img  id="imgCharMap" class="w3-card-4" src="../_images/charmap.jpg" alt="character map">
+        <p></p>
+        <figcaption>Figure 1 Character Map</figcaption>
+    </figure>
+    <p>Steps</p>      
+    <ol>
+        <li>Click the <b>Start</b> menu, type <i>charmap</i> in the <b>Search</b> box, and press <b>Enter</b>.<br />
+            Or, for Windows XP, Vista, and 7, 
+            click on the <b>Start</b> menu, then <b>All Programs</b>, <b>Accessories</b>, <b>System Tools</b>, and then click <b>Character Map</b>.<br />
+            (See Figure 1)</li>
+        <li>In the <b>Font</b> box, select the font that contains the character you want</li>
+        <li>In the character grid, click the character you want.  Click <b>Select</b>.<br />
+            Or, double-click each character you want.
+            You can select multiple characters. The character(s) appear in the <b>Characters To Copy</b> box.</li>
+        <li>Click <b>Copy</b></li>  
+        <li>Switch to your document, and then place the insertion point where you want to paste the character.</li>
+        <li>Click <b>Paste</b> (or press <b>Ctrl+V</b>).<br />
+            If the character looks different from the one you selected, select the character and apply the same font you selected in <b>Character Map</b>.</li>
+    </ol>
+    <p>Tips</p>
+    <ul>
+        <li><i>Character Map</i> shows the key shortcut you can use in Microsoft Excel or other programs to insert the selected character.
+            If the key shortcut includes a number key, press the key you want on the numeric keypad, not on the main keyboard area.</li>
+        <li>To magnify a character in <i>Character Map</i>, click it and hold down the mouse button.</li>
+        <li>On some PCs, the <i>Character Map</i> may be in another location under <b>Accessories</b> or the <b>Start</b> menu.</li>
+        <li><i>Character Map</i> works only with Windows-based programs.</li>
+    </ul>
+
+    <h3 class="subtitle" id="InsertSymbolSpecial">Insert a symbol or special character</h3>
+    <figure class="figRight">
+        <img  id="imgSymbol" class="w3-card-4" src="../_images/InsertSymbol.jpg" alt="Symbol dialog box">
+        <p></p>
+        <figcaption>Figure 2 Symbol dialog box, Symbols tab</figcaption>
+    </figure>
+    <p>You can use the <b>Symbol</b> dialog box (See Figure 2 below) to insert symbols, such as &frac14; and &copy;, or special characters, 
+       such as an em dash (&mdash;) or ellipsis (&hellip;) that are not on your keyboard, as well as Unicode characters.</p>
+    <p>The types of symbols and characters that you can insert depend on the font that you choose. 
+       For example, some fonts may include fractions (&frac12;), international characters (&Ccedil;, &euml;), and international monetary symbols (&pound;, &yen;). 
+       The built-in Symbol font includes arrows, bullets, and scientific symbols. 
+       You might also have additional symbol fonts, such as Wingdings, that include decorative symbols.</p>
+        
+    <h3 class="subtitle" id="InsertSymbol">Insert a symbol</h3>
+    <ol>
+        <li>Click where you want to insert the symbol.</li>
+        <li>On the <b>Insert</b> tab, in the <b>Symbols</b> group, click <b>Symbol</b>.</li>
+        <li>Do one of the following:
+            <ul>
+                <li>Click the symbol that you want in the drop-down list.</li>
+                <li>If the symbol that you want to insert is not in the list, click <b>More Symbols</b>.  
+                    See Figure 2.<br /> 
+                    In the <b>Font</b> box, click the font that you want, click the symbol that you want to insert, 
+                    and then click <b>Insert</b>.</li>
+            </ul>
+        </li>
+        <li>Click <b>Close</b>.</li>
+    </ol>
+    <h3 class="subtitle" id="InsertSpecial">Insert a special character</h3>
+    <ol>
+        <li>Click where you want to insert the special character.</li>
+        <li>On the <b>Insert</b> tab, in the <b>Symbols</b> group, click <b>Symbol</b>, and then click <b>More Symbols</b>.</li>
+        <li>Click the <b>Special Characters</b> tab.  See Figure 3.</li>
+        <li>Click the character that you want to insert, and then click <b>Insert</b>.</li>
+        <li>Click <b>Close</b>.</li>
+    </ol>
+    <figure class="figRight">
+        <img  id="imgSpecial" class="w3-card-4" src="../_images/InsertSpecial.jpg" alt="Symbol dialog box">
+        <p></p>
+        <figcaption>Figure 3 Symbol dialog box, Special characters tab</figcaption>
+    </figure>
+    <h3 class="subtitle" id="InsertUnicode">Insert a Unicode character</h3>
+    <p>You can insert a <abbr title="Unicode is a computing industry standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems.">Unicode</abbr> character into a document by selecting a character from the <b>Symbol</b> dialog box 
+        or by typing the character code directly in a document.</p>
+    <p>Select a Unicode character from the Symbol dialog box. See Figure 2.</p>
+    <p>When you select a Unicode character in the <b>Symbol</b> dialog box, 
+        its character code appears in the <b>Character code</b> box.</p>
+    <ol>
+        <li>Click where you want to insert the Unicode character.</li>
+        <li>On the <b>Insert</b> tab, in the <b>Symbols</b> group, click <b>Symbol</b>, and then click <b>More Symbols</b>.</li>
+        <li>On the <b>Symbols</b> tab, in the <b>Font</b> box, click the font that you want.</li>
+        <li>In the <b>from</b> box, click <b>Unicode (hex)</b>. </li>
+        <li>If the <b>Subset</b> box is available, click a character subset.</li>
+        <li>Click the symbol that you want to insert, and then click <b>Insert</b>.</li>
+        <li>Click <b>Close</b>.</li>
+    </ol>
+    <br />
+    <br />
+    <br />
+    <h3 class="subtitle" id="KeyboardUnicode">Use the keyboard to insert a Unicode character code in a document</h3>
+    <p>If you know the character code, you can enter the code in your document and then press <b>ALT+X</b> to convert it into a character. 
+        For example, press <b>002A</b> and then press <b>ALT+X</b> to produce <b>*</b>. 
+        The reverse also works. To display the Unicode character code for a character that is already in your document,
+        place the insertion point directly after the character and press <b>ALT+X</b>.</p>
+    
+    <figure class="figRight">
+        <img  id="imgCharSpecial" class="w3-card-4" src="../_images/charsSpecial.png" alt="Special characters">
+        <p></p>
+        <figcaption>Figure 4 Some special characters</figcaption>
+    </figure>
+    <h3 class="subtitle" id="FindUnicode">Find a Unicode character code</h3>
+    <p>When you select a Unicode character in the <b>Symbol</b> dialog box, 
+        its character code appears in the <b>Character code</b> box.</p>
+    <ol>
+        <li>On the <b>Insert</b> tab, in the <b>Symbols</b> group, click <b>Symbol</b>, and then click <b>More Symbols</b>.</li>
+        <li>On the <b>Symbols</b> tab, in the <b>Font</b> box, click the font that you want.</li>
+        <li>In the <b>from</b> box, click <b>Unicode (hex)</b>. </li>
+        <li>The Unicode character code is displayed in the <b>Character code</b> box.</li>
+    </ol>
+    <br />
+    <h3 class="subtitle" id="TypeSpecial">Type character codes to create special characters</h3>
+    <p>(<i>Almost all Windows-based programs</i>)</p>
+    <p>Steps</p>
+        <ol>
+            <li>Click where you want to insert the character.</li>
+            <li>Make sure <b>NUM LOCK</b> is on</li>
+            <li>Hold down <b>ALT</b>, and then, using the numeric keypad, type 0 (zero) followed by the character code.  See Figure 4.</li>
+        </ol>
+    <p>Tips</p>
+    If you don't know the character code for a symbol or letter in a specific font, 
+    <ul>
+        <li>Use the <b>Symbol</b> command on the <b>Insert</b> menu especially Word program. 
+            On the <b>Symbols</b> tab, click the symbol, and the shortcut key is shown beside the <b>Shortcut Key</b> button.  See Figure 2 above.</li>
+        <li>Look in Character Map's bottom-right corner. See the numbers after the words "Keystroke: Alt+".  See Figure 1 above.</li>  
+    </ul>
+    <br />
+    
+    <figure class="figRight">
+        <img  id="imgCharInternational" class="w3-card-4" src="../_images/charsInternational.png" alt="international characters">
+        <p></p>
+        <figcaption>Figure 5 International characters</figcaption>
+    </figure>   
+    <h3 id="TypeInternational">Type international characters</h3>
+    <p>(<i>Microsoft Word only</i>)</p>
+    <p>See Figure 5.</p>      
+    <br />
+    
+    <h3 id="AssignShort">Assign a symbol to a shortcut key</h3>
+    <p>(<i>Microsoft Word only</i>)</p>
+    <p>Steps</p>
+        <ol>
+            <li>On the <b>Insert</b> menu, click <b>Symbol</b>.</li>
+            <li>Click the tab with the symbol or character you want.</li>
+            <li>Click the symbol or character you want.</li>
+            <li>Click <b>Shortcut Key</b>.</li>
+            <li>In the <b>Press new shortcut key</b> box, type the key combination you want to use.</li>
+            <li>Click <b>Assign</b>.</li>
+        </ol>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    <h3 id="CreateArrows">Create arrows, faces, and other symbols automatically</h3>
+    <p>(<i>Microsoft Word only</i>)</p>
+    <figure class="figLeft">
+        <img  id="imgCharsSymbols" class="w3-card-4" src="../_images/charsSymbols.png" alt="Symbols">
+        <p></p>
+        <figcaption>Figure 6 Some symbols</figcaption>
+    </figure>
+    <p>You can add the following commonly used symbols to your document by typing corresponding characters or character combinations.<br /> 
+        For example, you can create <i class="fa fa-smile-o" aria-hidden="true"></i> by typing :) or :-).<br />
+        See Figure 6 for more samples.</p>
+    <p>Notes</p>
+    <ul>
+        <li>You can remove <b>AutoCorrect</b> entries if you don't want to replace key combinations with symbols.</li>
+        <li>You can add your own symbols or correct typing mistakes by clicking <b>AutoCorrect</b>.</li>
+    </ul>  
+    	
+</article>
+<footer class="w3-container w3-tiny">
+    <p id="foot">C. Ursal Jr., 2025 November 7<span id="posted">
+	<a href="https://hits.sh/junursal2.github.io/junursal2.basahon/SovereigntyAndSuffering.htm/">
+	<img id="counter-img" alt="Hits" src="https://hits.sh/junursal2.github.io/junursal2.basahon/SovereigntyAndSuffering.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" 
+          style="filter: invert(0) brightness(2);"/></span>
+    </p>
+</footer>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction();};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myTopBtn").style.display = "block";
+    } else {
+        document.getElementById("myTopBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html> 
