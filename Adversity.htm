@@ -70,13 +70,13 @@
 	  box-sizing: border-box;
 	}
 	/* --- Left side (date) --- */
-	#footer-date {
+	#author-date {
 	  margin: 0;
 	  padding: 0;
 	  text-align: left;
 	}
 	/* --- Right side (counter) --- */
-	#counter-link {
+	/* #counter-link {
 	  display: flex;
 	  align-items: center;
 	  height: 100%;
@@ -88,12 +88,18 @@
 	  font-family: inherit;
 	}
 	#counter-img {
-	  text-decoration: none; /* optional */
-	  color: inherit;        /* match footer text */
+	  text-decoration: none; /* optional
+	  color: inherit;        /* match footer text
 	  height: 21px;
 	  margin: 0;
 	  padding: 0;
-	}			
+	} */
+	#counter-text img {
+	  display: block;
+	  height: 1.75em; /* adjust to match text height */
+	  width:auto;
+	}
+
 </style>
 </head>
 <body>
@@ -386,16 +392,23 @@
 </div>
 
 <footer id="page-footer" class="w3-container w3-text-white w3-tiny">
-  <span id="footer-date">October 20, 2025</span>
-  <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm/">
-    <!-- <img src="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm.svg?label=views&color=blue&style=for-the-badge"
-         alt="page views" id="counter-img"> -->
+  <span id="author-date">C. Ursal II, October 20, 2025</span>
+  <span id="counter-text"><a href="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm/">
 		<img id="counter-img" alt="Hits"
             src="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent"
-          style="filter: invert(1) brightness(2);" />
-  </a>
+          style="filter: invert(0) brightness(2);" /></a>
+  </span>
 </footer>
-	
+<!-- <footer class="w3-container w3-tiny">
+    <p id="foot">C. Ursal Jr., 2025 October 15 
+		<span id="counter-text" class="w3-right">
+			<a href="https://hits.sh/junursal2.github.io/junursal2.basahon/PrerequisitesToInvesting.htm/">
+			<img alt="Hits" src="https://hits.sh/junursal2.github.io/junursal2.basahon/PrerequisitesToInvesting.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" 
+          	   style="filter: invert(0) brightness(2);"/>
+		</span>
+	</p>
+</footer> -->
 </body>
 
 </html>
+
