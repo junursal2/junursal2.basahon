@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html  lang="en-US">
+<head>
+    <title>Mutual Fund</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="mutual fund" />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="mutual fund" />
+
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements 
+    in versions of Internet Explorer prior to version 9 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+    * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+    header, section, footer, aside, nav, main, article, figure {display:block;}
+    .mySlides {display:none;}
+    .fa-home {color: goldenrod;}
+    #myVideo {
+        /*position: center;*/
+        width: 100%; 
+        height: 100%;
+    }
+    /* Default: buttons at top (mobile-first) */
+    .w3-display-topleft,
+    .w3-display-topright {
+        top: 0;
+        transform: none;
+    }
+
+    /* On screens wider than 600px (desktop/tablet): vertically center the buttons */
+    @media screen and (min-width: 600px) {
+        .w3-display-topleft,
+        .w3-display-topright {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    #counter-text {font-size:8px;}
+</style>
+</head>
+
+<body>
+    <br />
+    <div class="w3-content w3-card-2" style="max-width:800px">
+        <img class="mySlides" src="../_images/MutualFund/Slide1.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="../_images/MutualFund/Slide2.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="../_images/MutualFund/Slide3.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="../_images/MutualFund/Slide4.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="../_images/MutualFund/Slide5.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="../_images/MutualFund/Slide6.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="../_images/MutualFund/Slide7.jpg" alt="" style="width:100%">
+        <img class="mySlides" src="../_images/MutualFund/Slide8.jpg" alt="" style="width:100%">
+            <video loop controls class="mySlides" id="myVideo">
+                <source src="../_videos/MutualFund/MutualFund.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <a id="home" class="w3-display-topmiddle w3-xlarge"  title="Go back to Basahon page" href="basahon.html#goFinances"><i class="fa fa-home"></i></a>
+            <button class="w3-button w3-display-topleft w3-tiny w3-khaki" onclick="plusDivs(-1)">&#10094; Prev</button>
+            <button class="w3-button w3-display-topright w3-tiny w3-khaki" onclick="plusDivs(1)">Next &#10095;</button>
+        <div id="counter-text" class="w3-display-bottommiddle w3-small w3-text-gray" style="padding:4px;">posted 2025 Nov. 7&nbsp;
+            <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/MutualFund.htm/">
+                <img src="https://hits.sh/junursal2.github.io/junursal2.basahon/MutualFund.htm.svg?label=Views&color=goldenrod&labelColor=gray&style=flat-square" alt="Views">
+            </a>
+        </div>
+ 
+  </div>
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {slideIndex = 1;}    
+        if (n < 1) {slideIndex = x.length;}
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+    }
+
+    var video = document.getElementById("myVideo");
+
+    document.addEventListener('keydown', (event) => {
+        const keyName = event.key;
+        //alert('keydown event\n\n' + 'key: ' + keyName);
+            switch(keyName) {
+            case "ArrowRight":
+                plusDivs(1);
+                break;
+            case "ArrowLeft":
+                plusDivs(-1);
+                break;
+            default:
+                break;
+        }     
+    });
+
+  </script>
+
+</body>
+</html> 
