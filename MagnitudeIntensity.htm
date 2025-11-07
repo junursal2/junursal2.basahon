@@ -45,7 +45,7 @@
     #imgMagInt {max-width: 500px; width: 100%;}
     #imgSeismogram {max-width: 200px; width: 100%;}
     #imgSeismograph {max-width: 250px; width: 100%;}
-    #posted {float: right;}
+    /* #posted {float: right;} */
     pre {font-family: Verdana, sans-serif;font-size: 12px;}
     #myTopBtn {
        display: none;
@@ -69,6 +69,11 @@
     #tabPEIS td:first-child {text-align: center; vertical-align: middle;}
     #tabPEIS td:nth-child(2) {text-align: center; vertical-align: middle}
     #tabPEIS td:nth-child(3) {text-align: justify; font-size: 11px;}
+	#counter-text img {
+	  display: block;
+	  height: 1.5em; /* adjust to match text height */
+	  width:auto;
+	}
     </style>
 </head>
 
@@ -342,8 +347,15 @@
 </div>
 
 <footer class="w3-container w3-tiny">
-    <p id="foot">C. Ursal Jr. <span id="posted">2025 October 15</span></p>
+    <p id="foot">C. Ursal Jr., 2025 October 15 
+		<span id="counter-text">
+			<a href="https://hits.sh/junursal2.github.io/junursal2.basahon/PrerequisitesToInvesting.htm/">
+			<img alt="Hits" src="https://hits.sh/junursal2.github.io/junursal2.basahon/PrerequisitesToInvesting.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" 
+          	   style="filter: invert(1) brightness(2);"/>
+		</span>
+	</p>
 </footer>
+
 <script>
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction();};
@@ -384,5 +396,6 @@ window.onclick = function(event) {
 </body>
 
 </html>
+
 
 
