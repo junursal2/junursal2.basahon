@@ -19,16 +19,6 @@
 <style>
 	* {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
 	header, section, footer, aside, nav, main, article, figure {display:block;}
-
-	/*html, body {
-		margin: 0;
-	  	padding: 0;
-	}*/
-	/*.w3-container, .w3-row-padding {
-		padding-left: 0 !important;
-	  	padding-right: 0 !important;
-	 	 margin: 0 !important;
-	}*/
 	a {text-decoration: none;}
 	a:hover {color: yellow;}
 	article {overflow-x:auto;}
@@ -56,50 +46,15 @@
 	   font-size: 500%;
 	   font-weight: bold;}
 	#endChar {color: #210934;}
-	/* --- Footer layout --- */
-	/*#page-footer {
-	  background-color: #210934;
-	  color: white;
-	  display: flex;
-	  justify-content: space-between; /* date on left, counter on right
-	  align-items: center;            /* vertical centering
-	  height: 32px;
-	  width: 100%;
-	  margin: 0;
-	  padding: 0 10px;                /* small space from edges
-	  box-sizing: border-box;
-	}*/
-	/* --- Left side (date) --- */
 	#author-date {
 	  margin: 0;
 	  padding: 0;
-	 /* text-align: left; */
 	}
-	/* --- Right side (counter) --- */
-	/* #counter-link {
-	  display: flex;
-	  align-items: center;
-	  height: 100%;
-	  margin: 0;
-	  padding: 0;
-	}
-	#counter-text {
-	  color: white;
-	  font-family: inherit;
-	}
-	#counter-img {
-	  text-decoration: none; /* optional
-	  color: inherit;        /* match footer text
-	  height: 21px;
-	  margin: 0;
-	  padding: 0;
-	} */
 	#counter-text img {
 	  display: block;
-	  height: 1.75em; /* adjust to match text height */
-	  width:auto;
+	  height: 2em; /* adjust to match text height */
+	  width: auto;
 	}
-
 </style>
 </head>
 <body>
@@ -391,7 +346,7 @@
     </div>
 </div>
 
-<footer class="w3-container w3-text-white w3-tiny">
+<footer class="w3-container w3-text-white w3-small">
   <span id="author-date" class="w3-left w3-padding-left">C. Ursal II&nbsp;October 20, 2025</span>
   <span id="counter-text" class="w3-right w3-padding-right"><a href="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm/">
 		<img alt="Hits" src="https://hits.sh/junursal2.github.io/junursal2.basahon/Adversity.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=white"
@@ -401,3 +356,4 @@
 
 </body>
 </html>
+
