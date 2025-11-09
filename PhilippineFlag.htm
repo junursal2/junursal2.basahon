@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <title>Philippine flag</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />  
+    <meta name="description" content="Flag of the Philippines" />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="flag, Philippines, coat of arms" />
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/w3-colors-flat.css">
+    <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements in versions of Internet Explorer prior to version 9 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+<style>
+    * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+    header, section, footer, aside, nav, main, article, figure {display:block;}
+    section, article {text-align:justify;}
+    body {font-family: Verdana, Helvetica, sans-serif; font-size:12px;}
+    h3 {
+        color: white;
+        font-family: Georgia, serif;
+        font-weight: bold;
+        text-align:center;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    header {color: #000; background-color:#6B8E23;}
+    footer {color: white; background-color:#6B8E23;}
+    sup {font-size: 10px;}
+    #home {text-decoration: none; float: right; font-size: 24px; margin-top: 8px;}
+    #home:hover {color: white;}
+    #menu {float: left; font-size: 24px; margin-top: 8px;}
+    #menu:hover {color: white;}
+    #mySidebar {color: white; background-color:#6B8E23; font-size: 11px;}
+    /*#mySidebar {color: #000; background-color:#6B8E23; font-size: 11px;}*/
+    #posted {float: right;}
+    /*images*/
+    img {border: 1px solid gray; max-width: 100%;}
+    #construction {display: block; margin-left: auto; margin-right: auto; width: 50%;}
+    #flag, #origin, #history, #evolution {display: block; margin-left: auto; margin-right: auto;}
+    #fold {display: block; margin-left: auto; margin-right: auto; width: 66%;}
+    #display, #building, #raising {display: block; margin-left: auto; margin-right: auto;}
+    #gifHori {border: none; border-left: 1px solid gray; float: right; width: 280px; margin-left: 12px; margin-bottom: 10px;}
+    #gifVert {border: none; border-top: 1px solid gray; float: right; height: 300px; margin-left: 12px;}
+    /*table*/
+    #tabColor {
+        font-family: Verdana, Helvetica, sans-serif; font-size: 12px;
+        border-collapse: collapse;
+        table-layout: fixed;
+        margin: auto;
+        width: 70%;
+    }
+    #tabColor td, #tabColor th {
+        border: 1px solid #808080;
+        padding: 4px;
+        text-align: center;
+    }
+    #tabColor tr:nth-child(even){background-color: #f2f2f2;}
+    #tabColor th {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        text-align: center;
+        background-color: #DCDCDC;
+        color: black;
+    }    
+    /*Top button*/
+    #myTopBtn {
+        font-size: 18px;
+        display: none;
+        position: fixed;
+        bottom: 40px;
+        right: 30px;
+        z-index: 99;
+        border: 1px solid;
+        outline: none;
+        background-color: #6B8E23;
+        color: #000;
+        cursor: pointer;
+        padding: 1px 3px 1px 3px;
+        border-radius: 3px;}
+    #myTopBtn:hover {color: white;}
+    /*References*/
+    .reference {font-size: 11px;}
+    a.ref, a.source {color: blue; text-decoration:none;}
+    a.ref:hover, a.source:hover {text-decoration:underline;}
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 5px;
+        right: 35px;
+        color: red;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }     
+
+/* Sidebar styles */
+#mySidebar {
+    float: left;               /* sidebar on left */
+    width: 16%;                /* desktop width */
+    height: 100vh;
+    background-color: #6B8E23;
+    overflow-y: auto;          /* scrollable if taller than screen */
+    transition: all 0.3s;
+    display: block;            /* visible by default on desktop */
+}
+#mySidebar.open {
+    transform: translateX(0);
+}
+
+/* Main content styles */
+#main {
+    margin-left: 16%;         /* leave space for sidebar */
+    transition: margin-left 0.3s;
+}
+
+/* Menu button only visible on mobile */
+#menu {
+    display: none;
+}
+
+/* By default: hide mobile close button, show desktop label */
+#closeBtn { display: none; }
+#desktopLabel { display: block; }
+
+/* Mobile adjustments */
+@media screen and (max-width: 700px) {
+    #closeBtn { display: block; }        /* show close button on mobile */
+    #desktopLabel { display: none; }     /* hide desktop label on mobile */
+    #mySidebar {
+        position: fixed;
+        width: 175px;          /* overlay width */
+        transform: translateX(-100%);
+        display: block;         /* still part of DOM */
+        z-index: 1000;
+    }
+    #mySidebar.open {
+        transform: translateX(0);
+    }
+    #main {
+        margin-left: 0;         /* main content not pushed */
+    }
+    #menu {
+        display: inline-block;  /* show menu button on mobile */
+    }
+}
+
+</style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div id="mySidebar" class="w3-sidebar w3-bar-block w3-border-right">
+
+    	<!-- Desktop label -->
+    	<div id="desktopLabel" class="w3-bar-item w3-large w3-hover-white">Section</div>
+
+    	<!-- Mobile only close button -->
+    	<button id="closeBtn" onclick="w3_close()" class="w3-bar-item w3-large w3-hover-white">Close &times;</button>
+
+        <a href="#menu_top" class="w3-bar-item w3-button w3-hover-white"><em>top</em></a>
+        <a href="#menu_Symbol" class="w3-bar-item w3-button w3-hover-white">Symbolism</a>
+        <a href="#menu_Construction" class="w3-bar-item w3-button w3-hover-white">Construction</a>
+        <a href="#menu_Colors" class="w3-bar-item w3-button w3-hover-white">Colors</a>    
+        <a href="#menu_Origin" class="w3-bar-item w3-button w3-hover-white">Origin</a>
+        <a href="#menu_History" class="w3-bar-item w3-button w3-hover-white">History</a>    
+        <a href="#menu_Evolution" class="w3-bar-item w3-button w3-hover-white">Evolution</a>
+        <a href="#menu_War" class="w3-bar-item w3-button w3-hover-white">Display in peace or war</a>
+        <a href="#menu_Bldg" class="w3-bar-item w3-button w3-hover-white">Display on buildings</a>
+        <a href="#menu_Raise" class="w3-bar-item w3-button w3-hover-white">Flag raising & lowering</a>
+        <a href="#menu_Fold" class="w3-bar-item w3-button w3-hover-white">Flag folding</a>
+        <a href="#menu_refs" class="w3-bar-item w3-button w3-hover-white">References</a>
+        <a href="#menu_bottom" class="w3-bar-item w3-button w3-hover-white"><em>bottom</em></a>
+    </div>
+    
+    <main id="main">
+        <button id="myTopBtn" title="Jump to top" onclick="topFunction()"><i class="fa fa-arrow-up"></i></button>  
+        <header id="menu_top" class="w3-container">
+            <a id="menu" title="Open menu" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+            <a id="home" title="Go to Basahon page" href="basahon.html#goLifehacks"><i class="fa fa-home"></i></a>
+            <h3>Flag of the Philippines</h3>
+        </header>
+        <section class="w3-container">
+            <br />
+            <img id="flag" src="../_files/PhilFlag/1280px-Flag_of_the_Philippines.svg.png" alt="Philippine flag">
+            <p>A horizontal bicolour of blue and red; with a white equilateral triangle based at the hoist containing three, 5-pointed gold stars at its vertices, and an 8-rayed gold sun at its center.</p>
+	    <h4 id="menu_Symbol">Symbolism<a id="ref01" class="ref" href="#ref-01"><sup> [1]</sup></a>
+                <a id="ref02" class="ref" href="#ref-02"><sup>[2]</sup></a></h4>
+            <p>On March 25, 1936, then President Manuel L. Quezon issued E.O. No. 23 prescribing the technical description and specification of the Filipino Flag. 
+                It was followed by other directives assigning the <em>National Historical Institute</em> as the authority in Philippine <abbr title="vexillary (noun) one who bears a standard or banner. standard-bearer">Vexillaries</abbr> 
+                and <abbr title="(noun) The system by which coats of arms and other armorial bearings are devised, described, and regulated.">Heraldry</abbr>.</p>
+                <img id="gifVert" src="../_files/PhilFlag/PhilFlag_vert.gif" alt="animated vertical Philippine flag waving">
+            <ul>
+                <li>The <b>white triangle with equal sides</b> of the flag is symbolic of <em>equality among men</em>.</li>
+                <li>The <b>sun</b> represents <em>the gigantic strides that have been made by the Sons of this land on the road to progress and civilization</em>.</li>
+                <li>The <b>eight rays of the sun</b> in the triangle represent <em>the first eight united provinces that revolted for our independence against the Spanish rule.</em>.</li>
+                <li>The <b>three stars</b> in the triangle stand for the three major geographical divisions of the country - <em>Luzon, Visayas and Mindanao</em>.</li>
+                <li>The <b>red</b> field symbolizes <em>the willingness of the Filipino people to shed blood in defense of their country</em>.</li>
+                <li>The <b>blue</b> field stands for <em>common unity and the noble aspirations of the Filipino people</em>.</li>
+                <li>The <b>white</b> field stands for <em>purity</em>.</li>
+            </ul>
+            <p>The eight rays on the flag represent the eight original provinces: Batangas, Bulacan, Cavite, Laguna, Manila, Nueva Ecija, Pampanga, and Tarlac. 
+                All of these provinces still exist today except for one: Manila lost its status as a province, even though it still exists as the independent city that people know as the capital of the Philippines.
+                Much of the former province of Manila (capital: Mariquina, present-day Marikina City) became part of the District of Morong (which became the province of Rizal in 1901 under the American colonial administration). 
+                This may be the reason why many sources, especially in the Philippines, replace 'Manila' with 'Rizal' or even 'Morong' in the list.</p>
+            <ul>
+                <li>white equilateral triangle = liberty, equality, and fraternity</li>
+                <li>horizontal blue stripe = peace, truth, and justice</li>
+                <li>horizontal red stripe = patriotism and valor</li>
+                <li>golden sun = unity, freedom, people's democracy, and sovereignty</li>
+                <li>8 rays = 8 provinces with significant involvement in the 1896 Philippine Revolution against Spain</li>
+                <li>3 five-pointed stars = Luzon, Visayas and Mindanao</li>
+            </ul>
+        </section>
+
+        <section class="w3-container">
+            <h4 id="menu_Construction">Construction<a id="ref03" class="ref" href="#ref-03"><sup> [3]</sup></a></h4>
+            <p>The flag's length is twice its width, giving it an aspect ratio of 1:2. 
+                The length of all the sides of the white triangle are equal to the width of the flag.
+                Each star is oriented in such manner that one of its tips points towards the vertex at which it is located.
+                Moreover, the gap-angle between two neighbours of the 8 ray-bundles is as large as the angle of one ray-bundle (so 22.5°), 
+                with each major ray having double the thickness of its two minor rays.
+                The golden sun is not exactly in the center of the triangle but shifted slightly to the right.</p>
+            <img id="construction" src="../_files/PhilFlag/PhilFlag_construction.png" alt="Construction sheet of the Philippine flag">
+        </section>
+
+        <section class="w3-container">
+            <h4 id="menu_Colors">Colors<a id="ref04" class="ref" href="#ref-04"><sup> [4]</sup></a></h4>
+            <p>The flag's colors are specified by Republic Act 8491 in terms of their cable number 
+                in the system developed by the Color Association of the United States.
+                The official colors and their approximations in other color spaces are listed below:</p>
+            <table id="tabColor">
+                <tr>
+                    <th rowspan="2">Scheme</th>
+                    <th>Blue</th>
+                    <th>Red</th>
+                    <th>White</th>
+                    <th>Yellow</th>
+                </tr>
+                <tr>
+                    <td style="background-color: #0038A8">&nbsp;</td>
+                    <td style="background-color: #CE1126">&nbsp;</td>
+                    <td style="background-color: #FFFFFF">&nbsp;</td>
+                    <td style="background-color: #FCD116">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Cable No.</td>
+                    <td>80173</td>
+                    <td>80108</td>
+                    <td>80001</td>
+                    <td>80068</td>
+                </tr>
+                <tr>
+                    <td>Pantone</td>
+                    <td>286</td>
+                    <td>186</td>
+                    <td>n/a</td>
+                    <td>116</td>
+                </tr>
+                <tr>
+                    <td>RGB</td>
+                    <td>0-56-168</td>
+                    <td>206-17-38</td>
+                    <td>255-255-255</td>
+                    <td>252-209-22</td>
+                </tr>
+                <tr>
+                    <td>CMYK</td>
+                    <td>C100-M60-Y0-K5</td>
+                    <td>C0-M90-Y65-K10</td>
+                    <td>n/a</td>
+                    <td>C0-M18-Y85-K0</td>
+                </tr>
+                <tr>
+                    <td>HEX</td>
+                    <td>#0038A8</td>
+                    <td>#CE1126</td>
+                    <td>#FFFFFF</td>
+                    <td>#FCD116</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section class="w3-container">
+            <h4 id="menu_Origin">Origin<a id="ref05" class="ref" href="#ref-05"><sup> [5]</sup></a></h4>
+            <img id="origin" src="../_files/PhilFlag/PhilFlag_origin.png" alt="Origin of the Symbols of the Philippine flag">
+        </section>
+        
+        <section class="w3-container">
+            <h4 id="menu_History">History<a id="ref06" class="ref" href="#ref-06"><sup> [6]</sup></a></h4>
+            <img id="history" src="../_files/PhilFlag/PhilFlag_history.png" alt="History of the Philippine flag">
+        </section>
+        
+        <section class="w3-container">
+            <h4 id="menu_Evolution">Evolution<a id="ref07" class="ref" href="#ref-07"><sup> [7]</sup></a></h4>
+            <img id="evolution" src="../_files/PhilFlag/PhilFlag_evolution.png" alt="Evolution of the Philippine flag">        
+        </section>
+
+        <section class="w3-container">
+            <h4 id="menu_War">Display in times of peace or war<a id="ref08" class="ref" href="#ref-08"><sup> [8]</sup></a></h4>
+            <p>The flag has the unique ability to display a state of war of the country. 
+                It does this according to the orientation of the blue and red panels: 
+                if the blue panel is above the red, the Philippines is at peace, 
+                if the red above blue indicates a state of war. 
+                In the vertical position, blue on the right means war and opposite means otherwise.</p>
+            <img id="display" src="../_files/PhilFlag/PhilFlag_display.jpg" alt="How to properly display the Philippine flag">
+        </section>
+
+        <section class="w3-container">
+            <h4 id="menu_Bldg">Display on buildings<a id="ref09" class="ref" href="#ref-09"><sup> [9]</sup></a></h4>
+            <img id="building" src="../_files/PhilFlag/PhilFlag_display_buildings.jpg" alt="How to properly display the Philippine flag">
+        </section>
+
+        <section class="w3-container">
+            <h4 id="menu_Raise">Flag raising & lowering<a id="ref10" class="ref" href="#ref-10"><sup> [10]</sup></a></h4>
+            <img id="raising" src="../_files/PhilFlag/PhilFlag_display_raise_lower.jpg" alt="How to properly display the Philippine flag">
+        </section>
+
+        <section class="w3-container">
+            <h4 id="menu_Fold">Flag folding<a id="ref11" class="ref" href="#ref-11"> <sup> [11]</sup></a></h4>
+            <img id="fold" src="../_files/PhilFlag/PhilFlag_folding.png" alt="How to properly fold the Philippine flag">
+        </section>
+        
+        <section class="w3-container">
+            <hr />
+            <h4 id="menu_refs">References</h4>
+           <!-- <img id="gifHori" src="../_files/PhilFlag/PhilFlag_hori.gif" alt="animated Philippine flag waving"> -->
+
+    <!-- Container for floated image + audio -->
+    <div style="float: right; width: 300px; text-align: left; margin: 0 0 10px 15px;">
+        <!-- Image -->
+
+        <img id="gifHori" src="../_files/PhilFlag/PhilFlag_hori.gif" alt="animated Philippine flag waving""
+             style="width: 300px; display: block; margin-bottom: 5px;" />
+
+        <!-- Audio player -->
+        <audio id="anthemAudio" controls style="width: 350px; transform: scale(0.8); transform-origin: top left;">
+            <source src="../_files/PhilFlag/LupangHinirang.mp3" type="audio/mpeg">
+            <source src="../_files/PhilFlag/LupangHinirang.m4a" type="audio/mp4">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Caption under audio -->
+        <div style="font-size: 10px; color: #333; margin-top:-10px;">
+            The Philippine National Anthem: <i>Lupang Hinirang</i>
+        </div>
+    </div>
+
+            <ol>
+                <li id="ref-01" class="reference"><a class="source" href="#ref01">^</a>&nbsp;Symbolism.&nbsp;
+                    <a class="source" href="https://fotw.info/flags/ph.html#exp" target="_blank">https://fotw.info/flags/ph.html#exp</a></li>
+                <li id="ref-02" class="reference"><a class="source" href="#ref02">^</a>&nbsp;Symbolism.&nbsp;
+                    <a class="source" href="https://en.wikipedia.org/wiki/Flag_of_the_Philippines#Symbolism" target="_blank">https://en.wikipedia.org/wiki/Flag_of_the_Philippines#Symbolism</a></li>
+                <li id="ref-03" class="reference"><a class="source" href="#ref03">^</a>&nbsp;Construction.&nbsp;
+                    <a class="source" href="https://en.wikipedia.org/wiki/Flag_of_the_Philippines#Construction" target="_blank">https://en.wikipedia.org/wiki/Flag_of_the_Philippines#Construction</a></li>
+                <li id="ref-04" class="reference"><a class="source" href="#ref04">^</a>&nbsp;Colors.&nbsp;
+                    <a class="source" href="https://en.wikipedia.org/wiki/Flag_of_the_Philippines#Color" target="_blank">https://en.wikipedia.org/wiki/Flag_of_the_Philippines#Color</a></li>
+                <li id="ref-05" class="reference"><a class="source" href="#ref05">^</a>&nbsp;Origin.&nbsp;
+                    <a class="source" href="http://malacanang.gov.ph/3846-origin-of-the-symbols-of-our-national-flag/" target="_blank">http://malacanang.gov.ph/3846-origin-of-the-symbols-of-our-national-flag/</a></li>
+                <li id="ref-06" class="reference"><a class="source" href="#ref06">^</a>&nbsp;History.&nbsp;
+                    <a class="source" href="http://malacanang.gov.ph/history-of-the-philippine-flag/" target="_blank">http://malacanang.gov.ph/history-of-the-philippine-flag/</a></li>
+                <li id="ref-07" class="reference"><a class="source" href="#ref07">^</a>&nbsp;Evolution.&nbsp;
+                    <a class="source" href="https://www.officialgazette.gov.ph/the-philippine-flag/" target="_blank">https://www.officialgazette.gov.ph/the-philippine-flag/</a></li>
+                <li id="ref-08" class="reference"><a class="source" href="#ref08">^</a>&nbsp;Display in times of peace or war.&nbsp;<em>Ibid.</em>
+                <li id="ref-09" class="reference"><a class="source" href="#ref09">^</a>&nbsp;Display on buildings.&nbsp;<em>Ibid.</em>
+                <li id="ref-10" class="reference"><a class="source" href="#ref10">^</a>&nbsp;Flag raising & lowering.&nbsp;<em>Ibid.</em>
+                <li id="ref-11" class="reference"><a class="source" href="#ref11">^</a>&nbsp;Flag folding.&nbsp;<em>Ibid.</em>
+            </ol>
+        </section>
+    <footer  id="menu_bottom" class="w3-container w3-tiny">
+        <p>C. Ursal Jr., HPOI 2018 Nov 9 <span id="posted">2025 November 9</span></p>
+    </footer>
+    </main>
+
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction();};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myTopBtn").style.display = "block";
+        } else {
+            document.getElementById("myTopBtn").style.display = "none";
+        }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+        document.documentElement.scrollTop = 0; // For IE and Firefox
+    }
+
+function w3_open() {
+    var sidebar = document.getElementById("mySidebar");
+    if (window.innerWidth <= 700) {
+        sidebar.classList.add("open");  // slide in overlay on mobile
+    }
+}
+
+function w3_close() {
+    var sidebar = document.getElementById("mySidebar");
+    if (window.innerWidth <= 700) {
+        sidebar.classList.remove("open");
+    }
+}
+
+</script>  
+  
+</body>
+</html> 
