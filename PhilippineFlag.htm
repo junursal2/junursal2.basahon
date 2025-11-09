@@ -53,11 +53,13 @@
         margin: auto;
         width: 70%;
     }
-    #tabColor td, #tabColor th {
-        border: 1px solid #808080;
-        padding: 4px;
-        text-align: center;
-    }
+	#tabColor td, #tabColor th {
+	  border: 1px solid #808080;
+	  padding: 4px;
+	  text-align: center;
+	  word-wrap: break-word;
+	  white-space: normal; /* allows HEX values to wrap */
+	}
     #tabColor tr:nth-child(even){background-color: #f2f2f2;}
     #tabColor th {
         padding-top: 4px;
@@ -411,5 +413,6 @@
 </body>
 
 </html>
+
 
 
