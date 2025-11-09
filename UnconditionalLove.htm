@@ -87,31 +87,38 @@
       margin-right: 4px;
     }
 	  
-	footer {
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	  background-image: url("https://junursal2.github.io/junursal2.basahon/files/hearts.jpg");
-	  background-repeat: repeat;
-	  background-size: auto;
-	  color: white;
-	  font-family: "Trebuchet MS", sans-serif;
-	  font-size: 11px;
-	  padding: 8px 10px;
-	}
-	
-	#author, #counter {
-	  float: none;      /* remove floats */
-	  font-style: italic;
-	  font-size: 11px;
-	  color: white;     /* match author text */
-	}
-	
-	#counter-img {
-	  height: 14px;           /* adjust to match text line */
-	  vertical-align: middle; /* align with text */
-	  background: transparent; /* ensure no background */
-	}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("https://junursal2.github.io/junursal2.basahon/files/hearts.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  color: white;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 11px;
+  padding: 8px 10px;
+}
+
+#author, #counter {
+  font-style: italic;
+  font-family: "Trebuchet MS", sans-serif;  /* same font */
+  font-size: 11px;                          /* same size */
+  color: white;                             /* white text */
+}
+
+#counter {
+  display: inline-flex;
+  align-items: center;       /* vertical align with text */
+  gap: 2px;                  /* small gap between number and text */
+}
+
+#counter-img {
+  height: 11px;              /* same as text line height */
+  vertical-align: middle;    
+  background: transparent;    /* ensure no background */
+  display: inline-block;
+}
 
   </style>
 </head>
@@ -177,15 +184,18 @@
     
 	<footer>
 	  <span id="author">Jun Ursal II, HPOI 2016 Feb 16</span>
-	  <span id="counter">2025 October 18 &nbsp;
-	     <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/UnconditionalLove.htm/">
-	      	<img id="counter-img"
-	            src="https://hits.sh/junursal2.github.io/junursal2.basahon/UnconditionalLove.htm.svg?label=views&color=white&labelColor=transparent&style=flat"
-	            alt="page views"></a>
+	  <span id="counter">
+	    2025 October 18&nbsp;
+	    <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/UnconditionalLove.htm/">
+	      <img id="counter-img"
+	           src="https://hits.sh.junursal2.github.io/junursal2.basahon/UnconditionalLove.htm.svg?labelColor=transparent&color=white&style=flat"
+	           alt="page views">
+	    </a>
 	  </span>
 	</footer>
 	
 </body>
 </html>
+
 
 
