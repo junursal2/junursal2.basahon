@@ -27,16 +27,25 @@
       position: relative;
     }
 
-    footer {
-      background-image: url("https://junursal2.github.io/junursal2.basahon/files/hearts.jpg");
-      background-size: cover;
-      background-repeat: repeat;
-      color: white;
-      font-family: "Trebuchet MS", sans-serif;
-      font-size: 11px;
-      text-align: center;
-      padding: 1px 0;
-    }
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("https://junursal2.github.io/junursal2.basahon/files/hearts.jpg");
+  background-repeat: repeat;
+  background-size: auto;
+  color: white;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 11px;
+  padding: 8px 10px;
+}
+
+#author, #counter {
+  float: none;
+}
+#counter-img {
+  height: 21px;
+}
 
     h1 {
       color: white;
@@ -84,11 +93,6 @@
       }
     }
 
-    #author {
-      font-style: italic;
-	  float: left;
-    }
-
     #paraend {
       font-style: italic;
       font-size: 90%;
@@ -102,12 +106,6 @@
       color: darkred;
       margin-right: 4px;
     }
-	#counter {float:right;}
-	#counter-img {
-	  height: 21px;
-	  margin: 0;
-	  padding: 0;
-	}
   </style>
 </head>
 <body class="w3-container w3-justify">
@@ -170,13 +168,16 @@
         </div>
     </div>
     
-    <footer>
-        <span id="author">Jun Ursal II, HPOI 2016 Feb 16</span>
-		<span id="counter">2025 October 18 &nbps;&nbsp;
-		 	<a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/UnconditionalLove.htm/">
-    		<img  id="counter-img" src="https://hits.sh/junursal2.github.io/junursal2.basahon/UnconditionalLove.htm.svg?label=views&color=green&style=for-the-badge"
-                 alt="page views"></a></span>
-    </footer>
+	<footer>
+	  <span id="author">Jun Ursal II, HPOI 2016 Feb 16</span>
+	  <span id="counter">2025 October 18 &nbsp;
+	    	<a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/UnconditionalLove.htm/">
+	      	<img id="counter-img" src="https://hits.sh/junursal2.github.io/junursal2.basahon/UnconditionalLove.htm.svg?label=views&color=green&style=for-the-badge"
+	            alt="page views">
+	    	</a>
+	  </span>
+	</footer>
 
 </body>
 </html>
+
