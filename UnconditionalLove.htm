@@ -102,26 +102,24 @@ footer {
 
 #author, #counter {
   font-style: italic;
-  font-family: "Trebuchet MS", sans-serif;  /* same font */
-  font-size: 11px;                          /* same size */
-  color: white;                             /* white text */
+  color: white;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 11px;
 }
 
 #counter {
-  font-style: italic;
-  font-family: "Trebuchet MS", sans-serif;
-  font-size: 11px;
-  color: white;
-}
-#page-views {
-  font-weight: bold; /* optional, make number stand out */
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 
 #counter-img {
-  height: 11px;              /* same as text line height */
-  vertical-align: middle;    
-  background: transparent;    /* ensure no background */
+  height: 11px;
+  background: transparent;
+  vertical-align: middle;
   display: inline-block;
+  border: none;
+  filter: brightness(200%); /* ensures white color stays bright */
 }
 
   </style>
@@ -188,18 +186,17 @@ footer {
     
 	<footer>
 	  <span id="author">Jun Ursal II, HPOI 2016 Feb 16</span>
-	  <span id="counter">2025 October 18&nbsp;views:<span id="page-views">0</span>
+	  <span id="counter">
+	    2025 October 18&nbsp;
+	    <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/UnconditionalLove.htm/">
+	      <img id="counter-img"
+	        src="https://hits.sh/junursal2.github.io/junursal2.basahon/UnconditionalLove.htm.svg?labelColor=transparent&color=ffffff&style=flat-square"
+	        alt="views">
+	    </a>
+	  </span>
 	</footer>
-	
-<script>
-fetch('https://hits.sh/https://junursal2.github.io/junursal2.basahon/UnconditionalLove.htm?format=json')
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById('page-views').textContent = data.value;
-  })
-  .catch(err => console.log(err));
-</script>
-	
+		
 </body>
 </html>
+
 
