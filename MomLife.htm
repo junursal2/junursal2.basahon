@@ -57,21 +57,32 @@
     .next {border-radius: 3px 0 0 3px;}
     /* On hover, add a black background color with a little bit see-through */
     .prev:hover, .next:hover {background-color: rgba(169, 169, 169, 0.8); color: yellow;}
-    #author {font-size: 10px; top: 0;}
+    /* #author {font-size: 10px; top: 0;} */
     #owner {float: left; padding-left: 10px;}
     /* #petsa {float: right; padding-right: 0px;} */
-    
+
+ #author {
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between; /* pushes left & right spans apart */
+  align-items: center;             /* vertically centers */
+  padding: 0 10px;                 /* optional spacing on sides */
+}   
+#owner, #petsa {
+  float: none;                     /* disable old floats */
+}
+
 #petsa img {
-  vertical-align: middle;  /* aligns with text */
-  height: 14px;            /* match text height */
-  margin-left: 2px;        /* small space between date and counter */
-}    
-    #counter-img {
-      height: 21px;
-      /*display: block;*/
-      margin: 0;
-      padding: 0;
-    }
+  vertical-align: middle;
+  height: 14px;
+  margin-left: 2px;
+}
+#counter-img {
+  height: 21px;
+  /*display: block;*/
+  margin: 0;
+  padding: 0;
+}
 </style>
 </head>
 
@@ -171,3 +182,4 @@
 </body>
 
 </html>
+
