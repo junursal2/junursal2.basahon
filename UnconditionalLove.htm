@@ -108,9 +108,13 @@ footer {
 }
 
 #counter {
-  display: inline-flex;
-  align-items: center;       /* vertical align with text */
-  gap: 2px;                  /* small gap between number and text */
+  font-style: italic;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 11px;
+  color: white;
+}
+#page-views {
+  font-weight: bold; /* optional, make number stand out */
 }
 
 #counter-img {
@@ -184,18 +188,17 @@ footer {
     
 	<footer>
 	  <span id="author">Jun Ursal II, HPOI 2016 Feb 16</span>
-	  <span id="counter">
-	    2025 October 18&nbsp;
-	    <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/UnconditionalLove.htm/">
-	      <img id="counter-img"
-	           src="https://hits.sh.junursal2.github.io/junursal2.basahon/UnconditionalLove.htm.svg?labelColor=transparent&color=white&style=flat"
-	           alt="page views">
-	    </a>
-	  </span>
+	  <span id="counter">2025 October 18&nbsp;<span id="page-views">0</span>views:</span>
 	</footer>
+	
+<script>
+fetch('https://hits.sh/https://junursal2.github.io/junursal2.basahon/UnconditionalLove.htm?format=json')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('page-views').textContent = data.value;
+  })
+  .catch(err => console.log(err));
+</script>
 	
 </body>
 </html>
-
-
-
