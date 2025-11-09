@@ -8,10 +8,9 @@
     <meta name="description" content="Flag of the Philippines" />
     <meta name="author" content="Jun Ursal II" />
     <meta name="keywords" content="flag, Philippines, coat of arms" />
-    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
-    <link rel="stylesheet" href="css/w3.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/w3-colors-flat.css">
+    <link rel="icon" type="image/png" href="images/ursoft.ico" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements in versions of Internet Explorer prior to version 9 -->
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -104,57 +103,56 @@
         cursor: pointer;
     }     
 
-/* Sidebar styles */
-#mySidebar {
-    float: left;               /* sidebar on left */
-    width: 16%;                /* desktop width */
-    height: 100vh;
-    background-color: #6B8E23;
-    overflow-y: auto;          /* scrollable if taller than screen */
-    transition: all 0.3s;
-    display: block;            /* visible by default on desktop */
-}
-#mySidebar.open {
-    transform: translateX(0);
-}
+	/* Sidebar styles */
+	#mySidebar {
+	    float: left;               /* sidebar on left */
+	    width: 16%;                /* desktop width */
+	    height: 100vh;
+	    background-color: #6B8E23;
+	    overflow-y: auto;          /* scrollable if taller than screen */
+	    transition: all 0.3s;
+	    display: block;            /* visible by default on desktop */
+	}
+	#mySidebar.open {
+	    transform: translateX(0);
+	}
+	
+	/* Main content styles */
+	#main {
+	    margin-left: 16%;         /* leave space for sidebar */
+	    transition: margin-left 0.3s;
+	}
+	
+	/* Menu button only visible on mobile */
+	#menu {
+	    display: none;
+	}
 
-/* Main content styles */
-#main {
-    margin-left: 16%;         /* leave space for sidebar */
-    transition: margin-left 0.3s;
-}
-
-/* Menu button only visible on mobile */
-#menu {
-    display: none;
-}
-
-/* By default: hide mobile close button, show desktop label */
-#closeBtn { display: none; }
-#desktopLabel { display: block; }
-
-/* Mobile adjustments */
-@media screen and (max-width: 700px) {
-    #closeBtn { display: block; }        /* show close button on mobile */
-    #desktopLabel { display: none; }     /* hide desktop label on mobile */
-    #mySidebar {
-        position: fixed;
-        width: 175px;          /* overlay width */
-        transform: translateX(-100%);
-        display: block;         /* still part of DOM */
-        z-index: 1000;
-    }
-    #mySidebar.open {
-        transform: translateX(0);
-    }
-    #main {
-        margin-left: 0;         /* main content not pushed */
-    }
-    #menu {
-        display: inline-block;  /* show menu button on mobile */
-    }
-}
-
+	/* By default: hide mobile close button, show desktop label */
+	#closeBtn { display: none; }
+	#desktopLabel { display: block; }
+	
+	/* Mobile adjustments */
+	@media screen and (max-width: 700px) {
+	    #closeBtn { display: block; }        /* show close button on mobile */
+	    #desktopLabel { display: none; }     /* hide desktop label on mobile */
+	    #mySidebar {
+	        position: fixed;
+	        width: 175px;          /* overlay width */
+	        transform: translateX(-100%);
+	        display: block;         /* still part of DOM */
+	        z-index: 1000;
+	    }
+	    #mySidebar.open {
+	        transform: translateX(0);
+	    }
+	    #main {
+	        margin-left: 0;         /* main content not pushed */
+	    }
+	    #menu {
+	        display: inline-block;  /* show menu button on mobile */
+	    }
+	}
 </style>
 </head>
 
@@ -194,12 +192,12 @@
             <br />
             <img id="flag" src="../_files/PhilFlag/1280px-Flag_of_the_Philippines.svg.png" alt="Philippine flag">
             <p>A horizontal bicolour of blue and red; with a white equilateral triangle based at the hoist containing three, 5-pointed gold stars at its vertices, and an 8-rayed gold sun at its center.</p>
-	    <h4 id="menu_Symbol">Symbolism<a id="ref01" class="ref" href="#ref-01"><sup> [1]</sup></a>
+	    		<h4 id="menu_Symbol">Symbolism<a id="ref01" class="ref" href="#ref-01"><sup> [1]</sup></a>
                 <a id="ref02" class="ref" href="#ref-02"><sup>[2]</sup></a></h4>
             <p>On March 25, 1936, then President Manuel L. Quezon issued E.O. No. 23 prescribing the technical description and specification of the Filipino Flag. 
                 It was followed by other directives assigning the <em>National Historical Institute</em> as the authority in Philippine <abbr title="vexillary (noun) one who bears a standard or banner. standard-bearer">Vexillaries</abbr> 
                 and <abbr title="(noun) The system by which coats of arms and other armorial bearings are devised, described, and regulated.">Heraldry</abbr>.</p>
-                <img id="gifVert" src="../_files/PhilFlag/PhilFlag_vert.gif" alt="animated vertical Philippine flag waving">
+                <img id="gifVert" src="files/PhilFlag/PhilFlag_vert.gif" alt="animated vertical Philippine flag waving">
             <ul>
                 <li>The <b>white triangle with equal sides</b> of the flag is symbolic of <em>equality among men</em>.</li>
                 <li>The <b>sun</b> represents <em>the gigantic strides that have been made by the Sons of this land on the road to progress and civilization</em>.</li>
@@ -231,7 +229,7 @@
                 Moreover, the gap-angle between two neighbours of the 8 ray-bundles is as large as the angle of one ray-bundle (so 22.5°), 
                 with each major ray having double the thickness of its two minor rays.
                 The golden sun is not exactly in the center of the triangle but shifted slightly to the right.</p>
-            <img id="construction" src="../_files/PhilFlag/PhilFlag_construction.png" alt="Construction sheet of the Philippine flag">
+            <img id="construction" src="files/PhilFlag/PhilFlag_construction.png" alt="Construction sheet of the Philippine flag">
         </section>
 
         <section class="w3-container">
@@ -293,17 +291,17 @@
         
         <section class="w3-container">
             <h4 id="menu_Origin">Origin<a id="ref05" class="ref" href="#ref-05"><sup> [5]</sup></a></h4>
-            <img id="origin" src="../_files/PhilFlag/PhilFlag_origin.png" alt="Origin of the Symbols of the Philippine flag">
+            <img id="origin" src="files/PhilFlag/PhilFlag_origin.png" alt="Origin of the Symbols of the Philippine flag">
         </section>
         
         <section class="w3-container">
             <h4 id="menu_History">History<a id="ref06" class="ref" href="#ref-06"><sup> [6]</sup></a></h4>
-            <img id="history" src="../_files/PhilFlag/PhilFlag_history.png" alt="History of the Philippine flag">
+            <img id="history" src="files/PhilFlag/PhilFlag_history.png" alt="History of the Philippine flag">
         </section>
         
         <section class="w3-container">
             <h4 id="menu_Evolution">Evolution<a id="ref07" class="ref" href="#ref-07"><sup> [7]</sup></a></h4>
-            <img id="evolution" src="../_files/PhilFlag/PhilFlag_evolution.png" alt="Evolution of the Philippine flag">        
+            <img id="evolution" src="files/PhilFlag/PhilFlag_evolution.png" alt="Evolution of the Philippine flag">        
         </section>
 
         <section class="w3-container">
@@ -313,48 +311,43 @@
                 if the blue panel is above the red, the Philippines is at peace, 
                 if the red above blue indicates a state of war. 
                 In the vertical position, blue on the right means war and opposite means otherwise.</p>
-            <img id="display" src="../_files/PhilFlag/PhilFlag_display.jpg" alt="How to properly display the Philippine flag">
+            <img id="display" src="files/PhilFlag/PhilFlag_display.jpg" alt="How to properly display the Philippine flag">
         </section>
 
         <section class="w3-container">
             <h4 id="menu_Bldg">Display on buildings<a id="ref09" class="ref" href="#ref-09"><sup> [9]</sup></a></h4>
-            <img id="building" src="../_files/PhilFlag/PhilFlag_display_buildings.jpg" alt="How to properly display the Philippine flag">
+            <img id="building" src="files/PhilFlag/PhilFlag_display_buildings.jpg" alt="How to properly display the Philippine flag">
         </section>
 
         <section class="w3-container">
             <h4 id="menu_Raise">Flag raising & lowering<a id="ref10" class="ref" href="#ref-10"><sup> [10]</sup></a></h4>
-            <img id="raising" src="../_files/PhilFlag/PhilFlag_display_raise_lower.jpg" alt="How to properly display the Philippine flag">
+            <img id="raising" src="files/PhilFlag/PhilFlag_display_raise_lower.jpg" alt="How to properly display the Philippine flag">
         </section>
 
         <section class="w3-container">
             <h4 id="menu_Fold">Flag folding<a id="ref11" class="ref" href="#ref-11"> <sup> [11]</sup></a></h4>
-            <img id="fold" src="../_files/PhilFlag/PhilFlag_folding.png" alt="How to properly fold the Philippine flag">
+            <img id="fold" src="files/PhilFlag/PhilFlag_folding.png" alt="How to properly fold the Philippine flag">
         </section>
         
         <section class="w3-container">
             <hr />
             <h4 id="menu_refs">References</h4>
-           <!-- <img id="gifHori" src="../_files/PhilFlag/PhilFlag_hori.gif" alt="animated Philippine flag waving"> -->
-
-    <!-- Container for floated image + audio -->
-    <div style="float: right; width: 300px; text-align: left; margin: 0 0 10px 15px;">
-        <!-- Image -->
-
-        <img id="gifHori" src="../_files/PhilFlag/PhilFlag_hori.gif" alt="animated Philippine flag waving""
-             style="width: 300px; display: block; margin-bottom: 5px;" />
-
-        <!-- Audio player -->
-        <audio id="anthemAudio" controls style="width: 350px; transform: scale(0.8); transform-origin: top left;">
-            <source src="../_files/PhilFlag/LupangHinirang.mp3" type="audio/mpeg">
-            <source src="../_files/PhilFlag/LupangHinirang.m4a" type="audio/mp4">
-            Your browser does not support the audio element.
-        </audio>
-
-        <!-- Caption under audio -->
-        <div style="font-size: 10px; color: #333; margin-top:-10px;">
-            The Philippine National Anthem: <i>Lupang Hinirang</i>
-        </div>
-    </div>
+		    <!-- Container for floated image + audio -->
+		    <div style="float: right; width: 300px; text-align: left; margin: 0 0 10px 15px;">
+		        <!-- Image -->
+		        <img id="gifHori" src="../_files/PhilFlag/PhilFlag_hori.gif" alt="animated Philippine flag waving""
+		             style="width: 300px; display: block; margin-bottom: 5px;" />
+		        <!-- Audio player -->
+		        <audio id="anthemAudio" controls style="width: 350px; transform: scale(0.8); transform-origin: top left;">
+		            <source src="../_files/PhilFlag/LupangHinirang.mp3" type="audio/mpeg">
+		            <source src="../_files/PhilFlag/LupangHinirang.m4a" type="audio/mp4">
+		            Your browser does not support the audio element.
+		        </audio>
+		        <!-- Caption under audio -->
+		        <div style="font-size: 10px; color: #333; margin-top:-10px;">
+		            The Philippine National Anthem: <i>Lupang Hinirang</i>
+		        </div>
+		    </div>
 
             <ol>
                 <li id="ref-01" class="reference"><a class="source" href="#ref01">^</a>&nbsp;Symbolism.&nbsp;
@@ -399,21 +392,21 @@
         document.documentElement.scrollTop = 0; // For IE and Firefox
     }
 
-function w3_open() {
-    var sidebar = document.getElementById("mySidebar");
-    if (window.innerWidth <= 700) {
-        sidebar.classList.add("open");  // slide in overlay on mobile
-    }
-}
-
-function w3_close() {
-    var sidebar = document.getElementById("mySidebar");
-    if (window.innerWidth <= 700) {
-        sidebar.classList.remove("open");
-    }
-}
-
+	function w3_open() {
+	    var sidebar = document.getElementById("mySidebar");
+	    if (window.innerWidth <= 700) {
+	        sidebar.classList.add("open");  // slide in overlay on mobile
+	    }
+	}
+	
+	function w3_close() {
+	    var sidebar = document.getElementById("mySidebar");
+	    if (window.innerWidth <= 700) {
+	        sidebar.classList.remove("open");
+	    }
+	}
 </script>  
   
 </body>
+
 </html> 
