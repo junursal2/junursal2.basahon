@@ -50,13 +50,19 @@
 	  padding: 0;
 	  align-items:center;
 	}
-	#counter-text img {
-	  display: block;
-	  height: 100%; /* adjust to match text height */
-	  width: auto;
-	  align-items:flex-start;
-	  float:right;
-	}
+#counter-text {
+  display: flex;
+  align-items: center; /* vertically align date and image */
+  justify-content: flex-end;
+  gap: 4px; /* small space between text and counter */
+}
+
+#counter-text img {
+  height: 16px; /* or adjust to fit text height */
+  width: auto;
+  vertical-align: middle;
+  filter: invert(0) brightness(2);
+}
 </style>
 </head>
 <body>
@@ -358,4 +364,5 @@
 
 </body>
 </html>
+
 
