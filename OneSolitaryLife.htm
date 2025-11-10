@@ -78,13 +78,6 @@
         font-family: "Trebuchet MS", sans-serif;
         font-size: 12px;
     }
-    #postdate {
-        font-family: "Trebuchet MS", sans-serif;
-        font-size: 12px;
-        float: right;
-        position: relative;
-        top: -27px;
-    }
     p{
         font-family: Verdana, sans-serif;
         font-size: 20px;
@@ -94,20 +87,28 @@
         font-style: italic;
         font-size: 12px;
     }
+    
+/* Align the date and counter side-by-side, vertically centered */
+#postdate {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 12px;
+    position: relative;
+    top: -27px;
+}
 
-    #counter-link {
-      display: flex;
-      align-items: center;
-      float:right;
-    }
-    #counter-img {
-      height: 21px;
-      margin: 0;
-      padding: 0;
-      display: block;
-      float:right;
-      align-items:center;
-    }
+#counter-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+#counter-img {
+    height: 18px;
+    margin-left: 3px;
+}
 
 </style>
 </head>
@@ -176,4 +177,5 @@
 </body>
 
 </html>
+
 
