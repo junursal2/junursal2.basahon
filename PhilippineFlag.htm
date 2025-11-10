@@ -36,7 +36,12 @@
     #menu:hover {color: white;}
     #mySidebar {color: white; background-color:#6B8E23; font-size: 11px;}
     /*#mySidebar {color: #000; background-color:#6B8E23; font-size: 11px;}*/
-    #posted {float: right;}
+    #posted {
+	  float: right;
+	  display: block;
+	  height: 1.75em; /* adjust to match text height */
+	  width:auto;
+	}
     /*images*/
     img {border: 1px solid gray; max-width: 100%;}
     #construction {display: block; margin-left: auto; margin-right: auto; width: 50%;}
@@ -374,7 +379,13 @@
             </ol>
         </section>
     <footer  id="menu_bottom" class="w3-container w3-tiny">
-        <p>C. Ursal Jr., HPOI 2018 Nov 9 <span id="posted">2025 November 9</span></p>
+        <p>C. Ursal Jr., HPOI 2018 Nov 9 
+			<span id="posted">2025 November 9
+				<a href="https://hits.sh/junursal2.github.io/junursal2.basahon/PhilippineFlag.htm/">
+					<img alt="Hits" src="https://hits.sh/junursal2.github.io/junursal2.basahon/PhilippineFlag.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" 
+          	  	       style="filter: invert(0) brightness(2);"/>
+			</span>
+		</p>
     </footer>
     </main>
 
@@ -413,6 +424,3 @@
 </body>
 
 </html>
-
-
-
