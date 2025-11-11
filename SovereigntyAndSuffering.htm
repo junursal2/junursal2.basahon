@@ -36,15 +36,15 @@
   #charstart {float: left; font-family: Times New Roman, serif; font-size: 400%; font-weight: bold; line-height: 90%; width: 0.6em;}
   #source {font-size: 11px;text-align:left;}
   #title {color: purple; font-family: Times New Roman, serif; font-size: 36px; font-weight: bold; text-shadow: 0 0 1px #FF0000;}
-  #author {float:left;}
-  #footer-flex {
+  /* #footer-flex {
     display: flex;
-  	ustify-content: space-between; /* pushes items to edges */
+  	ustify-content: space-between; /* pushes items to edges
   	align-items: center;
-  }
+  } */
   #author {
   	color: black;
   	font-family: inherit;
+	float: left;
   }
   #counter-text {
   	color: black;
@@ -335,8 +335,7 @@
 </article>
 	
 <footer class="w3-container w3-tiny w3-padding">
-  <div id="footer-flex">
-    <span id="author">C. Ursal Jr. 2025 November 6</span>
+    <span id="author" class="w3-left">C. Ursal Jr. 2025 November 6</span>
     <span id="counter-text" class="w3-right">
       <a href="https://hits.sh/junursal2.github.io/junursal2.basahon/SovereigntyAndSuffering.htm/">
 		  <img id="counter-img" alt="Hits"
@@ -344,10 +343,10 @@
           style="filter: invert(1) brightness(2);" />
 	  </a>
     </span>
-  </div>
 </footer>
 
 </body>
 </html>
+
 
 
