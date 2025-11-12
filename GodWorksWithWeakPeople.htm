@@ -50,7 +50,6 @@
   h1 {font-family: Georgia, serif; text-align: center;}
   #linemiddle {background-color: gray; height: 1px; border: 0;}
   img {float: right; margin-right: 25px; width: 400px;}
-  #posted {float: right;}
   /* pre {font-size: 12px; color: #dcdcdc; text-shadow: none;} */
   pre {
 	  font-size: 12px; 
@@ -59,6 +58,28 @@
 	  /* white-space: pre-wrap;
 	  word-wrap: break-word; */
   }
+	  
+#postdate {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 12px;
+    position: relative;
+    top: -27px;
+}
+
+#counter-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+#counter-img {
+    height: 18px;
+    margin-left: 1px;
+}
+
   </style>
 </head>
 <body>
@@ -137,11 +158,14 @@ so that we might understand God's grace.
 </article>
 
 <footer class="w3-container w3-tiny">
-  <p>C. Ursal Jr., HPOI 2017 Apr 28 <span id="posted">2025 October 21</span></p>
+	<p id="postedby">Jun Ursal Jr., HPOI 2017 Apr 28</p>
+	<p id="postdate">2025 October 21&nbsp;&nbsp;|
+		<a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/GodWorksWithWeakPeople.htm/">
+		<img  id="counter-img" src="https://hits.sh/junursal2.github.io/junursal2.basahon/GodWorksWithWeakPeople.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent"
+		 alt="page views"></a>
+	</p>
 </footer>
 </div>
 </body>
 
 </html> 
-
-
