@@ -8,9 +8,9 @@
     <meta name="description" content="shoe sizes conversion" />
     <meta name="author" content="Jun Ursal II" />
     <meta name="keywords" content="shoe, sizes, conversion, mondopoint, US, UK, Euro" />
-    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
-    <link rel="stylesheet" href="css/w3.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="icon" type="image/png" href="images/ursoft.ico" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/w3-colors-flat.css">
     <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements in versions of Internet Explorer prior to version 9 -->
     <!--[if lt IE 9]>
@@ -47,50 +47,50 @@
     #menu {float: left; font-size: 24px; margin-top: 16px;}
     #menu:hover {color: white;}
 
- /* --- SIDEBAR --- */
-  #mySidebar {
-    background-color: #D69C2F;   /* Customize your sidebar color */
-    color: #000;
-    width: 250px;                /* Sidebar width on desktop */
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    overflow-y: auto;
-    z-index: 5;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-  }
+	 /* --- SIDEBAR --- */
+ 	#mySidebar {
+	    background-color: #D69C2F;   /* Customize your sidebar color */
+	    color: #000;
+	    width: 250px;                /* Sidebar width on desktop */
+	    display: none;
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    height: 100%;
+	    overflow-y: auto;
+	    z-index: 5;
+	    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  	}
 
-  /* --- OVERLAY for mobile --- */
-  #myOverlay {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.4);
-    z-index: 4;
-  }
+  	/* --- OVERLAY for mobile --- */
+	#myOverlay {
+	    position: fixed;
+	    display: none;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    left: 0;
+	    background-color: rgba(0,0,0,0.4);
+	    z-index: 4;
+	 }
 
-  /* --- MAIN CONTENT AREA --- */
-  #main {
-    transition: margin-left .3s;   /* Smooth push animation */
-    padding: 0px;
-  }
+	/* --- MAIN CONTENT AREA --- */
+	#main {
+	    transition: margin-left .3s;   /* Smooth push animation */
+	    padding: 0px;
+	}
 
-  /* Submenu indentation */
-  .submenu {text-indent: 16px;}
+	/* Submenu indentation */
+  	.submenu {text-indent: 16px;}
 
-  /* --- RESPONSIVE BEHAVIOR --- */
-  @media screen and (max-width: 600px) {
-    #mySidebar {
-      width: 35%;                /* Full-width overlay on mobile */
-    }
-  }
+  	/* --- RESPONSIVE BEHAVIOR --- */
+  	@media screen and (max-width: 600px) {
+    	#mySidebar {
+      	width: 35%;                /* Full-width overlay on mobile */
+    	}
+  	}
 
-   /*Top button*/
+   	/*Top button*/
     #myTopBtn {
         font-size: 18px;
         display: none;
@@ -104,48 +104,47 @@
         color: #000;
         cursor: pointer;
         padding: 1px 3px 1px 3px;
-        border-radius: 3px;}
+        border-radius: 3px;
+	}
     #myTopBtn:hover {color: white;}
  
     /*Tables*/
     caption {font-size: 12px; font-weight:bold;}
 
- table {
-  border-collapse: collapse;
-  margin: 0 auto;
-  overflow: hidden;
-  /*width: 500px;*/           /* ✅ always take full width */
-  height: auto;
-  max-width: 100%;
-  table-layout: fixed;    /* ✅ forces cells to shrink proportionally */
-  word-wrap: break-word;  /* ✅ breaks long words to fit */
-}
+	table {
+	  	border-collapse: collapse;
+		margin: 0 auto;
+		overflow: hidden;
+		height: auto;
+		max-width: 100%;
+		table-layout: fixed;    /* ✅ forces cells to shrink proportionally */
+		word-wrap: break-word;  /* ✅ breaks long words to fit */
+	}
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 4px;
-  text-align: center;
-  position: relative;
-}
-th {color: white;}
+	th, td {
+	  border: 1px solid #ddd;
+	  padding: 4px;
+	  text-align: center;
+	  position: relative;
+	}
+	th {color: white;}
 
-
-/* #tabMen Table */
-#tabMen {width:950px;}
-#tabMen th {background-color: blue;}
-#tabMen tr:hover {background-color: #8080ff;}
-#tabMen td:hover::after,
-#tabMen th:hover::after {
-  content: "";
-  position: absolute;
-  background-color: #8080ff;
-  left: 0;
-  top: -5000px;
-  height: 10000px;
-  width: 100%;
-  z-index: -1;
-}
-#tabMen th, #tabMen td {padding: 3px;}
+	/* #tabMen Table */
+	#tabMen {width:950px;}
+	#tabMen th {background-color: blue;}
+	#tabMen tr:hover {background-color: #8080ff;}
+	#tabMen td:hover::after,
+	#tabMen th:hover::after {
+	  content: "";
+	  position: absolute;
+	  background-color: #8080ff;
+	  left: 0;
+	  top: -5000px;
+	  height: 10000px;
+	  width: 100%;
+	  z-index: -1;
+	}
+	#tabMen th, #tabMen td {padding: 3px;}
 
     /*tabWomen*/
     #tabWomen {width: 950px;}
@@ -240,7 +239,7 @@ th {color: white;}
 
         <section class="w3-container">
             <p>A shoe size is an indication of the fitting size of a shoe for a person.</p>
-            <img id="shoes" src="../_images/shoes/shoes.jpg" alt="sole with shoes">
+            <img id="shoes" src="files/shoes/shoes.jpg" alt="sole with shoes">
             <p>There are a number of different shoe-size systems used worldwide. 
                 While all of them use a number to indicate the length of the shoe, they differ in exactly what they measure,
                 what unit of measurement they use, and where the size 0 (or 1) is positioned.
@@ -255,7 +254,7 @@ th {color: white;}
 
         <section class="w3-container">
             <h3 id="menu_Size">Shoe size<a id="ref01" class="ref" href="#ref-01"><sup>[1]</sup></a></h3>
-            <img id="size" src="../_images/shoes/shoe-size.jpg" alt="Shoe size & wiggle room">
+            <img id="size" src="files/shoes/shoe-size.jpg" alt="Shoe size & wiggle room">
             <p>A "comfort allowance" is added to the length of the feet before the size is calculated. 
                 In the US, this is usually 0.5 inches (EU = 1.5 centimeters), but varies from manufacturer to manufacturer.</p>
             <p><em><b>Shoe size = foot length +  wiggle room</b></em></p>
@@ -264,7 +263,7 @@ th {color: white;}
  
         <section class="w3-container">
             <h3 id="menu_Measure">How to measure your shoe size<a id="ref02" class="ref" href="#ref-02"><sup>[2]</sup></a></h3>
-            <img id="foot" src="../_images/shoes/foot-length.gif" alt="Foot length">
+            <img id="foot" src="files/shoes/foot-length.gif" alt="Foot length">
             <p>The best time to measure is the afternoon or evening when your feet have flattened out. 
                 If you measure your feet in the morning, they will be smaller, 
                 which would give you the wrong size and then you would buy shoes that were too small.</p>
@@ -278,20 +277,20 @@ th {color: white;}
             </ol>
             <p>If one of your shoes is always too tight, measure both feet 
                 and then use the length of the largest foot to calculate the correct size for your footwear.</p>     
-            <img id="measure" src="../_images/shoes/measure-feet.jpg" alt="Measure foot">
+            <img id="measure" src="files/shoes/measure-feet.jpg" alt="Measure foot">
             <p>Or, click a link below to download a <em>pdf</em> file and print the sizing chart. 
                 You can then use this as a guide to find your US/Canada size
                 which is the most commonly used size on the World Wide Web shopping sites.<a id="ref03" class="ref" href="#ref-03"><sup>[3]</sup></a></p>
             <ul>
-                <li><a href="../_images/shoes/sizechart-mens.pdf" title="Men's foot sizing chart" target="_blank">Men's foot sizing chart</a></li>
-                <li><a href="../_images/shoes/sizechart-womens.pdf" title="Women's foot sizing chart" target="_blank">Women's foot sizing chart</a></li>
-                <li><a href="../_images/shoes/sizechart-kids.pdf" title="Kids foot sizing chart" target="_blank">Kids foot sizing chart</a></li>
+                <li><a href="files/shoes/sizechart-mens.pdf" title="Men's foot sizing chart" target="_blank">Men's foot sizing chart</a></li>
+                <li><a href="files/shoes/sizechart-womens.pdf" title="Women's foot sizing chart" target="_blank">Women's foot sizing chart</a></li>
+                <li><a href="files/shoes/sizechart-kids.pdf" title="Kids foot sizing chart" target="_blank">Kids foot sizing chart</a></li>
             </ul>
         </section>
 
         <section class="w3-container">
             <h3 id="menu_Mondo">Mondopoint<a id="ref04" class="ref" href="#ref-04"><sup>[4]</sup></a></h3>
-            <img id="mondo" src="../_images/shoes/Mondopoint.png" alt="Mondopoint">
+            <img id="mondo" src="files/shoes/Mondopoint.png" alt="Mondopoint">
             <p>The Mondopoint shoe length system was introduced in 1970s 
                 by International Standards ISO 2816:1973 "Fundamental characteristics of a system of shoe sizing 
                 to be known as "Mondopoint" and ISO 3355:1975 "Shoe sizes - System of length grading (for use in the Mondopoint system)".
@@ -309,9 +308,9 @@ th {color: white;}
         <section class="w3-container">
             <h3 id="menu_Compare">Size comparison<a id="ref05" class="ref" href="#ref-05"><sup>[5]</sup></a></h3>
             <p><em>Adult shoe sizes comparison</em></p>
-            <img id="adult" src="../_images/shoes/999px-Shoesize-adult-en.png" alt="Adult shoe sizes comparison" />                
+            <img id="adult" src="files/shoes/999px-Shoesize-adult-en.png" alt="Adult shoe sizes comparison" />                
             <p><em>Children shoe sizes comparison</em></p>
-            <img id="kids" src="../_images/shoes/1006px-Shoesize-children-en.png" alt="Children shoe sizes comparison" />            
+            <img id="kids" src="files/shoes/1006px-Shoesize-children-en.png" alt="Children shoe sizes comparison" />            
             <p class="legend">Legend:</p>
                 <ul class="legend">
                     <li>EUR=Europe, UK=United Kingdom, US=United States, JP/CN=Japan/China</li>
@@ -1153,4 +1152,5 @@ function w3_close() {
 </script>  
   
 </body>
+
 </html> 
