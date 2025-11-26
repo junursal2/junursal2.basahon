@@ -25,25 +25,46 @@
     body {font-size: 11px; text-align: justify;}
     h1 {color: white; font-family: Georgia; font-style: italic; font-weight: bold;}
     h4 {color: #00FF00; margin-bottom:0.2em;}
-    header {
-        background-color: blue !important; 
-        top: 0; 
-        width: 100%;
-    }
-    #title {float:left;}
-    #home {
-	align-items: center;
-	float: right; 
-	color:yellow; 
-	font-size: 24px;
-	margin-top: 0.5em;
-    }
+	  
+header {
+    background-color: blue !important; 
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* stack rows */
+}
+
+/* ROW 1: Title + Home button */
+.header-row {
+    display: flex;
+    justify-content: space-between; /* title left, home right */
+    align-items: center;
+    width: 100%;
+}
+
+#title {
+    margin: 0;
+    font-style: italic;
+}
+
+#home {
+    font-size: 24px;
+    color: yellow;
+}
+
+/* ROW 2: Click text */
+#click {
+    margin-top: 0.3em;
+    font-style: italic;
+    color:black;
+}
+
 
     ul {color:white; margin-top:0.2em;}       
     img {
         float: right;
-        margin-left: 15px;
-        margin-bottom: 15px;
+        margin-left: 1px;
+        margin-bottom: 5px;
         max-width: 50%;
         height: auto;
     }
@@ -158,15 +179,21 @@
 <body>
   <button id="myTopBtn" title="Go to top" onclick="topFunction()">Go to top</button>  
   
-  <header class="w3-container">
-      <h1 class="w3-text-shadow" id="title">Jun<sup>2</sup> Universe&nbsp;&nbsp;<i class="fab fa-facebook-square"></i><span id="FB"></span> reels</h1>
-      <a id="home" title="Go to basahon articles main page" href="basahon.html#goFBYT">
-          <i class="fa fa-home"></i></a>
-  </header>
+<header class="w3-container">
+    <div class="header-row">
+        <h1 class="w3-text-shadow" id="title">Jun<sup>2</sup> Universe&nbsp;&nbsp;
+            <i class="fab fa-facebook-square"></i><span id="FB"></span> reels
+        </h1>
+        <a id="home" title="Go to basahon articles main page" href="basahon.html#goFBYT">
+            <i class="fa fa-home"></i></a>
+    </div>
+    <p id="click">Click a list below:</p>
+</header>
   
   <main class="columns">
      <div class="column" style="padding-left:8px;">
-	<h4>Astronomy 🔭🪐🌌</h4>
+	 <p>Click a list below:</p>
+	 <h4>Astronomy 🔭🪐🌌</h4>
         <ul>
 	   <li><a href="https://www.facebook.com/share/v/1Eu1EKem2X/" target="_blank">Auroras: A Cosmic Light Show</a></li>
            <li><a href="https://www.facebook.com/share/v/14QpFtWi66n/" target="_blank">Moons of Mars</a></li>
@@ -241,4 +268,5 @@ window.onclick = function(event) {
 
 </body>
 </html>
+
 
