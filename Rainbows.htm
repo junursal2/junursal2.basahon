@@ -8,9 +8,9 @@
     <meta name="description" content="All about rainbows" />
     <meta name="author" content="Jun Ursal II" />
     <meta name="keywords" content="rainbows" />
-    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
-    <link rel="stylesheet" href="css/w3.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="icon" type="image/png" href="images/ursoft.ico" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <![endif]-->
@@ -21,22 +21,18 @@
         a#home {color: white; float: left; font-size: 28px; margin-left:16px; margin-top: 20px;}
         a#home:hover {color: cyan !important;}
         body {font-size: 14px; text-align: justify;}
-		header {
-			padding-bottom: 16px;
+		header {padding-bottom: 16px;}
+		footer {
+		    display: flex;
+		    justify-content: space-between;   /* left + right alignment */
+		    align-items: center;              /* vertical alignment */
+		    color: white; 
+		    font-size: 10px;
+		    font-weight: normal; 
+		    text-align: left;
+		    height: 50px;
+		    padding: 10px 16px;
 		}
-footer {
-    display: flex;
-    justify-content: space-between;   /* left + right alignment */
-    align-items: center;              /* vertical alignment */
-    
-    color: white; 
-    font-size: 10px;
-    font-weight: normal; 
-    text-align: left;
-    height: 50px;
-
-    padding: 10px 16px;
-}
 
         .subhead {
             font-weight:bold;
@@ -100,8 +96,8 @@ footer {
 <body>
    
     <header class="gradRainbow">
-        <a id="home" class="w3-animate-fading" title="Go to basahon articles main page" href="basahon.html#goNature"><i class="fa fa-home"></i></a>
-        <img id="img-rainbow" src="../_images/rainbows/rainbow.png" />
+        <a id="home" class="w3-animate-fading" title="Go to basahon articles main page" href="basahon.html#goTrivia"><i class="fa fa-home"></i></a>
+        <img id="img-rainbow" src="files/rainbows/rainbow.png" />
     </header>
     <article class="w3-container">
         <p class="subhead">What is a rainbow?</p>
@@ -133,7 +129,7 @@ footer {
            this means that reflected light travels along a set path and maintains the difference of the refraction angle. 
            A rainbow is a bunch of raindrops hanging in the atmosphere that divide the sunlight into 7 colors,
            like a prism.</p>
-        <img id="img-howformed" src="../_images/rainbows/how-rainbow-formed.png" alt="How rainbows formed" />
+        <img id="img-howformed" src="files/rainbows/how-rainbow-formed.png" alt="How rainbows formed" />
 		
 		<hr />
         <p class="subhead">The Formation of Rainbows</p>
@@ -180,7 +176,7 @@ footer {
 		   Later he included orange and indigo, giving seven main colours by analogy to the number of notes in a musical scale.
 		   Newton chose to divide the visible spectrum into seven colours out of a belief derived from the beliefs of the ancient Greek sophists,
 		   who thought there was a connection between the colours, the musical notes, the known objects in the Solar System, and the days of the week.</p>
-        <img id="img-dispersion" src="../_images/rainbows/prism-dispersion.png" alt="Dispersion in prism" />
+        <img id="img-dispersion" src="files/rainbows/prism-dispersion.png" alt="Dispersion in prism" />
 		   
 		<p>The number of colours that the human eye is able to distinguish in a spectrum is in the order of 100.
 		   Accordingly, the Munsell colour system (a 20th-century system for numerically describing colours, 
@@ -190,40 +186,40 @@ footer {
 		<hr />
         <p class="subhead">Different Rainbow Types</p>
         <p class="subhead">Primary Rainbow</p>
-        <img id="img-type" src="../_images/rainbows/type-RainbowMistGrandCanyonArizona.jpg" alt="Rainbow mist Grand Canyon, Arizona" />
+        <img id="img-type" src="files/rainbows/type-RainbowMistGrandCanyonArizona.jpg" alt="Rainbow mist Grand Canyon, Arizona" />
         <p>This is the rainbow we are all most familiar with. The primary rainbow is the single multi-colored arc that usually appears after a rainstorm.
 		   Primary rainbows are formed when refracted light is reflected through a water droplet.
 		   The intensity of the rainbow's colors depends on how large the water droplets are.</p>
 		
 		<p class="subhead">Secondary Rainbow (Double rainbows)</p>
-        <img id="img-type" src="../_images/rainbows/type-DoubleRainbowThunder.jpg" alt="Double rainbow and lightning" />
+        <img id="img-type" src="files/rainbows/type-DoubleRainbowThunder.jpg" alt="Double rainbow and lightning" />
 		<p>If you have seen a primary rainbow, then chances are you have also seen a secondary rainbow. 
 		   They are also known as <em>double rainbows</em>. A secondary rainbow forms behind the primary rainbow when the light in the water droplet
 		   is reflected twice instead of once. The secondary is about twice as wide as the primary rainbow, but is only one-tenth as intense. 
 		   Its colors are also reversed.</p>
 		
 		<p class="subhead">Supernumerary Rainbows (Stacker rainbows)</p>
-        <img id="img-type" src="../_images/rainbows/type-SupernumeraryRainbows.jpg" alt="Supernumerary Rainbows" />
+        <img id="img-type" src="files/rainbows/type-SupernumeraryRainbows.jpg" alt="Supernumerary Rainbows" />
 		<p>Supernumerary rainbows are also known as <em>stacker rainbows</em>, and occur rather infrequently.
 		   They consist of several faint rainbows on the inner side of the primary - and more rarely, they appear outside of the secondary.
 		   They are formed by small but similarly sized raindrops, and by the interference of light which reflects once, 
 		   but travels along a different path inside the raindrop.</p>
 		   
 		<p class="subhead">Red Rainbows (Monochrome rainbows)</p>
-        <img id="img-type" src="../_images/rainbows/type-RedRainbow.jpg" alt="Red Rainbows" />
+        <img id="img-type" src="files/rainbows/type-RedRainbow.jpg" alt="Red Rainbows" />
 		<p>Red rainbows, also called <em>monochrome rainbows</em>, are formed after rainfall during sunrise or sunset. 
 		   The shorter wavelengths of the spectrum, such as blue and green, are scattered by dust and air molecules. 
 		   This leaves the remaining light to display the colors with the longest wavelengths, red and yellow, to finally form the red rainbow.</p>
 		   
 		<p class="subhead">Cloud Rainbows</p>
-        <img id="img-type" src="../_images/rainbows/type-CloudRainbow.jpg" alt="Cloud Rainbows" />
+        <img id="img-type" src="files/rainbows/type-CloudRainbow.jpg" alt="Cloud Rainbows" />
 		<p>Cloud rainbows form from small water droplets in clouds and damp air, rather than from raindrops. 
 		   They appear white because the water drops are very small in size (bigger water drops are more able to reflect the spectrum colours). 
 		   Cloud rainbows are much broader than normal rainbows, and are most likely to form over water. 
 		   They can also form over land, so long as the fog is thin enough for the sun's rays to shrine through.</p>
 		   
 		<p class="subhead">Twinned Rainbows</p>
-        <img id="img-type" src="../_images/rainbows/type-TwinnedRainbows.jpg" alt="Twinned Rainbows" />
+        <img id="img-type" src="files/rainbows/type-TwinnedRainbows.jpg" alt="Twinned Rainbows" />
 		<p>Twinned rainbows are not the same as the double rainbow - they're actually very rare.
 		   They're made up of two rainbow arcs that stem from a single base point, and they're caused when a combination of small 
 		   and large water droplets fall from the sky. The large drops are forced to flatten by air resistance, 
@@ -231,7 +227,7 @@ footer {
 		   The water droplets then form their own rainbow, which may come together to form twinned rainbows.</p>
 
 		<p class="subhead">Reflected and Reflection Rainbows</p>
-        <img id="img-type" src="../_images/rainbows/type-Reflected&ReflectionRainbow.jpg" alt="Reflected & Reflection Rainbows" />
+        <img id="img-type" src="files/rainbows/type-Reflected&ReflectionRainbow.jpg" alt="Reflected & Reflection Rainbows" />
 		<p>Reflected and reflection rainbows - which are not the same thing, despite their similar names - only form over water. 
 		   A reflected rainbow is the most commonly seen: it appears when light is deflected off the water droplets 
 		   and then reflected off the water before we have time to process the light with our eyes.</p>
@@ -239,14 +235,14 @@ footer {
 		   Reflection rainbows are not nearly as visible as a reflected rainbow, because of the specific conditions they require.</p>
 
 		<p class="subhead">Rainbow Wheels</p>
-        <img id="img-type" src="../_images/rainbows/type-RainbowWheels.jpg" alt="Rainbow Wheels" />
+        <img id="img-type" src="files/rainbows/type-RainbowWheels.jpg" alt="Rainbow Wheels" />
 		<p>Rainbow wheels are formed when dark clouds or dense rain showers prevent the light from reaching your eye. 
 		   The shadowed raindrops do not allow you to see the colours of the rainbow. 
 		   The result is a rainbow that can resemble a wagon wheel, with large spokes centered towards a specific point. 
 		   If the clouds are moving quickly across the sky, then the rainbow wheel can appear to rotate.</p>
 
 		<p class="subhead">Lunar Rainbows (white rainbow, moon bow)</p>
-        <img id="img-type" src="../_images/rainbows/type-LunarRainbow.jpg" alt="Lunar Rainbow" />
+        <img id="img-type" src="files/rainbows/type-LunarRainbow.jpg" alt="Lunar Rainbow" />
 		<p>A lunar rainbow is also known with many names like <em>white rainbow</em> or <em>moon bow</em>. 
 		   Lunar rainbows are rainbows that are formed at night by moonlight. However, moonlight is very weak and lunar rainbows are very rarely seen. 
 		   The best time to see them, logically, is on the night of a full moon while it's raining. 
@@ -254,14 +250,14 @@ footer {
 		   is not bright enough to activate the cone cells (colour receptors) in our eyes.</p>
 
 		<p class="subhead">Fogbow</p>
-        <img id="img-fogbow" src="../_images/rainbows/type-Fogbow.jpg" alt="Fogbow" />
+        <img id="img-fogbow" src="files/rainbows/type-Fogbow.jpg" alt="Fogbow" />
 		<p>As the name suggests a fogbow is caused due to fog, and not tiny water droplets. 
 		   This happens when the water drops are extremely tiny, that light cannot pass through them in the same manner as it would in a normal rainbow.
 		   The reflection takes place, but does not disperse light adequately in its colors. 
 		   Instead the colors overlap that gives a white colored band, which is also known as white rainbow. Fogbows will typically appear in cold areas.</p>
 
 		<hr />
-        <img id="img-Alexander" src="../_images/rainbows/type-AlexandersBand_text.jpg" alt="Alexander's dark band" />
+        <img id="img-Alexander" src="files/rainbows/type-AlexandersBand_text.jpg" alt="Alexander's dark band" />
 		<p class="subhead">Alexander's Dark Band</p>
 		<p>Alexander's Band is technically not a rainbow, but it is associated with the primary and secondary rainbows. 
 		   Named after <em>Alexander of Aphrodisias</em>, who observed it around 200 C.E. is the area of sky between the primary and secondary rainbow and it is noticeably darker than the rest of the sky. 
@@ -270,7 +266,7 @@ footer {
 
 		<div class="w3-container">
 		<hr />
-        <img id="img-ChaseRainbows" src="../_images/rainbows/chase_rainbows.jpg" alt="chasing rainbows" />
+        <img id="img-ChaseRainbows" src="files/rainbows/chase_rainbows.jpg" alt="chasing rainbows" />
 		<p class="subhead">End of the rainbow</p>
 		<p>Etymology: A reference to the myth that a pot of gold can be found at the end of a rainbow.</p>
 		<p>Noun: (<i>figuratively</i>) A magical place where one goes to find fulfillment of one's dreams.</p>
