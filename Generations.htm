@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Generations Table</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="The Generations" />
+<meta name="author" content="Jun Ursal II" />
+<meta name="keywords" content="generation" />
+  
+<link rel="icon" type="image/png" href="images/ursoft.ico" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        /*padding: 15px;*/
+        background-color: #f9f9f9;
+    }
+
+    a {text-decoration: none;}
+    a:hover {color: #ffe080;}
+
+    h4 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    header, footer {background-color: #0b2a66;}
+
+    #table-container {
+    	background-image: url("familytree.png"), url("familytree.png");
+    	background-repeat: no-repeat, no-repeat;
+    	background-position: left, right;
+    	background-size: 25%, 25%;
+        padding-top: 18px;
+    }
+
+    table {
+        border-collapse: collapse;
+        table-layout: auto; /* auto-fit columns */
+        width: auto;        /* desktop: shrink to fit content */
+        margin: 0 auto;     /* center table */
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 6px 10px;
+        text-align: center; /* default center */
+        vertical-align: middle;
+        font-size: 0.8em;
+        transition: background 0.3s;
+        white-space: nowrap; /* prevent wrapping by default */
+    }
+
+    /* Left-align Generation column and allow wrapping if too long */
+    tbody td:first-child {
+        text-align: left;
+        padding-left: 12px;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    th {
+        background: linear-gradient(to bottom, #6fa1f2, #3f72d1);
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #f0f4ff;
+    }
+    tbody tr:nth-child(odd) {
+        background-color: #ffffff;
+    }
+
+    tbody tr:hover {
+        background-color: #ffe080 !important;
+    }
+
+    .fa-home { 
+	font-size: 24px;
+    }
+
+    .note {
+        font-size: 0.75em;
+        margin-top: 8px;
+        text-align: center;
+        color: #555;
+    }
+    #notes {
+	font-size:12px;
+        text-align:justify;
+    	margin-top: 8px;
+    }
+    #source {font-size:11px;}
+    .aster {color:red;}
+
+    /* Mobile adjustments */
+    @media screen and (max-width: 480px) {
+        table {
+            width: 95%;         /* fill mobile screen */
+        }
+        th, td {
+            padding: 4px 6px;
+            font-size: 0.8em;
+            white-space: normal; /* wrap content on mobile */
+        }
+    }
+</style>
+</head>
+<body>
+
+<header class="w3-container w3-text-white">
+  <h3 class="w3-text-shadow">The Generations: Which Generation Are You?
+    <a id="home" class="w3-right" title="Go to Basahon page" href="basahon.html#goTrivia"><i class="fa fa-home"></i></a>
+  </h3>
+</header>
+
+<!-- <h4>Generations and Age Ranges</h4> -->
+
+<div id="table-container" style="width: auto; margin: 0 auto;">
+
+<table id="generations-table">
+    <thead>
+        <tr>
+            <th>Generation Name</th>
+            <th>Births Start</th>
+            <th>Births End</th>
+            <th>Youngest Age Today<span class="aster"> *</span></th>
+            <th>Oldest Age Today<span class="aster"> *</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>The Lost Generation / The Generation of 1914</td><td>1890</td><td>1915</td><td></td><td></td></tr>
+        <tr><td>The Interbellum Generation</td><td>1901</td><td>1913</td><td></td><td></td></tr>
+        <tr><td>The Greatest Generation</td><td>1910</td><td>1924</td><td></td><td></td></tr>
+        <tr><td>The Silent Generation</td><td>1925</td><td>1945</td><td></td><td></td></tr>
+        <tr><td>Baby Boomer Generation</td><td>1946</td><td>1964</td><td></td><td></td></tr>
+        <tr><td>Generation X (Baby Bust)</td><td>1965</td><td>1979</td><td></td><td></td></tr>
+        <tr><td>Xennials</td><td>1975</td><td>1985</td><td></td><td></td></tr>
+        <tr><td>Millennials / Generation Y / Gen Next</td><td>1980</td><td>1994</td><td></td><td></td></tr>
+        <tr><td>IGen / Gen Z</td><td>1995</td><td>2012</td><td></td><td></td></tr>
+        <tr><td>Gen Alpha</td><td>2013</td><td>2025</td><td></td><td></td></tr>
+    </tbody>
+</table>
+<p class="note">(<span class="aster">*</span>age if still alive today)</p>
+
+  <p id="notes">
+    <i>Notes:</i> Years are approximate and there is some overlap because there are no standard definitions for when a generation begins and ends.
+          The cut off years for each generation vary over time as the characteristics of that generation become more well understood.
+          The bottom line is that the experts do not agree on when generations begin and end.
+    <br /><br />
+    <span id="source"><i>Source:</i> 
+          <a href="https://www.careerplanner.com/Career-Articles/Generations.cfm">https://www.careerplanner.com/Career-Articles/Generations.cfm</a></span>
+  </p>
+</div>
+<br />
+
+<footer class="w3-container w3-text-white w3-tiny">
+  <p>C. Ursal Jr., 2025 Nov. 30
+    <!-- <span id="posted" class="w3-right">2025 Nov 30 &nbsp;|
+	<a href="https://hits.sh/junursal2.github.io/junursal2.basahon/Generations.htm/">
+	  <img alt="Hits" src="https://hits.sh/junursal2.github.io/junursal2.basahon/Generations.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" 
+             style="filter: invert(0) brightness(2);"/></a>
+    </span> -->
+  </p>
+</footer>
+
+<script>
+const currentYear = new Date().getFullYear();
+const rows = document.querySelectorAll("#generations-table tbody tr");
+
+rows.forEach(row => {
+    const name = row.cells[0].textContent.trim();
+    const startYear = parseInt(row.cells[1].textContent);
+    const endYear = parseInt(row.cells[2].textContent);
+
+    // Youngest age: force 1 for Gen Alpha only
+    row.cells[3].textContent = currentYear - endYear;
+    /* row.cells[3].textContent = (name === "Gen Alpha") ? 1 : currentYear - endYear; */
+
+    // Oldest age
+    row.cells[4].textContent = currentYear - startYear;
+});
+
+// Make notes width same as table
+const table = document.getElementById("generations-table");
+const notes = document.getElementById("notes");
+
+function adjustNotesWidth() {
+    const tableWidth = table.offsetWidth;
+    notes.style.width = tableWidth + "px";
+    notes.style.margin = "8px auto 0 auto"; // center aligned
+}
+
+// Initial adjustment
+adjustNotesWidth();
+
+// Adjust on window resize (mobile/desktop)
+window.addEventListener("resize", adjustNotesWidth);
+</script>
+
+</body>
+</html>
