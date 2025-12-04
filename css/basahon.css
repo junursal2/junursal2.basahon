@@ -68,7 +68,7 @@ a:hover {
 }
 .divExcel {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/excel2.png") right bottom no-repeat;
-    background-size: 75px, 100px;
+    background-size: 75px;
     background-color: #D6F5D6;
     padding-top: 0.5px;
     padding-bottom: 1px;
@@ -377,6 +377,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
