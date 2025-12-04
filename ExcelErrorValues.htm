@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+
+<html lang="en-US">
+<head>
+    <title>Microsoft Excel Error Values</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Microsoft Excel error values" />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="Microsoft Excel, error values" />
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+        .fa {font-size: 28px;}
+        #foot {font-size: 10px;}
+        h1 {font-family: Verdana;font-weight: bold; font-style: italic;}
+        li, p {font-size: 12px;}
+        ul {font-size: 11px; line-height: 300%;}
+     </style>
+</head>
+
+<body>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-small w3-padding" style="z-index:3;width:200px;"><br>
+  <div class="w3-container">
+    <a class="w3-bar-item w3-button w3-red w3-hover-white" title="Go to basahon articles main page" href="basahon.html#goExcel"><i class="fa fa-home"></i></a>
+  </div>
+  <div class="w3-bar-block">
+    <hr /> 
+    <p>Click an error value below:</p>
+    <a href="#ErrCodeNW" class="w3-bar-item w3-button w3-hover-white">#####</a> 
+    <a href="#ErrCodeDIV" class="w3-bar-item w3-button w3-hover-white">#DIV/0!</a> 
+    <a href="#ErrCodeNA" class="w3-bar-item w3-button w3-hover-white">#N/A</a> 
+    <a href="#ErrCodeNAME" class="w3-bar-item w3-button w3-hover-white">#NAME?</a> 
+    <a href="#ErrCodeNUM" class="w3-bar-item w3-button w3-hover-white">#NUM!</a>
+    <a href="#ErrCodeNULL" class="w3-bar-item w3-button w3-hover-white">#NULL!</a> 
+    <a href="#ErrCodeREF" class="w3-bar-item w3-button w3-hover-white">#REF!</a> 
+    <a href="#ErrCodeVAL" class="w3-bar-item w3-button w3-hover-white">#VALUE!</a>
+    <hr />
+    <a href="#" class="w3-bar-item w3-button w3-red">Go to top</a>
+    <p id="foot" class="w3-display-bottommiddle">C. Ursal Jr. <br />2018 April 10</p>
+  </div>
+</nav>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:240px;margin-right:40px">
+  <!-- Header -->
+  <div class="w3-container" id="header">
+    <h1>Microsoft Excel Error Values</h1>
+    <hr style="border:5px solid red">
+    <img src="../computers/excel/ExcelErrorValues.jpg" style="width: 100%;" alt="Excel error values">
+  </div>
+  <!-- ##### -->
+  <div class="w3-container" id="ErrCodeNW" style="margin-top:25px">
+    <h1 class="w3-xlarge w3-text-red"><b>#####</b></h1>
+    <hr style="border:1px solid red" class="w3-round">
+    <p>This error indicates that a column is not wide enough to display all of its content, 
+    or that a negative date or time is used in a cell.</p>
+    <p><b>Causes</b></p>
+    <ul>
+        <li>The column is not wide enough to display the content.</li>
+        <li>Dates and times are negative numbers.</li>
+    </ul>
+    <p><b>Resolution</b></p>
+    <ul>
+        <li>Increase the width of the column to fit the text.</li>
+        <li>Shrink the text size of the contents to fit the column</li>
+        <li>Apply a different number or date format.</li>
+        </ul>
+            <p style="padding-left:40px">In some cases, you can change the number 
+            or date format of a cell to make its contents fit within the existing cell width. 
+            For example, you can decrease the number of decimal places after the decimal point 
+            or switch from a Long Date to a Short Date format.</p>
+        <ul>
+        <li>If you are using the 1900 date system, dates and times in Microsoft Excel must be positive values.</li>
+        <li>When you subtract dates and times, make sure that you build the formula correctly.</li>
+        <li>If a formula that you use to calculate dates or times is correct but results in a negative value,
+            display that value in a format that is not a date or time format</li>       
+    </ul>
+  </div>
+  <!-- #DIV/0!-->
+  <div class="w3-container" id="ErrCodeDIV" style="margin-top:25px">
+    <h1 class="w3-xlarge w3-text-red"><b>#DIV/0!</b></h1>
+    <hr style="border:1px solid red" class="w3-round">
+    <p>Microsoft Excel displays the #DIV/0! error when a number is divided either by zero (0) 
+    or by a cell that contains no value.</p>
+    <p><b>Causes</b></p>
+    <ul>
+        <li>Entering a formula that performs explicit division by zero (0) - for example, <b>=5/0</b>.</li>
+        <li>Using a reference to a blank cell or to a cell that contains zero as the divisor in a formula 
+            or function that performs division.</li>
+        <li>Running a macro that uses a function or a formula that returns the #DIV/0! error.</li>
+    </ul>
+    <p><b>Resolution</b></p>
+    <ul>
+        <li>Make sure that the divisor in the function or formula is not zero (0) or blank.</li>
+        <li>Change the cell reference in the formula to another cell that does not contain a zero or a blank value.</li>
+        <li>Enter the value <b>#N/A</b> in the cell that is referenced as the divisor in the formula.</li>
+    </ul>    
+        <p style="padding-left:40px"> Entering <b>#N/A</b> will change the result of the formula to #N/A from #DIV/0! 
+        to indicate that the divisor value is not available.</p>
+    <ul>
+        <li>Prevent the error value from being displayed by using the <b>IF</b> worksheet function. 
+            You can then display 0 or any string as the result.</li>
+    </ul>
+        <p style="padding-left:40px">For example, if the formula that produces the error is <b>=A1/A2</b>, 
+        use <b>=IF(A2=0,"",A1/A2)</b> to return an empty string, or <b>=IF(A2=0,0,A1/A2)</b> to return 0.</p>
+  </div>
+  <!-- #N/A -->
+  <div class="w3-container" id="ErrCodeNA" style="margin-top:25px">
+    <h1 class="w3-xlarge w3-text-red"><b>#N/A</b></h1>
+    <hr style="border:1px solid red" class="w3-round">
+    <p>This error indicates that a value is not available to a function or formula.</p>
+    <p><b>Causes</b></p>
+    <ul>
+        <li>Data is missing, and <b>#N/A</b> or <b>NA()</b> has been entered in its place.</li>
+        <li>An inappropriate value was given for the <b><i>lookup_value </i></b>argument in the <b>HLOOKUP</b>, <b>LOOKUP</b>, <b>MATCH</b>, 
+            or <b>VLOOKUP</b> worksheet function.</li>
+        <li>The <b>VLOOKUP</b>, <b>HLOOKUP</b>, or <b>MATCH</b> worksheet function was used to locate a value in an unsorted table.</li>
+        <li>An <abbr title="array formula: A formula that performs multiple calculations on one or more sets of values, 
+            and then returns either a single result or multiple results. Array formulas are enclosed between braces { } 
+            and are entered by pressing CTRL+SHIFT+ENTER.">array formula</abbr> is using an argument that is not the same number of rows
+            or columns as the range that contains the array formula.</li>
+        <li>One or more required arguments were omitted from a built-in or custom worksheet function.</li>
+        <li>A custom worksheet function that you use is not available.</li>
+        <li>A macro that you run enters a function that returns <b>#N/A</b>.</li>
+    </ul>
+    <p><b>Resolution</b></p>
+    <ul>
+        <li>Optionally, if error checking is turned on in Excel, 
+            click the button that appears next to the cell that displays the error, 
+            click <b>Show Calculation Steps </b>if it appears, and then click the resolution that is appropriate for your data.</li>
+    </ul>
+        <p style="padding-left:40px">Tip: Review the following resolutions to help determine which option to click.</p>
+    <ul>
+        <li>If you manually entered <b>#N/A</b> in a cell, replace it with actual data if that data is now available. 
+            For example, if you entered <b>#N/A</b> in cells where data is not yet available, 
+            formulas that refer to those cells also return <b>#N/A</b> instead of attempting to calculate a value.
+            If you enter a value instead, the error should be resolved in the cells that contain the formulas.</li>
+        <li>Make sure that the <b><i>lookup_value</i></b> <abbr title="argument: The values that a function uses to perform operations or calculations. The type of argument a function uses is specific to the function. Common arguments that are used within functions include numbers, text, cell references, and names.">argument</abbr> that you entered in a <b>HLOOKUP</b>, <b>LOOKUP</b>, <b>MATCH</b>, or <b>VLOOKUP</b> worksheet function is the correct type of value. 
+            For example, verify that you entered a value or a cell reference instead of a range reference.</li>
+    </ul>
+        <p style="padding-left:40px">For information about using the correct arguments with functions, see HLOOKUP function, LOOKUP function, MATCH function, or VLOOKUP function</p>
+    <ul>
+        <li>By default, functions that look up information in tables must be sorted in ascending order. 
+            However, the <b>VLOOKUP</b> and <b>HLOOKUP</b> worksheet functions contain a <b><i>range_lookup</i></b> argument 
+            that instructs the function to find an exact match even if the table is not sorted. 
+            To find an exact match, set the <b><i>range_lookup</i></b> argument to <b>FALSE</b>.</li>
+    </ul>
+        <p style="padding-left:40px">The <b>MATCH</b> worksheet function contains a <b><i>match_type</i></b> argument that specifies the order the list must be sorted in to find a match. 
+            If the function cannot find a match, try changing the value of the <b><i>match_type</i></b> argument. 
+            To find an exact match, set the <b><i>match_type</i></b> argument to <b>0</b>.</p>
+    <ul>
+        <li>If an array formula has been entered into multiple cells, 
+            make sure that the ranges that are referenced by the formula have the same number of rows and columns,
+            or enter the array formula into fewer cells. 
+            For example, if the array formula has been entered into a range that is 15 rows high (C1:C15)
+            and the formula refers to a range that is 10 rows high (A1:A10), the range C11:C15 will display <b>#N/A</b>.
+            To correct this error, enter the formula into a smaller range (for example, C1:C10),
+            or change the range to which the formula refers to the same number of rows (for example, A1:A15).</li>
+        <li>Enter all required arguments in the function that returns the error.</li>
+        <li>Make sure that the workbook that contains the worksheet function is open and that the function is working properly.</li>
+        <li>Make sure that the arguments in the function are correct and are used in the correct position.</li>
+    </ul>
+  </div>
+  <!-- #NAME? -->
+  <div class="w3-container" id="ErrCodeNAME" style="margin-top:25px">
+    <h1 class="w3-xlarge w3-text-red"><b>#NAME?</b></h1>
+    <hr style="border:1px solid red" class="w3-round">
+    <p>This error occurs when Microsoft Excel does not recognize text in a formula.</p>
+    <p><b>Causes</b></p>
+    <ul>
+        <li>The <b>EUROCONVERT</b> function is used in a formula, but the Euro Currency Tools add-in is not loaded.</li>
+        <li>A formula refers to a <abbr title="name: A word or string of characters in Excel that represents a cell, range of cells, formula, or constant value.">name</abbr> that does not exist.</li>
+        <li>A formula refers to a name that is not spelled correctly.</li>
+        <li>The name of a function that is used in a formula is not spelled correctly.</li>
+        <li>Text may have been entered in a formula without enclosing it in double quotation marks.</li>
+        <li>A colon (:) was omitted in a range reference.</li>
+        <li>A reference to another sheet is not enclosed in single quotation marks (').</li>
+        <li>A workbook calls a user-defined function (UDF) that is not available on your computer.</li>
+    </ul>
+    <p><b>Resolution</b></p>
+    <ul>
+        <li>Optionally, if error checking is turned on in Excel, 
+            click the button that appears next to the cell that displays the error, 
+            click <b>Show Calculation Steps</b> if it appears, and then click the resolution that is appropriate for your data.</li>
+    </ul>
+        <p style="padding-left:40px">Tip: Review the following resolutions to help determine which option to click.</p>
+    <ul>
+        <li>The <b>EUROCONVERT</b> function requires that the Euro Currency Tools 
+            <abbr title="add-in: A supplemental program that adds custom commands or custom features to Microsoft Office.">
+                add-in</abbr> is installed on your computer. </li>
+        <li>Make sure that a <abbr title="name: A word or string of characters that represents a cell, range of cells, formula, or constant value. 
+                Use easy-to-understand names, such as Products, to refer to hard to understand ranges, such as Sales!C20:C30.">
+                name</abbr> that you refer to in a formula does in fact exist.</li>
+        <li>Correct the spelling of a misspelled name that you referred to in a formula.</li>
+        <li>Insert the correct function name in the formula that results in the error.</li>
+        <li>Enclose text in the formula in double quotation marks. For example, the following formula joins the text "The total amount is " with the value in cell B50:</li>
+    </ul>
+        <p style="padding-left:40px">="The total amount is B50</p>
+    <ul>    
+        <li>Make sure that all range references in the formula use a colon (:). For example, SUM(A1:C10).</li>
+        <li>If the formula refers to values or cells in other worksheets or workbooks, 
+            and the name of the other worksheet or workbook contains a nonalphabetical character or a space,
+            you must enclose its name within single quotation marks (') in the formula.</li>
+        <li>When a user-defined function (UDF) that is not available on your computer is called 
+            from a workbook that you open, you (or a developer) can implement a UDF in several ways. 
+            For more information, see Visual Basic Help and the Microsoft Office SharePoint Server 2007 Software Development Kit (SDK).</li>
+    </ul>
+  </div>
+  <!-- #NUM! -->
+  <div class="w3-container" id="ErrCodeNUM" style="margin-top:25px">
+    <h1 class="w3-xlarge w3-text-red"><b>#NUM!</b></h1>
+    <hr style="border:1px solid red" class="w3-round">
+    <p>This error indicates that a formula or function contains invalid numeric values.</p>
+    <p><b>Causes</b></p>
+    <ul>
+        <li>The wrong data type might be supplied in a function that requires a numeric argument.</li>
+        <li>The formula might use a worksheet function that <abbr title="iteration: Repeated calculation of a worksheet until a specific numeric condition is met.">iterates</abbr>, 
+            such as <b>IRR</b> or <b>RATE</b>, and that function cannot find a result.</li>
+        <li>The result of a formula might produce a number that is too large or too small to be represented in Excel.</li>
+    </ul>
+    <p><b>Resolution</b></p>
+    <ul>
+        <li>Optionally, if error checking is turned on in Excel, 
+            click the button that appears next to the cell that displays the error, 
+            click <b>Show Calculation Steps</b> if it appears, and then click the resolution that is appropriate for your data.</li>
+    </ul>
+        <p style="padding-left:40px">Tip: Review the following resolutions to help determine which option to click.</p>
+    <ul>
+        <li>Make sure that the <abbr title="argument: The values that a function uses to perform operations or calculations. 
+            The type of argument a function uses is specific to the function. 
+            Common arguments that are used within functions include numbers, text, cell references, and names.">
+            argument</abbr> that are used in the function are numbers. 
+            For example, even if the value that you want to enter is <b>$1,000</b>, enter <b>1000</b> in the formula.</li>
+        <li>Use a different starting value for the worksheet function.</li>
+        <li>Change the number of times that Excel iterates formulas.</li>
+        <li>Change the formula so that its result is between -1*10<sup>307</sup> and 1*10<sup>307</sup>.</li>
+    </ul>
+  </div>
+  <!-- #NULL! -->
+  <div class="w3-container" id="ErrCodeNULL" style="margin-top:25px">
+    <h1 class="w3-xlarge w3-text-red"><b>#NULL!</b></h1>
+    <hr style="border:1px solid red" class="w3-round">
+    <p>This error occurs when you specify an intersection of two areas (ranges) on a worksheet that do not intersect.
+       The intersection operator is a space character between references.</p>
+    <p><b>Causes</b></p>
+    <ul>
+        <li>You may have used an incorrect range operator.</li>
+        <li>The ranges that you specified in a formula do not intersect. 
+            For example, the ranges in the formula <b>=SUM(A1:B3 C1:D5)</b> do not intersect, 
+            so the formula returns a #NULL! error.</li>
+    </ul>
+    <p><b>Resolution</b></p>
+    <ul>
+        <li>Optionally, if error checking is turned on in Excel, 
+            click the button that appears next to the cell that displays the error, 
+            click <b>Show Calculation Steps</b> if it appears, and then click the resolution that is appropriate for your data.</li>
+    </ul>
+        <p style="padding-left:40px">Tip: Review the following resolutions to help determine which option to click.</p>
+    <ul>
+        <li>Make sure that you use a correct range operator by doing the following:</li>
+        <li><ul>
+            <li>To refer to a contiguous range of cells, use a colon (:) 
+                to separate the reference to the first cell in the range 
+                from the reference to the last cell in the range. 
+                For example, SUM(A1:A10) refers to the range that includes cells A1 through cell A10.</li>
+
+            <li>To refer to two areas that don't intersect, use the union operator, the comma (,). 
+                For example, if the formula sums two ranges, 
+                make sure that a comma separates the two ranges (SUM(A1:A10,C1:C10)).</li>
+            </ul>               
+        </li>
+        <li>Change the reference so that the ranges intersect. 
+            An intersection is a point in a worksheet where data in two or more ranges cross, 
+            or "intersect." An example of a formula that includes intersecting ranges is =CELL("address",(A1:A5 A3:C3)). 
+            In this example, the CELL function returns the cell address at which the two ranges intersect - A3.</li>
+    </ul>
+        <p style="padding-left:40px">When you enter or edit a <abbr title="formula: A sequence of values, cell references, names, functions, 
+            or operators in a cell that together produce a new value. A formula always begins with an equal sign (=).">formula</abbr>,
+            cell references and the borders around the corresponding cells are color-coded.</p>
+  </div>
+  <!-- #REF! -->
+  <div class="w3-container" id="ErrCodeREF" style="margin-top:25px">
+    <h1 class="w3-xlarge w3-text-red"><b>#REF!</b></h1>
+    <hr style="border:1px solid red" class="w3-round">
+    <p>This error occurs when a <abbr title="cell reference: The set of coordinates that a cell occupies on a worksheet. For example, the reference of the cell that appears at the intersection of column B and row 3 is B3.">cell reference</abbr> is not valid.</p>
+    <p><b>Causes</b></p>
+    <ul>
+        <li>Cells may have been deleted that were referred to by other formulas, 
+            or cells may have been pasted on top of other cells that were referred to by other formulas.</li>
+
+        <li>There may be an Object Linking and Embedding (OLE) link to a program that is not running.</li>
+    </ul>
+        <p style="padding-left:40px">NOTE: OLE is a technology that you can use to share information between programs.<p>
+    <ul> 
+        <li>There may be a link to a Dynamic Data Exchange (DDE) topic 
+           (a group or category of data in the server part of a client/server application), 
+           such as "system," that is not available.</li>
+    </ul>
+        <p style="padding-left:40px">NOTE: DDE is an established protocol for exchanging data between Microsoft Windows-based programs.</p>
+    <ul>        
+        <li>There may be a macro in the workbook that enters a function on the worksheet that returns a <b>#REF!</b> error.</li>
+    </ul>
+    <p><b>Resolution</b></p>
+    <ul>
+        <li>Optionally, if error checking is turned on in Excel, 
+            click the button that appears next to the cell that displays the error, 
+            click <b>Show Calculation Steps</b> if it appears, and then click the resolution that is appropriate for your data.</li>
+    </ul>
+        <p style="padding-left:40px">Tip: Review the following resolutions to help determine which option to click.</p>
+    <ul>
+        <li>Change the formulas, or restore the cells on the worksheet 
+            by clicking <b>Undo</b> on the Quick Access Toolbar immediately after you delete or paste the cells.</li>
+        <li>Start the program that is called for by an Object Linking and Embedding (OLE) link.</li>
+        <li>Make sure that you are using the correct Dynamic Data Exchange (DDE) topic.</li>
+        <li>Check the function to see if an <abbr title="argument: The values that a function uses to perform operations or calculations. The type of argument a function uses is specific to the function. Common arguments that are used within functions include numbers, text, cell references, and names.">arguement</abbr>
+            refers to a cell or range of cells that is not valid. 
+            For example, if a macro enters a function on the worksheet that refers to a cell above the function, 
+            and the cell that contains the function is in row 1, the function will return <b>#REF!</b> 
+            because there are no cells above row 1.</li>
+    </ul>
+  </div>
+  <!-- #VALUE!-->
+  <div class="w3-container" id="ErrCodeVAL" style="margin-top:25px">
+    <h1 class="w3-xlarge w3-text-red"><b>#VALUE!</b></h1>
+    <hr style="border:1px solid red" class="w3-round">
+    <p>Microsoft Excel may display the #VALUE! error if your formula includes cells that contain different data types.
+       If error checking is enabled and you position the mouse pointer over the error indicator,
+       the ScreenTip displays "A value used in the formula is of the wrong data type." 
+       You can typically fix this problem by making minor changes to your formula.</p>
+    <p><b>Causes</b></p>
+    <ul>
+        <li>One or more cells that are included in a formula contain text, 
+            and your formula performs math on those cells 
+            by using the standard arithmetic operators (+, -, *, and /).</li>
+    </ul>
+        <p style="padding-left:40px">For example, the formula <b>=A1+B1</b>, where A1 contains the string "Hello" 
+            and B1 contains the number 3, returns the #VALUE! error.</p>
+    <ul>
+        <li>A formula that uses a math function, such as <b>SUM</b>, <b>PRODUCT</b>, or <b>QUOTIENT</b>, contains an argument 
+            that is a text string instead of a number.</li>
+    </ul>
+        <p style="padding-left:40px">For example, the formula <b>PRODUCT(3,"Hello")</b> returns the #VALUE! error 
+            because the <b>PRODUCT</b> function requires numbers as arguments.</p>
+    <ul>
+        <li>Your workbook uses a data connection, and that connection is unavailable.</li>
+    </ul>
+    <p><b>Resolution</b></p>
+    <ul>
+        <li>Instead of using arithmetic operators, use a function, such as <b>SUM</b>, <b>PRODUCT</b>, or <b>QUOTIENT</b> 
+            to perform an arithmetic operation on cells that may contain text, 
+            and avoid using arithmetic operators in the function. Instead, separate the arguments by using commas.</li>
+    </ul>
+        <p style="padding-left:40px">For example, use the formula =SUM(A2,A3,A4) instead of =A2+A3+A4 or =SUM(A2+A3+A4).</p>
+    <ul>
+        <li>Ensure that none of the arguments in a math function, such as <b>SUM</b>, <b>PRODUCT</b>, or <b>QUOTIENT</b>, 
+            contain text as an argument directly in the function. 
+            If your formula uses a function, and that function refers to a cell that contains text, 
+            that cell is ignored, and no error is displayed.</li>
+        <li>If your workbook uses a data connection, take the steps that are required to restore the data connection 
+            or, if it is possible, consider importing the data.</li>
+    </ul>
+  </div>
+  <hr style="border:1px solid red" class="w3-round">
+  <!-- source -->
+  <div class="w3-container" id="source" style="margin-top:25px">
+    <p>Source: <i>Microsoft Excel 2010 Help</i></p>
+</div>
+    
+</body>
+</html>

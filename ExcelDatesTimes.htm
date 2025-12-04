@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+
+<html lang="en-US">
+<head>
+    <title>Microsoft Excel Dates &and Times</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Microsoft Excel dates and times" />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="Microsoft Excel, dates, times" />
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+	   a {font-style: italic;}
+	   a:hover {color: blue; text-decoration: none;}
+	   code {color: red; font-size: 15px;} /* font-weight: bold;} */
+       h1 {font-family: Verdana;font-weight: bold; font-style: italic;}
+       li {font-size: 14px;}
+       ol {font-size: 14px;}
+	   p {font-size: 16px;}
+	   section {margin-top: 10px;}
+       .fa-home {color: blue; float: right; font-size: 24px; margin-left:10px;}
+	   #datedif p {font-size: 12px;}
+	   #datedifclik {text-decoration: underline;}
+	   #posted {float: right; font-size: 11px;}
+	   #source {font-size: 12px;}
+     </style>
+</head>
+
+<body>
+
+<main class="w3-container">
+  <!-- Header -->
+  <header class="w3-container">
+    <h1>Microsoft Excel Dates & Times</h1>
+	<a title="Go to basahon articles main page" href="basahon.html#goExcel"><i class="fa fa-home"></i></a>
+    <hr style="border:5px solid red"">
+  </header>
+  
+  <!-- Present -->
+  <section class="w3-container">
+    <ol>
+	<p>Below are the various samples of dates and times formula in Excel.</p>
+    <p><b>Present</b></p>
+        <li>Press <code>CTRL+;</code> to have the latest date in a cell.  Date is the current system date of your computer.</li>
+        <li>Press <code>CTRL+:</code> to have the current time in a cell.  Time is the current system time of your computer.</li>
+		<li>Type <code>=TODAY()</code> in a cell to get today's date.  It will automatically change when you re-open the file.</li>
+		<li>Type <code>=NOW()</code> to put the current date and time in a cell.<br />
+		    Remember, although time changes every second, you will not see the cell updated unless the formula is somehow re-calculated.<br /> 
+			This is done by,</li>
+			<ol type="a">
+				<li>Pressing <b>F9</b></li>
+				<li>Saving/re-opening the file</li>
+				<li>Making any changes to any cell (like typing a value, changing a value)</li>
+				<li>Editing the formula cell and pressing <b>Enter</b></li>
+			</ol>
+		<li>To check if today is after or before the date in cell A1, use <code>=TODAY()>A1</code><br />
+		    This will be TRUE if A1 has a past date and FALSE if A1 has a future date.</li>
+		<li>To know how many days are there between TODAY and the date in A1, use <code>=TODAY()-A1</code><br />
+		    This will be a negative number if A1 is a future date.<br />
+			To see just the number of days (without negative sign), you can use <code>=ABS(TODAY()-A1)</code></li>
+		<li>To know how many hours are left between the time in A1 and current time, use <code>=(NOW()-A1)*24</code></li>
+		<li>To just see hours and minutes left, you can use <code>=TEXT((NOW()-A1),"[hh]:mm")</code><br />
+		    Note: This formula works only when <code>A1 < NOW()</code></li>
+		<li>To know how many weeks are left between TODAY() date and a future date in A1, use <code>=(TODAY()-A1)/7</code></li>
+		<li>To know how many months are left between TODAY() and date in A1, use <code>= DATEDIF(TODAY(),A1,"m")</code><br />
+			Related: <a id="datedifclik" onclick="document.getElementById('datedif').style.display='block'">How to use DATEDIF function.</a></li>
+		<li>To know which month is running, use <code>=MONTH(TODAY())</code></li>
+		<li>To see the month name instead of number, use <code>=TEXT(TODAY(),"MMMM")</code><br />
+		    This shows the month's name in your Excel language.</li>
+		<li>To know which year is running, use <code>=YEAR(TODAY())</code></li>
+		<li>To see the last 2 digits of the year, you can use <code>=RIGHT(YEAR(TODAY()), 2)</code></li>
+		<li>To find the day of week for TODAY, use <code>=WEEKDAY(TODAY())</code>.<br />
+		    This will give a number (1 to 7, 1 for Sunday, 7 for Saturday).</li>
+		<li>To see the weekday name instead of number, use <code>=TEXT(TODAY(),"DDDD")</code>.</li>
+		<li>To see today's date alone, use <code>=DAY(TODAY())</code></li>
+		<li>To know if the present year is a leap year or not, click this <a href="ExcelLeapYear.htm" target="_blank">link</a>.</li>
+    <p><b>Past</b></p>
+	    <li>To go back by 6 days from the date in A1, use <code>=A1-6</code></li>
+	    <li>To go back to last Friday, use <code>=A1-WEEKDAY(A1, 16)</code>.<br />
+		    This works in Excel 2010, 2013. If your time machine is old (ie you have Excel 2003 or earlier versions),<br />
+			you can use <code>=A1-CHOOSE(WEEKDAY(A1), 2,3,4,5,6,7,1)</code></li>
+	    <li>To go back by 5 weeks, use <code>=A1-5*7</code></li>
+	    <li>To go back to start of the month, use <code>=DATE(YEAR(A1), MONTH(A1),1)</code></li>
+	    <li>To go back to end of previous month, use <code>= DATE(YEAR(A1), MONTH(A1),1)-1</code> or use <code>=EOMONTH(A1,-1)</code></li>
+	    <li>To go back by 2 months, use <code>=EDATE(A1,-2)</code></li>
+	    <li>To go back by 27 working days, use <code>=WORKDAY(A1,-27)</code>. This assumes, Monday to Friday as working days.</li>
+	    <li>To go back by 27 working days, assuming you follow Monday to Friday work week and a set of extra holidays,<br />
+		    use <code>=WORKDAY(A1, -27, LIST_OF_HOLIDAYS)</code></li>
+	    <li>To go back by 7 quarters, use <code>=EDATE(A1,-7*3)</code></li>
+	    <li>To go back to the start of the year, <code>=DATE(YEAR(A1), 1,1)</code></li>
+    	<li>To go back to same date last year, <code>=DATE(YEAR(A1)-1, MONTH(A1), DAY(A1))</code></li>
+    	<li>To go back a decade, <code>=DATE(YEAR(A1)-10, MONTH(A1), DAY(A1))</code></li>
+    <p><b>Future</b></p>
+	    <li>To go to the 17th working day from date A1, assuming you use Sunday to Thursday workweek, use <code>=WORKDAY.INTL(A1,17,7)</code>.<br />
+		    This formula works in Excel 2010 or above.</li>
+	    <li>To go to next hour, use <code>=A1+1/24</code></li>
+	    <li>To go to next day morning 9AM, use <code>=INT(A1+1)+9/24</code></li>
+	    <li>To go to 18th of next month, use <code>=DATE(YEAR(A1), MONTH(A1)+1, 18)</code></li>
+	    <li>To go to end of the current quarter for date in A1, use <code>=DATE(YEAR(A1), CHOOSE(MONTH(A1), 4,4,4,7,7,7,10,10,10,13,13,13),1)-1</code></li>
+	    <li>To go to a future date that is 4 years, 6 months, 7 days away from A1, use <code>=DATE(YEAR(A1)+4, MONTH(A1)+6, DAY(A1)+7)</code></li>
+    <p><b>Duration</b></p>
+		<li>To know how many days are between 2 dates (in A1 & A2), use <code>=A1-A2</code></li>
+		<li>To know how many working days are between 2 dates, use <code>=NETWORKDAYS(A1, A2)</code><br />
+		    (remember: A1 should be less than A2).</li>
+    <p><b>Fixes for common date/time hiccups</b></p>
+		<li>If you see <span>######</span> instead of a date in a cell, try making the column wider.
+		    If you still see <span>######<span>, that means the date value is not understandable by Excel (negative numbers, dates prior to 1st of January 1900 etc.)</li>
+		<li>Often when pasting date values in to Excel, you notice that they are not treated as dates.<br />
+		    <a href="ExcelTextToDates.htm" target="_blank">Use these techniques to fix.</a></li>
+		<li>If you pass in-correct values or use wrong parameters, your date formulas show an error like <span>#NUM</span> or <span>#VALUE</span>.<br />
+		    <a href="ExcelErrorValues.htm" target="_blank">Read this to understand how to fix such errors.</a></li>
+	</ol>
+  </section>
+    
+  <!-- Footer -->
+  <footer class="w3-container">
+    <hr style="border:1px solid red">
+    <p id="source">Source: <i><a href="https://chandoo.org/wp/2013/10/17/excel-date-time-tips/" target="_blank">
+	https://chandoo.org/wp/2013/10/17/excel-date-time-tips/</a></i><span id="posted">posted: 2018 May 5 by C. Ursal</span></p>
+  </footer>
+  
+  <div id="datedif" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-orange"> 
+        <span onclick="document.getElementById('datedif').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h4>Datedif</h4>
+      </header>
+      <div class="w3-container w3-small">
+        <p>The DATEDIF function computes the difference between two dates in a variety of different intervals, such number of years, months, or days.</p>
+		<p>This function is basically undocumented and available in all versions of Excel since at least version 5/95, but is documented in the help file only for Excel 2000.</p>
+		<p><b>Use:</b></p>
+		<code>=DATEDIF(Start_Date, End_Date, Interval_type)</code>
+		<p><b>Where:</b></p>
+		<p>&nbsp;&nbsp;&nbsp;Start Date must be less than the End Date.<br />
+		   &nbsp;&nbsp;&nbsp;Interval_type is the interval type to return.<br />
+		   &nbsp;&nbsp;&nbsp;Interval_type value must be one of the following:</p>
+	  	   <img class="w3-image" src="../_images/datedif.png" alt="Datedif">
+		<p>Examples:</p>
+	  	   <img class="w3-image" src="../_images/datedifsamples.png" alt="Datedif samples"><br />
+		<p><em>! Users should be cautious with the use of this undocumented function as Microsoft may withdraw them from future versions of Excel.</em></p>
+      </div>
+    </div>
+  </div>
+
+</main>
+    
+</body>
+</html>
