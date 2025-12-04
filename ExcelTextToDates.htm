@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+
+<html lang="en-US">
+<head>
+    <title>How to Convert Text to Dates [Data Cleanup]</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Sometimes when we import data from another source in to excel, the dates are not imported properly. This can be due to any number of reasons." />
+    <meta name="author" content="" />
+    <meta name="keywords" content="Microsoft Excel, howtos, learn excel, texts to dates" />
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements 
+    in versions of Internet Explorer prior to version 9 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+       * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+       header, section, footer, aside, nav, main, article, figure {display:block;}
+	   a:hover {color: blue; text-decoration: none;}
+	   code {color: red; font-size: 13px;}
+       li {font-size: 12px;}
+       ol {font-size: 12px;}
+	   p {font-size: 12px;}
+       .fa-home {float: right; font-size: 24px; margin-left:10px;}
+	   #posted {float: right; font-size: 11px;}
+	   #source {font-size: 11px;}
+     </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="w3-container">
+    <h2>How to Convert Text to Dates [Data Cleanup]</h2>
+	<a title="Go to basahon main page" href="basahon.html#goExcel"><i class="fa fa-home"></i></a>
+    <hr style="border:3px solid red"">
+  </header>
+  <main class="w3-container w3-cell-row">
+  <!-- Section -->
+  <section class="w3-container w3-cell w3-mobile">
+	<img src="../_images/TextToDates/excel-text-to-date-methods.png" alt="text to dates tables">
+	<p>Sometimes when we import data from another source in to excel, the dates are not imported properly. 
+	   This can be due to any number of reasons, including:</>
+	<ul>
+      <li>The date format is different from one that is understood by Excel</li>
+      <li>The data has some extra spaces, other characters before and after the date values.</li>
+      <li>The dates are formatted for another country (or date system) and hence your version of Excel wont recognize them.</li>
+      <li>The separator between date, month and year is not a known separator (e.g. 12=DEC=2009 instead of 12-Dec-2009), etc.</li>
+	</ul>
+	<p>Below are some techniques you can use to quickly convert text to dates.</p>
+	<h5>Technique 1: Use Text to Columns Utility</h5>
+	<ol>
+	  <li>First copy the source data and paste it in a text file (open Notepad and paste there).</li>
+	  <li>Now copy the values from text file and paste them in Excel.</li>
+	  <li>At this point, Excel will prompt you for using "Text to columns" utility (or Text Import Wizard as it is called in Excel 2007)</li>
+	      <br />
+	  	  <img src="../_images/TextToDates/use-text-import-wizard.png" alt="text import wizard">
+		  <p></p>
+	  <li>Go to the Text Import Wizard (or Text to Columns dialog).</li>
+	  <li>Leave defaults or make changes in step 1 & 2.</li>
+	  <li>In step 3, select "Date" and specify the format of the date - like YMD, MDY, DMY, YDM, MYD or DYM. 
+	      It doesn't matter what is the format of source date, month or year is. Excel can smartly understand them.</li>
+		  <br />
+	  	  <img src="../_images/TextToDates/text-to-date-using-text-import-wizard-excel.png" alt="sample using text import wizard">
+		  <p></p>
+	  <li>Click "Finish".</li>
+	</ol>
+	<p>That is all. Your text dates are now converted to excel understandable dates.</p>
+    <h5>Technique 2: Using Formulas to Convert Text to Dates</h5>
+	<ol>
+		<li>Paste the data in a column (say "A")</li>
+		<li>Now depending on the format of source data, write one of the below formulas to convert text to dates.</li>
+	</ol>
+  </section>
+  <section class="w3-container w3-cell w3-mobile">
+	<p><b>Using DATEVALUE formula</b></p>
+  	  <p>DATEVALUE formula tells excel to fetch the date from a given input. 
+  	     It is a smart formula capable of converting dates stored as text to excel understandable date format. 
+  	     To convert a text in cell A1 to date, you just write =DATEVALUE(A1)</p>
+  	  <p>However, DATEVALUE formula has some limitations. It cannot process all types of dates. 
+  	     For e.g. I have shown a few sample dates along with corresponding DATEVALUE output.</p>
+  	     <img src="../_images/TextToDates/text-to-date-excel-example.png" alt="sample on text to date">
+	<p><b>Readjusting Date Text so that it works with DATEVALUE formula</b></p>
+	   <p>Whenever possible, your next best option is to re-adjust the source data text 
+	      so that it can be understood by DATEVALUE formula. Here is an example.</p>
+	      <img src="../_images/TextToDates/text-to-date-excel-formulas.png" alt="text to date formula">
+	   <p>We can use the text formulas like LEFT, RIGHT and MID to extract portions of the date text and then regroup them using 
+	      & operator to create meaningful date text format that would be understood by DATEVALUE formula.</p>
+	<h5>Technique 3: Using DATE formula to Convert Text to Dates</h5>
+	   <p>If your data has separate columns for date, month and year, you can use DATE formula to convert the data to dates like this:</p>
+	   <code>=DATE(year,month,day)</code>
+	   <p>For eg. =DATE(2009,12,31) will give the date 31st December, 2009.</p>
+	<h5>Techinque 4: Using TEXT formula</h5>
+	   <p>If you want to convert excel dates to text values (for your report or some other purpose), you can use the TEXT formula like this:</p>
+	   <code>=TEXT(A1,"DD-MMM-YYYY")</code>
+	   <p>will convert date in Cell A1 to DD-MMM-YYYY format. You can pass any other date / time formats to TEXT formula as well.</p>
+  </section>
+  </main>
+  <!-- Footer -->
+  <footer class="w3-container">
+    <hr style="border:1px solid red">
+    <p id="source">Source: <i><a href="https://chandoo.org/wp/2010/03/23/text-to-date-convertion/" target="_blank">
+	https://chandoo.org/wp/2010/03/23/text-to-date-conversion/</a></i><span id="posted">posted: 2018 May 9 by C. Ursal</span></p>
+	<p></p>
+  </footer>
+
+</body>
+</html>

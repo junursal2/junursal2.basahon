@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+
+<html lang="en-US">
+<head>
+    <title>Different ways to tell if a year is leap year, using Excel formulas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Different ways to tell if a year is leap year, using Excel Formulas." />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="Microsoft Excel, leap year, dates" />
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements 
+    in versions of Internet Explorer prior to version 9 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+       * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+       header, section, footer, aside, nav, main, article, figure {display:block;}
+	   a:hover {color: blue; text-decoration: none;}
+	   code {color: red; font-size: 13px;}
+       li {font-size: 12px;}
+       ol {font-size: 12px;}
+	   p {font-size: 12px;}
+	   table {width: 100%; font-size: 12px; border-collapse: collapse;}
+	   table, th, tr, td {border: 1px solid black;}
+	   th, tr, td {padding: 5px;}
+	   td:first-child {text-align: center;}
+       .fa-home {float: right; font-size: 24px; margin-left:10px;}
+	   #imgLeapYr {float: right; margin: 5px 0px 5px 15px;}
+	   #posted {float: right; font-size: 11px;}
+	   #source {font-size: 11px;}
+	   #tablenote {font-size: 10px;}
+     </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="w3-container">
+    <h2>Different ways to tell if a year is leap year, using Excel formulas</h2>
+	<a title="Go to basahon main page" href="basahon.html#goExcel"><i class="fa fa-home"></i></a>
+    <hr style="border:3px solid red"">
+  </header>
+  <main class="w3-container w3-cell-row">
+  <!-- Section -->
+  <section class="w3-container w3-cell w3-mobile">
+	<p>Before starting, please setup the worksheet with the following:</p>
+    <table class="w3-hoverable">
+      <tr class="w3-green">
+        <th>Cell address</th>
+        <th>Formula</th>
+        <th>Value</th>
+        <th>Name<sup>a</sup></th>
+        <th>Purpose</th>
+      </tr>
+      <tr>
+        <td>B3</td>
+        <td></td>
+        <td>2012</td>
+        <td>year</td>
+        <td>Year number (user input)</td>
+      </tr>
+      <tr>
+        <td>B4</td>
+        <td>=DATE(year,1,1)</td>
+        <td>1/1/2012</td>
+        <td>Jan1st</td>
+        <td>Date of Jan 1st</td>
+      </tr>
+      <tr>
+        <td>B5</td>
+        <td>=DATE(year,2,1)</td>
+        <td>2/1/2012</td>
+        <td>Feb1st</td>
+        <td>Date of Feb 1st</td>
+      </tr>
+      <tr>
+        <td>B6</td>
+        <td>=DATE(year,3,1)</td>
+        <td>3/1/2012</td>
+        <td>Mar1st</td>
+        <td>Date of Mar 1st</td>
+      </tr>
+      <tr>
+        <td>B7</td>
+        <td>=DATE(year,4,1)</td>
+        <td>4/1/2012</td>
+        <td>Apr1st</td>
+        <td>Date of Apr 1st</td>
+      </tr>
+    </table>
+	<span id="tablenote">a = Name of the range.</span>
+	<p>Then, in any other cells, input the codes in <code>red</code> font as indicated in the list below:<br />
+	   Results will be TRUE or FALSE depending on the year inputted.  In this case it will always be TRUE for year 2012.</p>	
+	<p>Different ways (formula) to check if a year is leap year:</p>
+    <ol>
+        <li>The year has 366 days<br />
+		    <code>=DATE(year+1,1,1)-Jan1st=366</code><br />
+			<code>=DATE(year+1,1,1)-DATE(year,1,1)=366</code></li><br />
+        <li>Feb. 29th is not Mar. 1st<br />
+		    <code>=DATE(year,2,29)<>Mar1st</code><br />
+			<code>=DATE(year,2,29)<>DATE(year,3,1)</code></li><br />
+        <li>February has 29 days<br />
+		    <code>=DAY(EOMONTH(Feb1st,0))=29</code><br />
+			<code>=DAY(EOMONTH(DATE(year,2,1),0))=29</code></li><br />
+        <li>February 1st and March 1st are not on same day of week<br />
+		    In non leap years, Feb has 28 days (a multiple of 7), so both Feb and March start on same day of week.<br />
+		    <code>=WEEKDAY(Feb1st)<>WEEKDAY(Mar1st)</code><br />
+			<code>=WEEKDAY(DATE(year,2,1))<>WEEKDAY(DATE(year,3,1))</code></li><br />
+        <li>Adding 365 to January 1st does not change year<br />
+		    <code>=YEAR(Jan1st)=YEAR(Jan1st+365)</code><br />
+			<code>=YEAR(DATE(year,1,1))=YEAR(DATE(year,1,1)+365)</code></li><br />
+        <li>30th Day of February is March 1st<br />
+		    <code>=DATE(year,2,30)=Mar1st</code><br />
+			<code>=DATE(year,2,30)=DATE(year,3,1)</code></li><br />
+        <li>Two days between February 28th and March 1st<br />
+			<code>=DATE(year,2,28)+2=Mar1st</code></li><br />
+	</ol>
+  </section>
+  <section class="w3-container w3-cell w3-mobile">
+	<img id="imgLeapYr" src="../_images/leapyear.jpg" alt="frog leap year">
+    <ol start="8">
+        <li>"2/29/YYYY" is a number or a day<br />
+		    <code>=ISNUMBER(DATEVALUE("2/29/"&year))</code><br />
+		    <code>=ISNUMBER(1*("2/29/"&year))</code><br />
+		    <code>=ISNUMBER(1*("29-Feb-"&year))</code><br />
+		    <code>=NOT(ISERR(1*("29-Feb-"&year)))</code><br />
+			<code>=NOT(ISERROR(DATEVALUE("2/29/"&year)))</code><br />
+		    <code>=AND(ISNUMBER(1*(year&"-02-29")),(year>1900))</code></li><br />
+        <li>0th Day of March is Feb 29th<br />
+		    In real world there is no zeroth day for any month. But in Excel, since all dates are numbers,<br />
+			0th day refers to last day of previous month.<br />
+			<code>=DAY(DATE(year,3,0))=29</code></li><br />
+        <li>April 1st and January 1st are on same day of week<br />
+			In leap years, there are 91 days between January 1st and April 1st.<br /> 
+			And since 91 is a multiple of 7, both April 1st and January 1st start on same day of week<br />
+		    <code>=WEEKDAY(Jan1st)=WEEKDAY(Apr1st)</code><br />
+			<code>=WEEKDAY(DATE(year,1,1))=WEEKDAY(DATE(year,4,1))</code></li><br />
+        <li>Next year's February 1st and this year's February 2nd are NOT  on same day of week<br />
+		    In non-leap years, there are 364 days between February 2nd and next year's February 1st.<br />
+			Since 364 is a multiple of 7, both of these days are on same day of week.<br /> 
+			Which is not the case in leap years (as the difference becomes 365).<br />
+		    <code>=WEEKDAY(Feb1st+1)<>WEEKDAY(EDATE(Feb1st,12))</code><br />
+			<code>=WEEKDAY(DATE(year,2,1)+1)<>WEEKDAY(EDATE(DATE(year,2,1),12))</code></li><br />
+        <li>February starts and ends on same day of week<br />
+		    29 days means both 1st and 29 are on same weekday<br />
+		    <code>=WEEKDAY(Feb1st)=WEEKDAY(EOMONTH(Feb1st,0))</code><br />
+			<code>=WEEKDAY(DATE(year,2,1))=WEEKDAY(EOMONTH(DATE(year,2,1),0))</code></li><br />
+        <li>The year is divisible by 400, or if it is divisible by 4 not by 100.<br />
+			<code>=((MOD(year,4)=0)*((MOD(year,100)<>0)+(MOD(year,400)=0))=1)</code></li><br />
+        <li>if the 60th day of the year is on February<br />
+		    <code>=MONTH(DATE(year,1,60)=2</code><br />
+			<code>=IF(MONTH(DATE(year,1,1)+59)=2,TRUE,FALSE)</code></li><br />
+        <li>Days between March 1st and February 1st are not divisible by 7<br />
+			<code>=MOD(Mar1st-Feb1st,7)=1</code></li>
+	</ol>
+  </section>
+  </main>
+  <!-- Footer -->
+  <footer class="w3-container">
+    <hr style="border:1px solid red">
+    <p id="source">Source: <i><a href="http://chandoo.org/wp/2012/02/29/check-leap-year-using-excel/" target="_blank">
+	http://chandoo.org/wp/2012/02/29/check-leap-year-using-excel/</a></i><span id="posted">posted: 2018 May 5 by C. Ursal</span></p>
+	<p></p>
+  </footer>
+
+</body>
+</html>
