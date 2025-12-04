@@ -26,8 +26,23 @@
        .fa-home {color: blue; float: right; font-size: 24px; margin-left:10px;}
 	   #datedif p {font-size: 12px;}
 	   #datedifclik {text-decoration: underline;}
-	   #posted {float: right; font-size: 11px;}
+	   /*#posted {float: right; font-size: 11px;}*/
 	   #source {font-size: 12px;}
+#posted {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 10px;
+}
+#counter-link {
+    display: inline-flex;
+    margin-top: 5px;
+}
+#counter-img {
+    height: 18px;
+    margin-left: 1px;
+}
      </style>
 </head>
 
@@ -121,7 +136,14 @@
   <footer class="w3-container">
     <hr style="border:1px solid red">
     <p id="source">Source: <i><a href="https://chandoo.org/wp/2013/10/17/excel-date-time-tips/" target="_blank">
-	https://chandoo.org/wp/2013/10/17/excel-date-time-tips/</a></i><span id="posted">posted: 2018 May 5 by C. Ursal</span></p>
+		https://chandoo.org/wp/2013/10/17/excel-date-time-tips/</a></i>
+		<span id="created">C. Ursal 2018 May 5 by C. Ursal</span>
+		<span id="posted">posted: 2025 Dec 4 |
+			<a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/ExcelDatesTimes.htm/">
+			<img id="counter-img" alt="Hits" src="https://hits.sh/junursal2.github.io/junursal2.basahon/ExcelDatesTimes.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" 
+              style="filter: invert(0) brightness(2);"/></a>
+		</span>
+	</p>
   </footer>
   
   <div id="datedif" class="w3-modal">
@@ -152,4 +174,5 @@
     
 </body>
 </html>
+
 
