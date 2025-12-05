@@ -196,7 +196,7 @@ li {
 li > ul,
 li > ol {
     margin-left: 0;
-    padding-left: 20px; /* same indent for both */
+    padding-left: 10px; /* same indent for both */
 }
 ul {
   padding-left: 20px;
@@ -382,3 +382,4 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
