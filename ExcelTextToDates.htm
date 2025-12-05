@@ -8,9 +8,9 @@
     <meta name="description" content="Sometimes when we import data from another source in to excel, the dates are not imported properly. This can be due to any number of reasons." />
     <meta name="author" content="" />
     <meta name="keywords" content="Microsoft Excel, howtos, learn excel, texts to dates" />
-    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
-    <link rel="stylesheet" href="css/w3.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="images/ursoft.ico" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements 
     in versions of Internet Explorer prior to version 9 -->
     <!--[if lt IE 9]>
@@ -40,7 +40,7 @@
   <main class="w3-container w3-cell-row">
   <!-- Section -->
   <section class="w3-container w3-cell w3-mobile">
-	<img src="../_images/TextToDates/excel-text-to-date-methods.png" alt="text to dates tables">
+	<img src="files/Excel/TextToDates/excel-text-to-date-methods.png" alt="text to dates tables">
 	<p>Sometimes when we import data from another source in to excel, the dates are not imported properly. 
 	   This can be due to any number of reasons, including:</>
 	<ul>
@@ -56,14 +56,14 @@
 	  <li>Now copy the values from text file and paste them in Excel.</li>
 	  <li>At this point, Excel will prompt you for using "Text to columns" utility (or Text Import Wizard as it is called in Excel 2007)</li>
 	      <br />
-	  	  <img src="../_images/TextToDates/use-text-import-wizard.png" alt="text import wizard">
+	  	  <img src="files/Excel/TextToDates/use-text-import-wizard.png" alt="text import wizard">
 		  <p></p>
 	  <li>Go to the Text Import Wizard (or Text to Columns dialog).</li>
 	  <li>Leave defaults or make changes in step 1 & 2.</li>
 	  <li>In step 3, select "Date" and specify the format of the date - like YMD, MDY, DMY, YDM, MYD or DYM. 
 	      It doesn't matter what is the format of source date, month or year is. Excel can smartly understand them.</li>
 		  <br />
-	  	  <img src="../_images/TextToDates/text-to-date-using-text-import-wizard-excel.png" alt="sample using text import wizard">
+	  	  <img src="files/Excel/TextToDates/text-to-date-using-text-import-wizard-excel.png" alt="sample using text import wizard">
 		  <p></p>
 	  <li>Click "Finish".</li>
 	</ol>
@@ -81,11 +81,11 @@
   	     To convert a text in cell A1 to date, you just write =DATEVALUE(A1)</p>
   	  <p>However, DATEVALUE formula has some limitations. It cannot process all types of dates. 
   	     For e.g. I have shown a few sample dates along with corresponding DATEVALUE output.</p>
-  	     <img src="../_images/TextToDates/text-to-date-excel-example.png" alt="sample on text to date">
+  	     <img src="files/Excel/TextToDates/text-to-date-excel-example.png" alt="sample on text to date">
 	<p><b>Readjusting Date Text so that it works with DATEVALUE formula</b></p>
 	   <p>Whenever possible, your next best option is to re-adjust the source data text 
 	      so that it can be understood by DATEVALUE formula. Here is an example.</p>
-	      <img src="../_images/TextToDates/text-to-date-excel-formulas.png" alt="text to date formula">
+	      <img src="files/Excel/TextToDates/text-to-date-excel-formulas.png" alt="text to date formula">
 	   <p>We can use the text formulas like LEFT, RIGHT and MID to extract portions of the date text and then regroup them using 
 	      & operator to create meaningful date text format that would be understood by DATEVALUE formula.</p>
 	<h5>Technique 3: Using DATE formula to Convert Text to Dates</h5>
@@ -108,3 +108,4 @@
 
 </body>
 </html>
+
