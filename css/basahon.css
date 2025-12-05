@@ -193,10 +193,9 @@ p {
 li {
     font:12px Verdana, sans-serif;
 }
-li > ul,
-li > ol {
-    margin-left: 0;
-    padding-left: 10px; /* same indent for both */
+ol {
+    margin-left:0;
+    padding-left:20px;
 }
 ul {
   padding-left: 20px;
@@ -382,4 +381,5 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
