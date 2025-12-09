@@ -34,60 +34,45 @@
         }
         #author {font-style: italic;}
 		
-/*#posted {
-    display: flex;
-    align-items: center;
-}
-#counter-link {
-    display: inline-flex;
-    margin-top: 5px;
-}
-#counter-img {
-    height: 18px;
-    margin-left: 1px;
-}*/
-
-.footer {
-    font-size: 0.875rem; /* matches w3-small */
-}
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    flex-wrap: wrap; /* allows items to wrap on small screens */
-    gap: 5px; /* space between rows when wrapped */
-}
-.footer-left, .footer-right {
-    display: flex;
-    align-items: center;
-}
-/* spacing between text and counter */
-.footer-right {
-    display: flex;
-    align-items: center; /* vertically aligns text and image */
-    gap: 5px;
-    font-size: 0.875rem; /* matches footer text */
-}
-#counter-img {
-    height: 1em; /* match the font size */
-    width: auto; /* maintain aspect ratio */
-    vertical-align: middle; /* extra alignment safety */
-    filter: invert(1) brightness(2);
-}
-/* Responsive breakpoint for small screens */
-@media (max-width: 500px) {
-    .footer-content {
-        flex-direction: column; /* stack left and right vertically */
-        align-items: flex-start; /* align text to left */
-    }
-
-    .footer-right {
-        margin-top: 5px; /* spacing between rows */
-    }
-}
-
+		.footer {
+		    font-size: 0.875rem; /* matches w3-small */
+		}
+		.footer-content {
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    width: 100%;
+		    box-sizing: border-box;
+		    flex-wrap: wrap; /* allows items to wrap on small screens */
+		    gap: 5px; /* space between rows when wrapped */
+		}
+		.footer-left, .footer-right {
+		    display: flex;
+		    align-items: center;
+		}
+		/* spacing between text and counter */
+		.footer-right {
+		    display: flex;
+		    align-items: center; /* vertically aligns text and image */
+		    gap: 5px;
+		    font-size: 0.875rem; /* matches footer text */
+		}
+		#counter-img {
+		    height: 2em; /* match the font size */
+		    width: auto; /* maintain aspect ratio */
+		    vertical-align: middle; /* extra alignment safety */
+		    filter: invert(1) brightness(2);
+		}
+		/* Responsive breakpoint for small screens */
+		@media (max-width: 500px) {
+		    .footer-content {
+		        flex-direction: column; /* stack left and right vertically */
+		        align-items: flex-start; /* align text to left */
+		    }
+		    .footer-right {
+		        margin-top: 5px; /* spacing between rows */
+		    }
+		}
 	</style>
 </head>
 
@@ -208,4 +193,5 @@
 </footer>
 </body>
 </html>
+
 
