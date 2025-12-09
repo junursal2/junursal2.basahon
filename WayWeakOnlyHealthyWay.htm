@@ -34,45 +34,53 @@
         }
         #author {font-style: italic;}
 		
-		.footer {
-		    font-size: 10px;
-		}
-		.footer-content {
-		    display: flex;
-		    justify-content: space-between;
-		    align-items: center;
-		    width: 100%;
-		    box-sizing: border-box;
-		    flex-wrap: wrap; /* allows items to wrap on small screens */
-		    gap: 5px; /* space between rows when wrapped */
-		}
-		.footer-left, .footer-right {
-		    display: flex;
-		    align-items: center;
-		}
-		/* spacing between text and counter */
-		.footer-right {
-		    display: flex;
-		    align-items: center; /* vertically aligns text and image */
-		    gap: 5px;
-		    font-size: 10px; /* matches footer text */
-		}
-		#counter-img {
-		    height: 10px; /* match the font size */
-		    width: auto; /* maintain aspect ratio */
-		    vertical-align: middle; /* extra alignment safety */
-		    filter: invert(1) brightness(2);
-		}
-		/* Responsive breakpoint for small screens */
-		@media (max-width: 500px) {
-		    .footer-content {
-		        flex-direction: column; /* stack left and right vertically */
-		        align-items: flex-start; /* align text to left */
-		    }
-		    .footer-right {
-		        margin-top: 5px; /* spacing between rows */
-		    }
-		}
+/* Base footer */
+.footer {
+    font-size: 0.875rem; /* ~14px, you can adjust this */
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+}
+
+/* Flex container for left and right */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* allows wrapping on small screens */
+    gap: 0.5em;      /* space between rows when wrapped */
+}
+
+/* Left and right sections */
+.footer-left,
+.footer-right {
+    display: flex;
+    align-items: center;
+    line-height: 1em; /* ensures image aligns perfectly */
+}
+
+/* Space between right text and counter image */
+.footer-right {
+    gap: 0.3em;
+}
+
+/* Counter image scales with text */
+#counter-img {
+    height: 1em;       /* same height as text */
+    width: auto;       /* maintain aspect ratio */
+    vertical-align: middle;
+    filter: invert(1) brightness(2);
+}
+
+/* Responsive: stack footer items on small screens */
+@media (max-width: 500px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-right {
+        margin-top: 0.3em; /* spacing between rows */
+    }
+}
 	</style>
 </head>
 
@@ -177,7 +185,7 @@
 		</p>
     </footer>
 -->
-<footer class="footer w3-container w3-medium w3-theme">
+<footer class="footer w3-container w3-theme">
     <div class="footer-content">
         <div class="footer-left">
             Jun Ursal II, 2015 November 27
@@ -185,12 +193,14 @@
         <div class="footer-right">
             2025 November 11 |
             <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/WayWeakOnlyHealthyWay.htm/">
-                <img id="counter-img" alt="Hits" 
-                    src="https://hits.sh/junursal2.github.io/junursal2.basahon/WayWeakOnlyHealthyWay.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" />
+                <img id="counter-img" alt="Hits"
+                     src="https://hits.sh/junursal2.github.io/junursal2.basahon/WayWeakOnlyHealthyWay.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" />
             </a>
         </div>
     </div>
 </footer>
+
 </body>
 </html>
+
 
