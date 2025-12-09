@@ -57,9 +57,10 @@ a:hover {
     padding-bottom: 1px;
 }
 .divDisasters {
-    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disasters9.png") right center no-repeat, url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
-    /*background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;*/
-    background-size: 100px;
+    background: 
+        url("https://junursal2.github.io/junursal2.basahon/images/basahon/disasters9.png") right center no-repeat, 
+        url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
+    background-size: 150px auto, 100px auto;
     background-color: #ffedcc;
     padding-top: 1px;
     padding-bottom: 1px;
@@ -382,6 +383,7 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
 
 
