@@ -16,72 +16,69 @@
     <link rel="stylesheet" href="css/w3-theme-khaki.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <style>
-        h1 {font-family: Georgia, serif; text-shadow: 0 0 3px green;}
-        #home {float: right; text-shadow: none; font-size: 30px;}
-        a {text-decoration: none;}
-        img {
-            float:right;
-            top: 100px;
-            height: 100%;
-            width: 50%;
-        }
-        pre {
-            font-family: "Trebuchet MS", sans-serif;
-            font-size: 10px; 
-            background-repeat: no-repeat;
-            background-position: right center;
-            background-size: 45%;
-        }
-        #author {font-style: italic;}
-		
-/* Base footer */
-.footer {
-    font-size: 0.625rem; /* ~14px, you can adjust this */
-    padding: 0.5em 1em;
-    box-sizing: border-box;
-}
-
-/* Flex container for left and right */
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* allows wrapping on small screens */
-    gap: 0.5em;      /* space between rows when wrapped */
-}
-
-/* Left and right sections */
-.footer-left,
-.footer-right {
-    display: flex;
-    align-items: center;
-    line-height: 1em; /* ensures image aligns perfectly */
-}
-
-/* Space between right text and counter image */
-.footer-right {
-    gap: 0.3em;
-}
-
-/* Counter image scales with text */
-#counter-img {
-    height: 1.75em;       /* same height as text */
-    width: auto;       /* maintain aspect ratio */
-    vertical-align: middle;
-    filter: invert(1) brightness(2);
-}
-
-/* Responsive: stack footer items on small screens */
-@media (max-width: 500px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .footer-right {
-        margin-top: 0.3em; /* spacing between rows */
-    }
-}
-		
+	h1 {font-family: Georgia, serif; text-shadow: 0 0 3px green;}
+	#home {float: right; text-shadow: none; font-size: 30px;}
+	a {text-decoration: none;}
+	img {
+		float:right;
+		top: 100px;
+		height: 100%;
+		width: 50%;
+	}
+	pre {
+		font-family: "Trebuchet MS", sans-serif;
+		font-size: 10px; 
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: 45%;
+	}
+	#author {font-style: italic;}
+	
+	/* Base footer */
+	.footer {
+		font-size: 0.625rem; /* ~14px, you can adjust this */
+		padding: 0.5em 1em;
+		box-sizing: border-box;
+	}
+	
+	/* Flex container for left and right */
+	.footer-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap; /* allows wrapping on small screens */
+		gap: 0.5em;      /* space between rows when wrapped */
+	}
+	
+	/* Left and right sections */
+	.footer-left,
+	.footer-right {
+		display: flex;
+		align-items: center;
+		line-height: 1em; /* ensures image aligns perfectly */
+	}
+	/* Space between right text and counter image */
+	.footer-right {
+		gap: 0.3em;
+	}
+	/* Counter image scales with text */
+	#counter-img {
+		height: 1.75em;       /* same height as text */
+		width: auto;       /* maintain aspect ratio */
+		vertical-align: middle;
+		filter: invert(1) brightness(2);
+	}
+	
+	/* Responsive: stack footer items on small screens */
+	@media (max-width: 500px) {
+		.footer-content {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.footer-right {
+			margin-top: 0.3em; /* spacing between rows */
+		}
+	}
 	</style>
 </head>
 
@@ -175,24 +172,22 @@
         </pre>
         <hr />
     </div>
-    </div>
+	</div>
 
-<footer class="footer w3-container w3-theme">
-    <div class="footer-content">
-        <div class="footer-left">
-            Jun Ursal II, 2015 November 27
-        </div>
-        <div class="footer-right">
-            2025 November 11 |
-            <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/WayWeakOnlyHealthyWay.htm/">
-                <img id="counter-img" alt="Hits"
-                     src="https://hits.sh/junursal2.github.io/junursal2.basahon/WayWeakOnlyHealthyWay.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" />
-            </a>
-        </div>
-    </div>
-</footer>
+	<footer class="footer w3-container w3-theme">
+	    <div class="footer-content">
+	        <div class="footer-left">
+	            Jun Ursal II, 2015 November 27
+	        </div>
+	        <div class="footer-right">
+	            2025 November 11 |
+	            <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/WayWeakOnlyHealthyWay.htm/">
+	                <img id="counter-img" alt="Hits"
+	                     src="https://hits.sh/junursal2.github.io/junursal2.basahon/WayWeakOnlyHealthyWay.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" />
+	            </a>
+	        </div>
+	    </div>
+	</footer>
 
 </body>
 </html>
-
-
