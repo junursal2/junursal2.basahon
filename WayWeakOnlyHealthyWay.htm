@@ -65,10 +65,15 @@
 }
 /* spacing between text and counter */
 .footer-right {
+    display: flex;
+    align-items: center; /* vertically aligns text and image */
     gap: 5px;
+    font-size: 0.875rem; /* matches footer text */
 }
 #counter-img {
-    height: 18px;
+    height: 1em; /* match the font size */
+    width: auto; /* maintain aspect ratio */
+    vertical-align: middle; /* extra alignment safety */
     filter: invert(1) brightness(2);
 }
 /* Responsive breakpoint for small screens */
@@ -203,5 +208,6 @@
 </footer>
 </body>
 </html>
+
 
 
