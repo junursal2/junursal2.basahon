@@ -57,7 +57,8 @@ a:hover {
     padding-bottom: 1px;
 }
 .divDisasters {
-    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
+    background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disasters9.jpg") right center no-repeat, url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;
+    /*background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/disaster.jpg") right bottom no-repeat;*/
     background-size: 100px;
     background-color: #ffedcc;
     padding-top: 1px;
@@ -381,4 +382,5 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
+
 
