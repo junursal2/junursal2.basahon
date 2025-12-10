@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <title>Cebuano</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />  
+    <meta name="description" content="Cebuano" />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="Cebuano" />
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/w3-colors-flat.css">
+    <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements in versions of Internet Explorer prior to version 9 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+        * {box-sizing: border-box;} /*This makes sure that the padding and border are included in the total width and height of the elements.*/
+        header, section, footer, aside, nav, main, article, figure {display:block;}
+        /*body*/
+        section {overflow-x:auto; text-align:justify;}
+        body {font-family: Verdana, Helvetica, sans-serif; font-size:12px; }
+        h1 {
+            color: yellow;
+            font-family: Georgia, serif;
+            /*text-align: center;*/
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+            font-weight: bold;
+        }
+        /*#foot {color: black;}*/
+        sup {font-size: 10px;}
+        /*#posted {float: right;}*/
+        /*header*/
+        a#home {color: orange; text-decoration: none; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+        a#home:hover {color: blue;}
+        header, footer {
+            background-image: url("../_images/sinulog01.jpg");
+            background-size: contain;
+            background-repeat: repeat;
+        }       
+        #home {float: right; font-size: 24px; margin-top: 16px;}
+        #menu {float: left; font-size: 24px; margin-top: 16px;color: white; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+        #menu:hover {color: yellow;}
+        /*sidebar*/
+        #mySidebar {background-color: #c0392b;}
+        /*top button*/
+        #myTopBtn {
+            font-size: 18px;
+            display: none;
+            position: fixed;
+            bottom: 40px;
+            right: 30px;
+            z-index: 99;
+            border: 1px solid;
+            outline: none;
+            background-color: #c0392b;
+            color: white;
+            cursor: pointer;
+            padding: 1px 3px 1px 3px;
+            border-radius: 3px;
+        }
+        #myTopBtn:hover {background-color:yellow; color:#c0392b;}
+        /*images*/
+        figure {float: right; margin: 10px 0px 15px 15px;}
+        figcaption {font-family: Arial;font-size: 12px;}
+        /*Tables*/
+        #tabMonths, #tabWeeks {border-collapse:collapse; width: auto; float: left; margin-left:16px; margin-right: 16px; margin-bottom: 16px;}
+        #tabMonths td, #tabMonths th, #tabWeeks td, #tabWeeks th {border:1px solid #ddd; padding-left:4px; padding-right:4px;}
+        #tabMonths tr:nth-child(odd){background-color: #f2f2f2;}
+        #tabMonths tr:hover {background-color: yellow;}
+        #tabMonths th {text-align:center; padding-left:4px; padding-right:4px; color:white; background-color:#e74c3c;}
+
+        #tabNumbers {border-collapse:collapse; width: auto; float: left; margin-left:16px; margin-right: 16px;}
+        #tabNumbers td, #tabNumbers th {border:1px solid #ddd; padding-left:4px; padding-right:4px;}
+        #tabNumbers td:nth-child(1) {text-align: right;}
+        #tabNumbers tr:nth-child(odd){background-color: #f2f2f2;}
+        #tabNumbers tr:hover {background-color: yellow;}
+        #tabNumbers th {text-align:center; padding-left:4px; padding-right:4px; color:white; background-color:#e74c3c;}
+
+        #tabWeeks {border-collapse:collapse; width: auto; float: left; margin-left:16px; margin-right: 16px; margin-bottom: 16px;}
+        #tabWeeks td, #tabWeeks th {border:1px solid #ddd; padding-left:4px; padding-right:4px;}
+        #tabWeeks tr:nth-child(odd){background-color: #f2f2f2;}
+        #tabWeeks tr:hover {background-color: yellow;}
+        #tabWeeks th {text-align:center; padding-left:4px; padding-right:4px; color:white; background-color:#e74c3c;}
+
+        #start {padding-left: 24px;}
+        /*Notes*/
+        .notes {font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; font-size: 12px;}
+        a.notes, a.anotes {text-decoration:none;}
+        a.notes:hover, a.anotes:hover {text-decoration:underline;}
+        /*References*/
+        .reference {font-size: 11px;}
+        a.ref, a.source {color: blue; text-decoration:none;}
+        a.ref:hover, a.source:hover {text-decoration:underline;}
+
+footer {height:30px;}
+footer p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* vertically centers everything */
+    margin: 8px;
+}
+#posted {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 10px;
+}
+
+#counter-link {
+    display: inline-flex;
+    /*margin-top: 0px;*/
+}
+
+#counter-img {
+    height: 18px;
+    margin-top: -5px;
+    margin-left: 0px;
+}
+    </style>
+</head>
+
+<body>
+    <!--
+    <nav id="mySidebar" class="w3-sidebar w3-bar-block w3-border-right w3-flat-pomegranate" style="display:none">
+      <button onclick="w3_close()" class="w3-bar-item w3-large w3-hover-cyan">Close menu &times;</button>
+      <a href="#menu_NMW" class="w3-bar-item w3-button">Numbers, Months & Weeks</a>
+      <a href="#menu_refs" class="w3-bar-item w3-button">References</a>
+    </nav>
+    -->
+<main id="main">
+    <button id="myTopBtn" title="Jump to top" onclick="topFunction()"><i class="fa fa-arrow-up"></i></button>
+ 
+    <header class="w3-container">
+      <!-- <a id="menu" title="Open menu" onclick="w3_open()"><i class="fa fa-bars"></i></a> -->
+  	  <a id="home" title="Go to Basahon page" href="basahon.html#goFunstuff"><i class="fa fa-home"></i></a>
+  	  <h1>Cebuano: Numbers, Months & Weeks</h1>
+    </header>
+  
+    <section class="w3-container">
+        <h3 id="menu_NMW">Numbers, Months & Weeks</h3>
+        <p id="start">Cebuano uses two numeral systems:</p>
+        <ol type="a">
+            <li>The native system (currently) is mostly used in counting the number of things, animate and inanimate, e.g. the number of horses, houses.</li>
+            <li>The Spanish-derived system, on the other hand, is exclusively applied in monetary terminology and is also commonly used in counting from 11 and above.</li>            
+        </ol>
+        <aside>
+            <table id="tabNumbers">
+                <caption><b>Sugbuanon (Cebuano) Numbers</b>&nbsp;<a id="ref01" class="ref" href="#ref-01"><sup>[1]</sup></a>&nbsp;<a id="ref02" class="ref" href="#ref-01"><sup>[2]</sup></a></caption>
+                <tr>
+                    <th>No.</th>
+                    <th>Native Cebuano<sup>a</sup></th>
+                    <th>Spanish-derived<sup>b</sup></th>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>wala</td>
+                  <td>nulo, sero</td>
+                </tr>
+                <tr>
+                  <td><b>1</b></td>
+                  <td>usa</td>
+                  <td>uno</td>
+                </tr>
+                <tr>
+                  <td><b>2</b></td>
+                  <td>duha</td>
+                  <td>dos</td>
+                </tr>
+                <tr>
+                  <td><b>3</b></td>
+                  <td>tulo</td>
+                  <td>tres</td>
+                </tr>
+                <tr>
+                  <td><b>4</b></td>
+                  <td>upat</td>
+                  <td>kwatro</td>
+                </tr>
+                <tr>
+                  <td><b>5</b></td>
+                  <td>lima</td>
+                  <td>singko</td>
+                </tr>
+                <tr>
+                  <td><b>6</b></td>
+                  <td>unom</td>
+                  <td>says (sayis)</td>
+                </tr>
+                <tr>
+                  <td><b>7</b></td>
+                  <td>pito</td>
+                  <td>site (siyete)</td>
+                </tr>
+                <tr>
+                  <td><b>8</b></td>
+                  <td>walo</td>
+                  <td>otso</td>
+                </tr>
+                <tr>
+                  <td><b>9</b></td>
+                  <td>siyam</td>
+                  <td>nuybe (nuwebe)</td>
+               </tr>
+                <tr>
+                  <td><b>10</b></td>
+                  <td>napulo, pulo</td>
+                  <td>dyes (diyes)</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>napulog usa</td>
+                  <td>onse</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>napulog duha</td>
+                  <td>dose</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>napulog tulo</td>
+                  <td>trese</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>napulog upat</td>
+                  <td>katorse</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>napulog lima</td>
+                  <td>kinse</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>napulog unom</td>
+                  <td>disesays (diyesesayis)</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>napulog pito</td>
+                  <td>disesite</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>napulog walo</td>
+                  <td>diseotso</td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>napulog siyam</td>
+                  <td>disenuybe</td>
+                </tr>
+                <tr>
+                  <td><b>20</b></td>
+                  <td>kawhaan (kaduhaan)</td>
+                  <td>baynte (beyinte)</td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td>kawhaag usa</td>
+                  <td>baynte uno</td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td>kawhaag usa</td>
+                  <td>baynte uno</td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td>kawhaag usa</td>
+                  <td>baynte uno</td>
+                </tr>
+                <tr>
+                  <td>22</td>
+                  <td>kawhaag duha</td>
+                  <td>baynte dos</td>
+                </tr>
+                <tr>
+                  <td>23</td>
+                  <td>kawhaag tulo</td>
+                  <td>baynte tres</td>
+                </tr>
+                <tr>
+                  <td>24</td>
+                  <td>kawhaag upat</td>
+                  <td>baynte kwarto</td>
+                </tr>
+                <tr>
+                  <td>25</td>
+                  <td>kawhaag lima</td>
+                  <td>bayntsingko (baynte singko)</td>
+                </tr>
+                <tr>
+                  <td><b>30</b></td>
+                  <td>katlo-an (katulo-an)</td>
+                  <td>traynta (treyinta)</td>
+                </tr>
+                <tr>
+                  <td><b>40</b></td>
+                  <td>kap-atan (kaupatan)</td>
+                  <td>kwarenta</td>
+                </tr>
+                <tr>
+                  <td><b>50</b></td>
+                  <td>kalim-an (kalima-an)</td>
+                  <td>singkwenta</td>
+                </tr>
+                <tr>
+                  <td><b>60</b></td>
+                  <td>kanum-an (ka-unoman)</td>
+                  <td>saysenta (sesenta)</td>
+                </tr>
+                <tr>
+                  <td><b>70</b></td>
+                  <td>kapito-an</td>
+                  <td>setenta</td>
+                </tr>
+                <tr>
+                  <td><b>80</b></td>
+                  <td>kawalo-an</td>
+                  <td>otsenta</td>
+                </tr>
+                <tr>
+                  <td><b>90</b></td>
+                  <td>kasiyaman</td>
+                  <td>nobenta</td>
+                </tr>
+                <tr>
+                  <td><b>100</b></td>
+                  <td>usa ka gatos</td>
+                  <td>siyen, sento (siyento)</td>
+                </tr>
+                <tr>
+                  <td>101</td>
+                  <td>usa ka gatos ug usa</td>
+                  <td>sento uno</td>
+                </tr>
+                <tr>
+                  <td>120</td>
+                  <td>usa ka gatos ug kawhaan</td>
+                  <td>sento baynte</td>
+                </tr>
+                <tr>
+                  <td>200</td>
+                  <td>duha ka gatos</td>
+                  <td>dosentos (dosiyentos)</td>
+                </tr>
+                <tr>
+                  <td>300</td>
+                  <td>tulo ka gatos</td>
+                  <td>tresentos (tresiyentos)</td>
+                </tr>
+                <tr>
+                  <td>400</td>
+                  <td>upat ka gatos</td>
+                  <td>kwatrosentos (kwatrosiyentos)</td>
+                </tr>
+                <tr>
+                  <td>500</td>
+                  <td>lima ka gatos</td>
+                  <td>kinentos (kiniyentos)</td>
+                </tr>
+                <tr>
+                  <td><b>1,000</b></td>
+                  <td>usa ka libo</td>
+                  <td>mil</td>
+                </tr>
+                <tr>
+                  <td>5,000</td>
+                  <td>lima ka libo</td>
+                  <td>singko mil</td>
+                </tr>
+                <tr>
+                  <td><b>10,000</b></td>
+                  <td>usa ka laksa, napulo ka libo</td>
+                  <td>dyes mil</td>
+                </tr>
+                <tr>
+                  <td>50,000</td>
+                  <td>lima ka laksa, kalim-an ka libo</td>
+                  <td>singkwenta mil</td>
+                </tr>
+                <tr>
+                  <td>100,000</td>
+                  <td>napulo ka laksa, usa ka gatos ka libo</td>
+                  <td>siyen mil, siyento mil</td>
+                </tr>
+                
+                <tr>
+                  <td><b>1,000,000</b></td>
+                  <td>usa ka yukot</td>
+                  <td>milyon</td>
+                </tr>
+                <tr>
+                  <td><b>1,000,000,000</b></td>
+                  <td>usa ka wakat</td>
+                  <td>bilyon</td>
+                </tr>
+            </table>
+        </aside>
+        <aside>
+            <table id="tabMonths">
+                <caption><b>Months (Bulan)</b>&nbsp;<a id="ref01" class="ref" href="#ref-01"><sup>[1]</sup></a></caption>
+                <tr>
+                  <th>No.</th>
+                  <th>English</th>
+                  <th>Cebuano</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>January</td>
+                  <td>Ulalong</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>February</td>
+                  <td>Daghangkahoy</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>March</td>
+                  <td>Daghangbulan</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>April</td>
+                  <td>Kiling</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>May</td>
+                  <td>Himbabuyan</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>June</td>
+                  <td>Kabay</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>July</td>
+                  <td>Hidapdapon</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>August</td>
+                  <td>Lubolubod</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>September</td>
+                  <td>Kangurulsol</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>October</td>
+                  <td>Bagyo-bagyo</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>November</td>
+                  <td>Panglot nga dyotay</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>December</td>
+                  <td>Panglot nga dako</td>
+                </tr>
+            </table>
+        </aside>
+        <aside>
+            <table id="tabWeeks">
+                <caption><b>Weeks (Pitlaw)</b>&nbsp;<a id="ref01" class="ref" href="#ref-01"><sup>[1]</sup></a></caption>
+                <tr>
+                  <th>English</th>
+                  <th>Cebuano</th>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>Ligid-ligid</td>
+                </tr>
+                <tr>
+                  <td>Monday</td>
+                  <td>Tigburukad</td>
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td>Dumason</td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>Dukot-dukot</td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td>Baylo-baylo</td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td>Danghos</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>Hingot-hingot</td>
+                </tr>
+            </table>
+        </aside>
+        <figure>
+            <img id="pintados" src="../_images/pintados.png" alt="Pintados">
+            <figcaption>the <em>Pintados</em> ("The Tattooed"), <br />
+                another name for Visayans of Cebu and its surrounding islands <br /> 
+                according to the early Spanish explorers.
+            </figcaption>
+        </figure>
+    </section>  
+    <section class="w3-container">
+        <h3 id="menu_refs">References</h3>
+        <ol>
+           <li id="ref-01" class="reference"><a class="source" href="#ref01">^</a>&nbsp;Numbers, months & weeks.&nbsp;
+                      <a class="source" href="http://akopito.weebly.com/blog-naacutekocirc" target="_blank">http://akopito.weebly.com/blog-naacutekocirc</a></li>
+           <li id="ref-02" class="reference"><a class="source" href="#ref02">^</a>&nbsp;Numbers.&nbsp;
+                      <a class="source" href="https://en.wikipedia.org/wiki/Cebuano_language" target="_blank">https://en.wikipedia.org/wiki/Cebuano_language</a></li>
+        </ol>
+    </section>
+
+    <footer class="w3-container w3-tiny">
+        <p id="foot">C. Ursal Jr., 2020 Mar 4
+           <span id="posted">2025 Dec 10,
+	      <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/Cebuano.htm/">
+	      <img id="counter-img" alt="Hits" src="https://hits.sh/junursal2.github.io/junursal2.basahon/Cebuano.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" 
+                style="filter: invert(1) brightness(2);"/></a>
+	   </span>
+	</p>
+    </footer>
+</main>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myTopBtn").style.display = "block";
+    } else {
+        document.getElementById("myTopBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+<!--
+// Get the modal
+var modal = document.getElementById('modalID');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "15%";
+  document.getElementById("mySidebar").style.width = "15%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("menu").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("menu").style.display = "inline-block";
+}
+-->
+</script>  
+  
+</body>
+</html> 
