@@ -9,8 +9,8 @@
     <meta name="author" content="Jun Ursal II" />
     <meta name="keywords" content="Cebuano" />
     <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
-    <link rel="stylesheet" href="css/w3.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/w3-colors-flat.css">
     <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements in versions of Internet Explorer prior to version 9 -->
     <!--[if lt IE 9]>
@@ -29,14 +29,12 @@
             text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
             font-weight: bold;
         }
-        /*#foot {color: black;}*/
         sup {font-size: 10px;}
-        /*#posted {float: right;}*/
         /*header*/
         a#home {color: orange; text-decoration: none; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
         a#home:hover {color: blue;}
         header, footer {
-            background-image: url("../_images/sinulog01.jpg");
+            background-image: url("files/sinulog01.jpg");
             background-size: contain;
             background-repeat: repeat;
         }       
@@ -94,49 +92,38 @@
         .reference {font-size: 11px;}
         a.ref, a.source {color: blue; text-decoration:none;}
         a.ref:hover, a.source:hover {text-decoration:underline;}
-
-footer {height:30px;}
-footer p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* vertically centers everything */
-    margin: 8px;
-}
-#posted {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 10px;
-}
-
-#counter-link {
-    display: inline-flex;
-    /*margin-top: 0px;*/
-}
-
-#counter-img {
-    height: 18px;
-    margin-top: -5px;
-    margin-left: 0px;
-}
-    </style>
+		/*footer*/
+		footer {height:30px;}
+		footer p {
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center; /* vertically centers everything */
+		    margin: 8px;
+		}
+		#posted {
+		    display: flex;
+		    align-items: center;
+		    gap: 4px;
+		    font-family: "Trebuchet MS", sans-serif;
+		    font-size: 10px;
+		}
+		#counter-link {
+		    display: inline-flex;
+		}
+		#counter-img {
+		    height: 18px;
+		    margin-top: -5px;
+		    margin-left: 0px;
+		}
+	</style>
 </head>
 
 <body>
-    <!--
-    <nav id="mySidebar" class="w3-sidebar w3-bar-block w3-border-right w3-flat-pomegranate" style="display:none">
-      <button onclick="w3_close()" class="w3-bar-item w3-large w3-hover-cyan">Close menu &times;</button>
-      <a href="#menu_NMW" class="w3-bar-item w3-button">Numbers, Months & Weeks</a>
-      <a href="#menu_refs" class="w3-bar-item w3-button">References</a>
-    </nav>
-    -->
 <main id="main">
     <button id="myTopBtn" title="Jump to top" onclick="topFunction()"><i class="fa fa-arrow-up"></i></button>
- 
+	
     <header class="w3-container">
-      <!-- <a id="menu" title="Open menu" onclick="w3_open()"><i class="fa fa-bars"></i></a> -->
-  	  <a id="home" title="Go to Basahon page" href="basahon.html#goFunstuff"><i class="fa fa-home"></i></a>
+  	  <a id="home" title="Go to Basahon page" href="basahon.html#goTrivia"><i class="fa fa-home"></i></a>
   	  <h1>Cebuano: Numbers, Months & Weeks</h1>
     </header>
   
@@ -511,7 +498,7 @@ footer p {
             </table>
         </aside>
         <figure>
-            <img id="pintados" src="../_images/pintados.png" alt="Pintados">
+            <img id="pintados" src="files/pintados.png" alt="Pintados">
             <figcaption>the <em>Pintados</em> ("The Tattooed"), <br />
                 another name for Visayans of Cebu and its surrounding islands <br /> 
                 according to the early Spanish explorers.
@@ -579,4 +566,5 @@ function w3_close() {
 </script>  
   
 </body>
+
 </html> 
