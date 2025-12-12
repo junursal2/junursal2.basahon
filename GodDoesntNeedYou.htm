@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>God Doesn't Need You</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="distinction between tolerance, allowance & clearance" />
+  <meta name="author" content="Jun Ursal II" />
+  <meta name="keywords" content="tolerance, allowance, clearance" />
+  
+  <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+  <link rel="stylesheet" href="css/w3.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <![endif]-->
+<style>
+  * {box-sizing: border-box}
+  html, body {height: 100%; margin: 0; font-family: Verdana, sans-serif; background-color: black; color: white;}
+
+  /* slideshow wrapper */
+  .slideshow-container {
+    position: relative;     /* needed for absolute children (prev/next/number) */
+    max-width: 100%;
+    margin: 0 auto;
+    background: black;
+    overflow: hidden;
+  }
+
+  /* each slide */
+  .mySlides { display: none; }
+  .mySlides img {
+    width: 100%;            /* scale to container width */
+    height: auto;           /* preserve aspect ratio */
+    max-height: 80vh;       /* keep within viewport on mobile */
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* navigation arrows */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px 14px;     /* touch-friendly size */
+    color: #cccccc;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.15);
+    transition: background 0.2s ease;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .prev { left: 8px; }
+  .next { right: 8px; }
+
+  .prev:hover, .next:hover { background-color: rgba(255,255,255,0.08); }
+
+  /* caption & number */
+  .text, .numbertext {
+    color: #cccccc;
+    font-size: 14px;
+    padding: 6px 10px;
+    text-align: center;
+  }
+  .numbertext { position: absolute; top: 8px; left: 8px; font-size: 12px; }
+
+  /* dots container */
+  .dots-row {
+    text-align: center;
+    padding: 8px 12px 0 12px;
+  }
+  .dot {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 4px 3px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+  }
+  .dot:active { transform: scale(0.95); }
+  .active, .dot:hover { background-color: #1E90FF; }
+
+  /* notice just below slides */
+  #notice {
+    color: #cccccc;
+    text-align: center;
+    padding: 6px 12px 18px 12px;
+    font-size: 0.95rem;
+  }
+
+  /* subtle fade animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.2s;
+    animation-name: fade;
+    animation-duration: 1.2s;
+  }
+  @-webkit-keyframes fade { from {opacity: .4} to {opacity: 1} }
+  @keyframes fade { from {opacity: .4} to {opacity: 1} }
+
+  /* home icon */
+  #home { position: absolute; top: 6px; right: 10px; font-size: 20px; color: #cccccc; text-decoration: none; z-index: 20;}
+  #home:hover { color: #1E90FF; }
+
+  /* ---- Responsive tweaks ---- */
+  @media (max-width: 768px) {
+    .prev, .next { padding: 14px 16px; font-size: 22px; }
+    .mySlides img { max-height: 70vh; }
+    .dot { height: 13px; width: 13px; margin: 3px 2px; }
+    .numbertext { font-size: 11px; padding: 6px; }
+    #notice { font-size: 0.92rem; padding-bottom: 12px; }
+  }
+
+  @media (max-width: 480px) {
+    .prev, .next { padding: 16px; font-size: 24px; }
+    .dot { height: 12px; width: 12px; margin: 2px 2px; }
+    .mySlides img { max-height: 60vh; }           /* ensure room for prev/next and notice */
+    .numbertext { font-size: 10px; padding: 4px; }
+    #notice { font-size: 0.88rem; padding: 6px 8px 10px 8px; }
+  }
+
+  /* make sure focus outlines are visible for accessibility */
+  .prev:focus, .next:focus, .dot:focus, #home:focus { outline: 2px dashed rgba(30,144,255,0.35); outline-offset: 3px; }
+
+.site-footer {
+  width: 100%;
+  padding: 25px 10px 0px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*background-color: #333;*/
+  color: white;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+/* Responsive: stack vertically on mobile */
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+  
+  .footer-left, .footer-right {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+  <div class="slideshow-container" id="slideshowRoot">
+    <a id="home" title="Go to Basahon page" href="basahon.html#goBiblical"><i class="fa fa-home"></i></a>
+
+    <!-- Slides -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="../_files/GodDoesntNeedYou/slide1.png" alt="Slide 1">
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="../_files/GodDoesntNeedYou/slide2.png" alt="Slide 2">
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="../_files/GodDoesntNeedYou/slide3.png" alt="Slide 3">
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 5</div>
+      <img src="../_files/GodDoesntNeedYou/slide4.png" alt="Slide 4">
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 5</div>
+      <img src="../_files/GodDoesntNeedYou/slide5.png" alt="Slide 5">
+    </div>
+
+    <!-- Arrows -->
+    <a class="prev" title="Previous" onclick="plusSlides(-1)" aria-label="Previous slide">&#10094;</a>
+    <a class="next" title="Next" onclick="plusSlides(1)" aria-label="Next slide">&#10095;</a>
+
+    <!-- dots row (keeps above notice, below slides visually) -->
+    <div class="dots-row" aria-hidden="false">
+      <span class="dot" title="Go to page 1" onclick="currentSlide(1)"></span>
+      <span class="dot" title="Go to page 2" onclick="currentSlide(2)"></span>
+      <span class="dot" title="Go to page 3" onclick="currentSlide(3)"></span>
+      <span class="dot" title="Go to page 4" onclick="currentSlide(4)"></span>
+      <span class="dot" title="Go to page 5" onclick="currentSlide(5)"></span>
+    </div>
+
+    <!-- notice just under slides -->
+    <div id="notice" class="w3-small" role="note">
+      Click <span class="navi">&#10094;</span>, <span class="navi">&#10095;</span>, <span class="navi">&bull;</span> to navigate.
+    </div>
+  </div>
+
+<footer class="site-footer">
+  <span class="footer-left">Jun Ursal II, 2018 Oct 31</span>
+  <span class="footer-right">2025 Dec 12, 
+     <a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/GodDoesntNeedYou -new2.htm/">
+     <img id="counter-img" alt="Hits" src="https://hits.sh/junursal2.github.io/junursal2.basahon/GodDoesntNeedYou -new2.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" 
+       style="filter: invert(0) brightness(2);"/></a>
+
+  </span>
+</footer>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots   = document.getElementsByClassName("dot");
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+/* Optional: make swipe left/right work on touch devices (small, lightweight) */
+(function addTouchHandlers() {
+  var el = document.getElementById('slideshowRoot');
+  if (!el) return;
+  var startX = 0, startY = 0, distX = 0, distY = 0;
+  el.addEventListener('touchstart', function(e) {
+    var t = e.changedTouches[0];
+    startX = t.pageX; startY = t.pageY; distX = 0; distY = 0;
+  }, {passive:true});
+  el.addEventListener('touchend', function(e) {
+    var t = e.changedTouches[0];
+    distX = t.pageX - startX;
+    distY = t.pageY - startY;
+    // horizontal swipe detection with threshold
+    if (Math.abs(distX) > 40 && Math.abs(distY) < 75) {
+      if (distX < 0) { plusSlides(1); } else { plusSlides(-1); }
+    }
+  }, {passive:true});
+})();
+</script>
+
+</body>
+</html>
