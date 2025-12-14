@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+
+<html lang="en-US">
+<head>
+    <title>Successful and Unsuccessful People</title>    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Distinction between successful & unsuccessful people" />
+    <meta name="author" content="Jun Ursal II, 2018 December 3" />
+    <meta name="keywords" content="love" />
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+        header, section, footer, aside, nav, main, article, figure {display:block;}
+        * {box-sizing: border-box;}
+        html, body {font-family: Arial; height: 100%; margin: 0; padding:0;}
+        #home {font-size: 24px; color: yellow;}
+        #home:hover {color: gray;}
+img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+}        .imgBack {
+            background-image: url('../_images/success/success.jpg');
+            height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .imgBox {display: grid; height: 100%;}
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {position: relative;}
+        /* Hide the images by default */
+
+        .mySlides {display: none; padding-top: 16px;}
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 4px 16px 4px 16px;
+            color: yellow;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            -webkit-user-select: none;
+            -moz-user-select: none; /* Firefox 2+ */
+            -ms-user-select: none; /* IE 10+ */
+            user-select: none; /* Standard syntax */
+        }
+        /* Position the "next button" to the right */
+        .next {right: 0; border-radius: 3px 0 0 3px;}
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {background-color: rgba(169, 169, 169, 0.8); color: white;}
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: cyan;
+            font-size: 12px;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+        }
+        #inKey {color: white;}
+
+@media (max-width: 768px) {
+    img {
+        max-height: 80vh;
+    }
+
+    .prev, .next {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    #home {
+        font-size: 20px;
+    }
+}
+    </style>
+</head>
+
+<body class="imgBack">
+    <a id="home" class="w3-display-topmiddle" title="Go to basahon articles main page" href="basahon.html#goFunstuff"><i class="fa fa-home"></i></a>
+    <br />
+    <div class="container">
+        <div class="mySlides">
+            <div class="numbertext">1 / 7</div>
+            <img src="../_images/Success/1.jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 7</div>
+            <img src="../_images/Success/2.jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3 / 7</div>
+            <img src="../_images/Success/3.jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">4 / 7</div>
+            <img src="../_images/Success/4.jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">5 / 7</div>
+            <img src="../_images/Success/5.jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">6 / 7</div>
+            <img src="../_images/Success/6.jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">7 / 7</div>
+            <img src="../_images/Success/7.jpg" alt="">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">0 / 7</div>
+            <img src="" alt="">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)" title="Previous">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)" title="Next">&#10095;</a>
+    </div>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {showSlides(slideIndex += n);}
+    function currentSlide(n) {showSlides(slideIndex = n);}
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {slideIndex = 1;}
+        if (n < 1) {slideIndex = slides.length;}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+    document.addEventListener('keydown', (event) => {
+        const keyName = event.key;
+        //alert('keydown event\n\n' + 'key: ' + keyName);
+            switch(keyName) {
+            case "ArrowRight":
+                plusSlides(1);
+                break;
+            case "ArrowLeft":
+                plusSlides(-1);
+                break;
+            default:
+                break;
+        }     
+    });
+</script>     
+</body>
+</html>
