@@ -137,6 +137,13 @@ a:hover {
     background-color: #99ffcc;
     padding-bottom: 1px; 
 }
+.divQuotes {
+    /*background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/brainbulb.png") right bottom no-repeat;
+    background-size: 65px;*/
+    background-color: #ffcccc;
+    padding-top: 0.5px;
+    padding-bottom: 1px;
+}
 .divTrivia {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/brainbulb.png") right bottom no-repeat;
     background-size: 65px;
@@ -383,10 +390,3 @@ td {
 tr:nth-child(odd) {
     background-color: #dddddd;
 }
-
-
-
-
-
-
-
