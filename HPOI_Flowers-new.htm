@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <title>HPOI flowers</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />  
+    <meta name="description" content="HPOI flowers" />
+    <meta name="author" content="Jun Ursal II" />
+    <meta name="keywords" content="HPOI, flowers" />
+    <link rel="icon" type="image/png" href="../_images/ursoft.ico" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/w3-colors-flat.css">
+    <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements in versions of Internet Explorer prior to version 9 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+<style>
+    * {box-sizing: border-box;}
+    body {margin: 0; font-family: Arial;}   
+    h3 {
+        color: blue;
+        font-family: Georgia, serif;
+        font-weight: bold;
+        text-align:center;
+        /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+    }
+    header {color: #000; background-color: #FFD700; border-bottom: 1px solid blue;}
+    footer {color: blue; background-color: #FFD700; border-top: 1px solid blue;}
+    p {font-size: 12px;}
+    #img01 {cursor: default;}
+    #home {
+        color: white; 
+        text-decoration: none; 
+        float: right; 
+        font-size: 24px; 
+        margin-top: 8px;
+        text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+    }
+    #home:hover {color: blue;}
+    /*#logo {cursor: default; width: 60px; float: left; margin-top: 16px;}*/
+    #logo {width: 60px; float: left; margin-top: 16px;}
+    #posted {float: right;}
+    .clickImg {
+	font-size: 12px;
+	margin-top: 5px;
+        margin-left: 10px;
+	margin-bottom: 2px;
+    }
+    .thumbnail {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .gallery {
+    	display: grid;
+    	grid-template-columns: repeat(5, 1fr);
+    	gap: 8px;
+    	padding: 0 4px;
+    }
+
+    .gallery-item {
+    	position: relative;
+    }
+
+    .gallery-item img {
+    	width: 100%;
+    	height: 150px;
+    	object-fit: cover;
+    	display: block;
+    }
+
+    @media screen and (max-width: 800px) {
+    	.gallery {
+        	grid-template-columns: repeat(2, 1fr);
+    	}
+    }
+
+    @media screen and (max-width: 600px) {
+    	.gallery {
+        	grid-template-columns: 1fr;
+    	}
+    }
+
+    /*Top button*/
+    #myTopBtn {
+        font-size: 18px;
+        display: none;
+        position: fixed;
+        bottom: 40px;
+        right: 30px;
+        z-index: 99;
+        border: 1px solid;
+        outline: none;
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+        padding: 1px 3px 1px 3px;
+        border-radius: 3px;}
+    #myTopBtn:hover {color: #FFD700;}
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    /* Modal Content (image) */
+    .modal-content {
+        position:absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        margin: auto;
+    }
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+        .modal-content {
+        width: 100%;
+      }
+    }
+    .w3-text-black {font-weight: bold;}
+    .w3-text-white {font-weight: bold;}
+    .photoNo {color: cyan; font-size: 18px; -webkit-text-stroke: 0.5px blue;}
+</style>
+</head>
+
+<body>
+    <main id="main">
+        <button id="myTopBtn" title="Jump to top" onclick="topFunction()"><i class="fa fa-arrow-up"></i></button>  
+        <header id="menu_top" class="w3-container">
+            <img id="logo" src="../_images/hpoi.png" alt="">
+            <a id="home" title="Go to Basahon page" href="basahon.html#goHPOI"><i class="fa fa-home"></i></a>
+            <h3>HPOI flowers</h3>
+        </header>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01" alt="">
+            <div id="caption"></div>
+        </div>
+	<p class="clickImg">Click the image for a full-size view.</p>
+
+        <!-- Photo Grid -->
+        <div class="gallery"> 
+
+	   <!-- #1 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_1471-thumb.jpg" class="thumbnail"
+	           data-full="../_images/HPOI/flowers/IMG_1471.jpg"
+	           alt="" style="width:100%" title="#1 iPhone 6S+" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">1</p></div>
+           </div>
+
+	   <!-- #2-->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190330_065939-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190330_065939.jpg"
+		   alt="" style="width:100%" title="#2 Huawei P20 Pro" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">2</p></div>
+           </div>
+
+	   <!-- #3-->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190330_065952-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190330_065952.jpg"
+		   alt="" style="width:100%" title="#3 Huawei P20 Pro" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">3</p></div>
+           </div>
+
+	   <!-- #4-->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190704_134501-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190704_134501.jpg"
+		   alt="" style="width:100%" title="#4 Huawei P20 Pro" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">4</p></div>
+           </div>
+
+	   <!-- #5-->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190329_100003-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190329_100003.jpg"
+		   alt="" style="width:100%" title="#5 Huawei P20 Pro" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">5</p></div>
+           </div>
+
+	   <!-- #6 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190329_100139-thumb.jpg" class="thumbnail"
+	 	   data-full="../_images/HPOI/flowers/IMG_20190329_100139.jpg"
+		   alt="" style="width:100%" title="#6 Huawei P20 Pro" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">6</p></div>
+           </div>
+
+	   <!-- #7 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190330_170731-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190330_170731.jpg"
+		   alt="" style="width:100%" title="#7 Huawei P20 Pro" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">7</p></div>
+           </div>
+
+	   <!-- #8 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190329_100456-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190329_100456.jpg"
+		   alt="" style="width:100%" title="#8 Huawei P20 Pro" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">8</p></div>
+           </div>
+
+	   <!-- #9 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190330_170608-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190330_170608.jpg"
+		   alt="" style="width:100%" title="#9 Huawei P20 Pro" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">9</p></div>
+           </div>
+
+	   <!-- #10 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190704_134514-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190704_134514.jpg"
+		   alt="" style="width:100%" title="#10 Huawei P20 Pro. Can you see the bee?" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">10</p></div>
+           </div>
+
+	   <!-- #11 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_122908-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_122908.jpg"
+		   alt="" style="width:100%" title="#11 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">11</p></div>
+           </div>
+
+	   <!-- #12 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_122939-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_122939.jpg"
+		   alt="" style="width:100%" title="#12 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">12</p></div>
+           </div>
+
+	   <!-- #13 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_122956-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_122956.jpg"
+		   alt="" style="width:100%" title="#13 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">13</p></div>
+           </div>
+
+	   <!-- #14 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123050-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123050.jpg"
+		   alt="" style="width:100%" title="#14 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">14</p></div>
+           </div>
+
+	   <!-- #15 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123133-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123133.jpg"
+		   alt="" style="width:100%" title="#15 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">15</p></div>
+           </div>
+
+	   <!-- #16 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123153-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123153.jpg"
+		   alt="" style="width:100%" title="#16 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">16</p></div>
+           </div>
+
+	   <!-- #17 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123243-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123243.jpg"
+		   alt="" style="width:100%" title="#17 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">17</p></div>
+           </div>
+
+	   <!-- #18 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123257-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123257.jpg"
+		   alt="" style="width:100%" title="#18 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">18</p></div>
+           </div>
+
+	   <!-- #19 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190706_070337-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190706_070337.jpg"
+		   alt="" style="width:100%" title="#19 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">19</p></div>
+           </div>
+
+	   <!-- #20 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190706_070356-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190706_070356.jpg"
+		   alt="" style="width:100%" title="#20 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">20</p></div>
+           </div>
+
+	   <!-- #21 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123007-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123007.jpg"
+		   alt="" style="width:100%" title="#21 Huawei P20 Pro. Can you see the bee?" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">21</p></div>
+           </div>
+
+	   <!-- #22 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123012-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123012.jpg"
+		   alt="" style="width:100%" title="#22 Huawei P20 Pro. Can you see the bee?" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">22</p></div>
+           </div>
+
+	   <!-- #23 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123017-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123017.jpg"
+		   alt="" style="width:100%" title="#23 Huawei P20 #20 Pro. Can you see the bee?" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">23</p></div>
+           </div>
+
+	   <!-- #24 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123025-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123025.jpg"
+		   alt="" style="width:100%" title="#24 Huawei P20 Pro. Can you see the bee?" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">24</p></div>
+           </div>
+
+	   <!-- #25 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123118-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123118.jpg"
+		   alt="" style="width:100%" title="#25 Huawei P20 Pro. Can you see the bee?" onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">25</p></div>
+           </div>
+
+	   <!-- #26 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190706_070509-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190706_070509.jpg"
+		   alt="" style="width:100%" title="#26 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">26</p></div>
+           </div>
+
+	   <!-- #27 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123348-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123348.jpg"
+		   alt="" style="width:100%" title="#27 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">27</p></div>
+           </div>
+
+	   <!-- #28 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123213-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123213.jpg"
+		   alt="" style="width:100%" title="#28 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">28</p></div>
+           </div>
+
+	   <!-- #29 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123419-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123419.jpg"
+		   alt="" style="width:100%" title="#29 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">29</p></div>
+           </div>
+
+	   <!-- #30 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190705_123437-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190705_123437.jpg"
+		   alt="" style="width:100%" title="#30 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">30</p></div>
+           </div>
+
+	   <!-- #31 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190716_070423-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190716_070423.jpg"
+		   alt="" style="width:100%" title="#31 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">31</p></div>
+           </div>
+
+	   <!-- #32 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190716_070510-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190716_070510.jpg"
+		   alt="" style="width:100%" title="#32 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">32</p></div>
+           </div>
+
+	   <!-- #33 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190716_071104-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190716_071104.jpg"
+		   alt="" style="width:100%" title="#33 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">33</p></div>
+           </div>
+
+	   <!-- #34 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190716_071126-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190716_071126.jpg"
+		   alt="" style="width:100%" title="#34 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">34</p></div>
+           </div>
+
+	   <!-- #35 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190716_071147-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190716_071147.jpg"
+		   alt="" style="width:100%" title="#35 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">35</p></div>
+           </div>
+
+	   <!-- #36 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190716_071204-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190716_071204.jpg"
+		   alt="" style="width:100%" title="#36 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">36</p></div>
+           </div>
+
+	   <!-- #37 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190716_071227-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190716_071227.jpg"
+		   alt="" style="width:100%" title="#37 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">37</p></div>
+           </div>
+
+	   <!-- #38 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190716_071309-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190716_071309.jpg"
+		   alt="" style="width:100%" title="#38 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">38</p></div>
+            </div>
+
+	   <!-- #39 -->
+           <div class="gallery-item w3-display-container w3-text-black">
+              <img src="../_images/HPOI/flowers/IMG_20190726_171220-thumb.jpg" class="thumbnail"
+		   data-full="../_images/HPOI/flowers/IMG_20190726_171220.jpg"
+		   alt="" style="width:100%" title="#39 Huawei P20 Pro." onclick="image(this)">
+              <div class="w3-display-topleft w3-container"><p class="photoNo">39</p></div>
+            </div>
+
+        </div>
+        <br />
+        <footer  id="menu_bottom" class="w3-container">
+            <p>Photo #1 was from an <em>iPhone 6S+</em> while #2~39 were from <em>Huawei P20 Pro</em>. &nbsp; Can you see the bee in photos #21~26?<span id="posted">C. Ursal Jr., 2019 August 3</span></p>
+        </footer>
+    </main>    
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction();};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myTopBtn").style.display = "block";
+        } else {
+            document.getElementById("myTopBtn").style.display = "none";
+        }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Chrome, Safari and Opera 
+        document.documentElement.scrollTop = 0; // For IE and Firefox
+    }
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    // Get the image and insert it inside the modal
+    function image(img) {
+        modal.style.display = "block";
+        modalImg.src = img.src.replace("-thumb","");
+        modalImg.style.height="100%";
+    }
+    var modalImg = document.getElementById("img01");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+    };
+</script>
+
+</body>
+</html> 
