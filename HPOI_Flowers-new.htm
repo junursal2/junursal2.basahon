@@ -102,38 +102,34 @@
         border-radius: 3px;}
     #myTopBtn:hover {color: #FFD700;}
     /* The Modal (background) */
-	.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    inset: 0;
-    background: rgba(0,0,0,.95);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-	}
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
     /* Modal Content (image) */
-    /*.modal-content {
+    .modal-content {
         position:absolute;
         top: 0; bottom: 0; left: 0; right: 0;
         margin: auto;
-    }*/
-	.modal-content {
-    display: block;
-    margin: auto;
-    max-width: 95vw;
-    max-height: 95vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
     }
     /* The Close Button */
-	.close {
-    position: fixed;
-    top: 10px;
-    right: 15px;
-    font-size: 36px;
-    z-index: 10000;
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
     }
     .close:hover,
     .close:focus {
