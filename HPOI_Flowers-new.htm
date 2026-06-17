@@ -505,22 +505,18 @@
     // Get the modal
     var modal = document.getElementById('myModal');
     // Get the image and insert it inside the modal
-	function image(img) {
-    	modal.style.display = "flex";
-    	modalImg.src = img.dataset.full || img.src.replace("-thumb","");
-	}
-	var modalImg = document.getElementById("img01");
+    function image(img) {
+        modal.style.display = "block";
+        modalImg.src = img.src.replace("-thumb","");
+        modalImg.style.height="100%";
+    }
+    var modalImg = document.getElementById("img01");
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() { 
         modal.style.display = "none";
     };
-	modal.onclick = function(e) {
-    if (e.target === modal) {
-        modal.style.display = "none";
-    }
-};
 </script>
 
 </body>
