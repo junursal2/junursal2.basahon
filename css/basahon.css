@@ -80,14 +80,14 @@ a:hover {
 }
 .divFun {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/fun-stuff.gif") right bottom no-repeat;
-    background-size: 110px;
+    background-size: 100px;
     background-color: #DCDCDC;
     padding-top: 0.5px;
     padding-bottom: 1px;
 }
 .divHPOI {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/hpoilogo2.png") right bottom no-repeat;
-    background-size: 100px;
+    background-size: 80px;
     background-color: #F0E68C;
     padding-top: 0.5px;
     padding-bottom: 1px;
@@ -155,7 +155,7 @@ a:hover {
 }
 .divVirtues {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/virtue.jpg") right bottom no-repeat;
-    background-size: 100px;
+    background-size: 90px;
     background-color: #ffdb99;
     padding-top: 0.5px;
     padding-bottom: 1px;
