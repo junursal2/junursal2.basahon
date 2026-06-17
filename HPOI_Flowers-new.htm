@@ -163,7 +163,7 @@
             <img class="modal-content" id="img01" alt="">
             <div id="caption"></div>
         </div>
-	<p class="clickImg">Click the image for a full-size view.</p>
+	<p class="clickImg">Click the image for a full-size view and click again to close.</p>
 
         <!-- Photo Grid -->
         <div class="gallery"> 
@@ -517,6 +517,9 @@
     span.onclick = function() { 
         modal.style.display = "none";
     };
+    modalImg.onclick = function() {
+     	modal.style.display = "none";
+    };	
 </script>
 
 </body>
