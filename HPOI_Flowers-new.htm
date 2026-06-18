@@ -31,23 +31,53 @@
     footer {color: blue; background-color: #FFD700; border-top: 1px solid blue;}
     p {font-size: 12px;}
     #img01 {cursor: default;}
-    #home {
+    /* #home {
         color: white; 
         text-decoration: none; 
         float: right; 
         font-size: 24px; 
         margin-top: 8px;
         text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
-    }
+    } */
+/* Turns the header into a flexible row */
+.header-flex {
+    display: flex;
+    align-items: center;       /* Centers everything vertically */
+    justify-content: space-between; /* Pushes groups to Left, Middle, and Right */
+    width: 100%;
+    padding: 10px 10px;
+}
+
+/* Keeps the logo and years perfectly paired together on the left */
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Ensures the middle header stays perfectly centered */
+.header-flex h3 {
+    margin: 0 auto; 
+    text-align: center;
+}
+
+/* Optional: adjustment for the home icon layout if needed */
+#home {
+    color: white;
+    display: inline-block;
+    font-size: 24px;
+    text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+}
+
     #home:hover {color: blue;}
     /*#logo {cursor: default; width: 60px; float: left; margin-top: 16px;}*/
-    #logo {width: 60px; float: left; margin-top: 16px;}
+    #logo {width: 80px; float: left; margin-top: 0px;}
     #posted {float: right;}
     .clickImg {
-	font-size: 12px;
-	margin-top: 5px;
+		font-size: 12px;
+		margin-top: 5px;
         margin-left: 10px;
-	margin-bottom: 2px;
+		margin-bottom: 2px;
     }
     .thumbnail {
         width: 100%;
@@ -152,12 +182,24 @@
 <body>
     <main id="main">
         <button id="myTopBtn" title="Jump to top" onclick="topFunction()"><i class="fa fa-arrow-up"></i></button>  
-        <header id="menu_top" class="w3-container">
+       <!-- <header id="menu_top" class="w3-container">
             <img id="logo" src="images/HPOI.png" alt="">
             <a id="home" title="Go to Basahon page" href="basahon.html#goHPOI"><i class="fa fa-home"></i></a>
             <h3>HPOI flowers</h3>
-        </header>
-        <!-- The Modal -->
+        </header> -->
+
+<header id="menu_top" class="w3-container header-flex">
+    <div class="logo-group">
+        <img id="logo" src="../_images/hpoi.png" alt="">
+        <span style="font-size: 10px">2010~2025</span>
+    </div>
+    <h3>HPOI flowers</h3>
+    <a id="home" title="Go to Basahon page" href="basahon.html#goHPOI"><i class="fa fa-home"></i></a>
+</header>
+
+		
+		
+		<!-- The Modal -->
         <div id="myModal" class="modal">
             <span class="close">&times;</span>
             <img class="modal-content" id="img01" alt="">
@@ -516,7 +558,7 @@
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() { 
         modal.style.display = "none";
-    };
+    }
     modalImg.onclick = function() {
      	modal.style.display = "none";
     };	
