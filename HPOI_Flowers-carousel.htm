@@ -215,6 +215,37 @@
     color: #FFD700;
 }
 
+/* Default arrows (desktop/tablet) */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;            /* Center vertically by default */
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1000;
+}
+
+/* Left arrow */
+.carousel-arrow.left {
+    left: 30px;
+}
+
+/* Right arrow */
+.carousel-arrow.right {
+    right: 30px;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+    .carousel-arrow {
+        top: auto;            /* Remove vertical centering */
+        bottom: 20px;         /* Push arrows to lower portion */
+        transform: none;      /* Reset transform */
+    }
+}
+
 </style>
 </head>
 
@@ -568,7 +599,8 @@
           			  style="filter: invert(1) brightness(2);"/></a>
 				</span>
 			</p>
-        </footer>    </main>    
+        </footer>    
+</main>    
 <script>
     // ==========================================
     // Top Button
