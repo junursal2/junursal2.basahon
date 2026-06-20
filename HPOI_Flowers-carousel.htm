@@ -670,12 +670,11 @@
 
     function scrollFunction() {
         const btn = document.getElementById("myTopBtn");
-
         btn.style.display =
             (document.body.scrollTop > 20 ||
              document.documentElement.scrollTop > 20)
-            ? "block"
-            : "none";
+                ? "block"
+                : "none";
     }
 
     function topFunction() {
@@ -689,35 +688,35 @@
     const modal = document.getElementById("myModal");
     const modalImg = document.getElementById("img01");
     const closeBtn = document.querySelector(".close");
-
-    const galleryImages = Array.from(
-        document.querySelectorAll(".thumbnail")
-    );
+    const galleryImages = Array.from(document.querySelectorAll(".thumbnail"));
 
     let currentIndex = 0;
+    let startX = 0;
+    let startY = 0;
+    let hasSwiped = false;
 
     function image(img) {
         currentIndex = galleryImages.indexOf(img);
-
         modal.style.display = "block";
-        modalImg.src = img.dataset.full;
-        modalImg.alt = img.title || "";
+        updateModalImage();
+    }
+
+    function updateModalImage() {
+        const currentImg = galleryImages[currentIndex];
+        modalImg.src = currentImg.dataset.full || currentImg.src;
+        modalImg.alt = currentImg.title || "";
     }
 
     function changeImage(direction) {
-
         currentIndex += direction;
 
         if (currentIndex < 0) {
             currentIndex = galleryImages.length - 1;
-        }
-
-        if (currentIndex >= galleryImages.length) {
+        } else if (currentIndex >= galleryImages.length) {
             currentIndex = 0;
         }
 
-        modalImg.src = galleryImages[currentIndex].dataset.full;
-        modalImg.alt = galleryImages[currentIndex].title || "";
+        updateModalImage();
     }
 
     function closeModal() {
@@ -727,37 +726,43 @@
     // ==========================================
     // Modal Closing
     // ==========================================
-
-    // X button
     closeBtn.addEventListener("click", closeModal);
 
-    // Click dark background
+    // Close when clicking dark background only
     modal.addEventListener("click", function (e) {
         if (e.target === modal) {
             closeModal();
         }
     });
 
-    // Double-click image
-    modalImg.addEventListener("dblclick", closeModal);
+    // Desktop: double-click image to close
+    modalImg.addEventListener("dblclick", function () {
+        if (window.innerWidth > 700) {
+            closeModal();
+        }
+    });
+
+    // Mobile: single tap image to close
+    modalImg.addEventListener("click", function () {
+        if (window.innerWidth <= 700 && !hasSwiped) {
+            closeModal();
+        }
+        hasSwiped = false;
+    });
 
     // ==========================================
     // Keyboard Navigation
     // ==========================================
     document.addEventListener("keydown", function (e) {
-
         if (modal.style.display !== "block") return;
 
         switch (e.key) {
-
             case "ArrowLeft":
                 changeImage(-1);
                 break;
-
             case "ArrowRight":
                 changeImage(1);
                 break;
-
             case "Escape":
                 closeModal();
                 break;
@@ -767,25 +772,32 @@
     // ==========================================
     // Mobile Swipe Navigation
     // ==========================================
-    let startX = 0;
-
     modalImg.addEventListener("touchstart", function (e) {
-        startX = e.touches[0].clientX;
-    });
+        const touch = e.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+        hasSwiped = false;
+    }, { passive: true });
 
     modalImg.addEventListener("touchend", function (e) {
+        const touch = e.changedTouches[0];
+        const endX = touch.clientX;
+        const endY = touch.clientY;
 
-        const endX = e.changedTouches[0].clientX;
-        const swipeDistance = endX - startX;
+        const diffX = endX - startX;
+        const diffY = endY - startY;
 
-        if (Math.abs(swipeDistance) < 50) return;
+        // Only treat as swipe if mostly horizontal and long enough
+        if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY)) {
+            hasSwiped = true;
 
-        if (swipeDistance < 0) {
-            changeImage(1);      // Swipe left
-        } else {
-            changeImage(-1);     // Swipe right
+            if (diffX < 0) {
+                changeImage(1);   // swipe left -> next
+            } else {
+                changeImage(-1);  // swipe right -> previous
+            }
         }
-    });
+    }, { passive: true });
 </script>
 
 </body>
