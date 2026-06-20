@@ -153,6 +153,15 @@
         }
     }
 
+	.w3-text-black {font-weight: bold;}
+    .w3-text-white {font-weight: bold;}
+
+    .photoNo {
+        color: cyan;
+        font-size: 16px;
+        -webkit-text-stroke: 0.5px blue;
+    }
+
     /* Modal */
     .modal {
         display: none;
@@ -163,7 +172,7 @@
         background-color: rgba(0,0,0,0.9);
     }
 
-    /* Desktop/default: image centered, arrows on left/right of image */
+    /* Desktop/default: image centered, arrows at left/right */
     .modal-inner {
         position: absolute;
         top: 50%;
@@ -184,7 +193,7 @@
         margin: auto;
     }
 
-    /* Desktop: arrows overlay on left/right side */
+    /* Desktop arrows overlay */
     .carousel-controls {
         position: absolute;
         inset: 0;
@@ -196,21 +205,21 @@
         top: 50%;
         transform: translateY(-50%);
         color: white;
-        font-size: 42px;
+        font-size: 34px;
         font-weight: bold;
         cursor: pointer;
         user-select: none;
-        padding: 8px 12px;
+        padding: 6px 10px;
         line-height: 1;
         pointer-events: auto;
     }
 
     .prev {
-        left: -55px;
+        left: -38px;   /* closer to image */
     }
 
     .next {
-        right: -55px;
+        right: -38px;  /* closer to image */
     }
 
     .nav:hover {
@@ -220,10 +229,10 @@
     /* Close button */
     .close {
         position: absolute;
-        top: 15px;
-        right: 35px;
+        top: 12px;
+        right: 22px;
         color: #f1f1f1;
-        font-size: 32px;
+        font-size: 26px;
         font-weight: bold;
         transition: 0.3s;
         z-index: 10000;
@@ -237,16 +246,7 @@
         text-decoration: none;
     }
 
-    .w3-text-black {font-weight: bold;}
-    .w3-text-white {font-weight: bold;}
-
-    .photoNo {
-        color: cyan;
-        font-size: 16px;
-        -webkit-text-stroke: 0.5px blue;
-    }
-
-    /* Mobile: move arrows below image */
+    /* Mobile: arrows below image */
     @media only screen and (max-width: 700px) {
         .modal-inner {
             display: flex;
@@ -265,8 +265,9 @@
             inset: auto;
             display: flex;
             justify-content: center;
-            gap: 24px;
-            margin-top: 10px;
+            align-items: center;
+            gap: 18px;
+            margin-top: 8px;
             pointer-events: auto;
         }
 
@@ -274,8 +275,8 @@
             position: static;
             top: auto;
             transform: none;
-            font-size: 30px;
-            padding: 4px 8px;
+            font-size: 24px;
+            padding: 2px 6px;
         }
 
         .prev,
@@ -286,8 +287,8 @@
 
         .close {
             top: 10px;
-            right: 18px;
-            font-size: 26px;
+            right: 16px;
+            font-size: 22px;
         }
     }
 </style>
