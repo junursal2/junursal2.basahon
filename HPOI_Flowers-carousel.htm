@@ -68,12 +68,12 @@
         font-size: 24px;
         text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
     }
-
     #home:hover {color: blue;}
     #img01 {cursor: default;}
     #logo {width: 80px; float: left; margin-top: 0px;}
-    #posted {float: right;}
 	#menu_bottom {color: white;}
+    #posted {float: right;}
+	
 	.w3-text-black {font-weight: bold;}
     .w3-text-white {font-weight: bold;}
 	
@@ -306,34 +306,20 @@
            <h3>HPOI 🌻 flowers</h3>
            <a id="home" title="Go to Basahon page" href="basahon.html#goHPOI"><i class="fa fa-home"></i></a>
         </header>
-
-
-<!-- The Modal -->
-<!-- <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <span class="nav prev" onclick="changeImage(-1)">&#10094;</span>
-    <img class="modal-content" id="img01" alt="">
-    <span class="nav next" onclick="changeImage(1)">&#10095;</span>
-    <div id="caption"></div>
-</div> -->
 		
-<!-- The Modal -->
-<div id="myModal" class="modal">
-    <span class="close">&times;</span>
-
-    <div class="modal-inner">
-        <img class="modal-content" id="img01" alt="">
-
-        <div class="carousel-controls">
-            <span class="nav prev" onclick="changeImage(-1)">&#10094;</span>
-            <span class="nav next" onclick="changeImage(1)">&#10095;</span>
-        </div>
-    </div>
-
-    <div id="caption"></div>
-</div>
-		
-	<p class="clickImg">Click the image for a full-size view and double-click to close.</p>
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+    		<span class="close">&times;</span>
+    		<div class="modal-inner">
+        		<img class="modal-content" id="img01" alt="">
+        		<div class="carousel-controls">
+            		<span class="nav prev" onclick="changeImage(-1)">&#10094;</span>
+            		<span class="nav next" onclick="changeImage(1)">&#10095;</span>
+        		</div>
+    		</div>
+			
+    	<div id="caption"></div>
+		<p class="clickImg">Click the image for a full-size view and double-click to close.</p>
 
         <!-- Photo Grid -->
         <div class="gallery"> 
