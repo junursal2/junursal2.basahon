@@ -11,61 +11,85 @@
     <link rel="icon" type="image/ico" href="images/ursoft.ico" />
   	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
   	<link rel="stylesheet" href="css/w3-colors-flat.css">
-    <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements in versions of Internet Explorer prior to version 9 -->
+  <!-- HTML5Shiv is a JavaScript workaround to enable styling of HTML5 elements in versions of Internet Explorer prior to version 9 -->
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <![endif]-->
+
 <style>
     * {box-sizing: border-box;}
     body {margin: 0; font-family: Arial;}   
+
     h3 {
-        color: blue;
+        color: cyan;
         font-family: Georgia, serif;
         font-weight: bold;
-        text-align:center;
+        text-align: center;
     }
-    header {color: #000; background-color: #FF7F50; border-bottom: 1px solid blue;}
-    footer {color: blue; background-color: #FF7F50; border-top: 1px solid blue;}
+
+    header {
+        color: #000;
+        background-color: #B22222;
+        border-bottom: 1px solid blue;
+    }
+
+    footer {
+        color: blue;
+        background-color: #B22222;
+        border-top: 1px solid blue;
+    }
+
     p {font-size: 12px;}
-	/* Turns the header into a flexible row */
-	.header-flex {
-    	display: flex;
-    	align-items: center;       /* Centers everything vertically */
-    	justify-content: space-between; /* Pushes groups to Left, Middle, and Right */
-    	width: 100%;
-    	padding: 10px 10px;
-	}
-	/* Keeps the logo and years perfectly paired together on the left */
-	.logo-group {
-    	display: flex;
-    	align-items: center;
-    	gap: 8px;
-	}
-	/* Ensures the middle header stays perfectly centered */
-	.header-flex h3 {
-    	margin: 0 auto; 
-    	text-align: center;
-	}
-	/* Optional: adjustment for the home icon layout if needed */
-	#home {
-    	color: white;
-    	display: inline-block;
-    	font-size: 24px;
-    	text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
-	}
+
+    /* Header */
+    .header-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 10px;
+    }
+
+    .logo-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .header-flex h3 {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #home {
+        color: white;
+        display: inline-block;
+        font-size: 24px;
+        text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+    }
     #home:hover {color: blue;}
     #img01 {cursor: default;}
     #logo {width: 80px; float: left; margin-top: 0px;}
+	#menu_bottom {color: white;}
     #posted {float: right;}
+	
+	.w3-text-black {font-weight: bold;}
+    .w3-text-white {font-weight: bold;}
+	
+    .photoNo {
+        color: cyan;
+        font-size: 16px;
+        -webkit-text-stroke: 0.5px blue;
+    }
 
     .clickImg {
-		font-size: 12px;
-		margin-top: 5px;
+        font-size: 12px;
+        margin-top: 5px;
         margin-left: 10px;
-		margin-bottom: 2px;
-    }   
+        margin-bottom: 2px;
+    }
+
     .thumbnail {
         width: 100%;
         height: 200px;
@@ -73,36 +97,36 @@
     }
 
     .gallery {
-    	display: grid;
-    	grid-template-columns: repeat(5, 1fr);
-    	gap: 8px;
-    	padding: 0 4px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+        padding: 0 4px;
     }
 
     .gallery-item {
-    	position: relative;
+        position: relative;
     }
 
     .gallery-item img {
-    	width: 100%;
-    	height: 150px;
-    	object-fit: cover;
-    	display: block;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        display: block;
     }
 
     @media screen and (max-width: 800px) {
-    	.gallery {
-        	grid-template-columns: repeat(2, 1fr);
-    	}
+        .gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     @media screen and (max-width: 600px) {
-    	.gallery {
-        	grid-template-columns: 1fr;
-    	}
+        .gallery {
+            grid-template-columns: 1fr;
+        }
     }
 
-    /*Top button*/
+    /* Top button */
     #myTopBtn {
         font-size: 18px;
         display: none;
@@ -116,9 +140,12 @@
         color: white;
         cursor: pointer;
         padding: 1px 3px 1px 3px;
-        border-radius: 3px;}
+        border-radius: 3px;
+    }
+
     #myTopBtn:hover {color: #FFD700;}
-    /* Responsive layout - makes a two column-layout instead of four columns */
+
+    /* Responsive columns */
     @media screen and (max-width: 800px) {
         .column {
             -ms-flex: 50%;
@@ -126,7 +153,7 @@
             max-width: 50%;
         }
     }
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
     @media screen and (max-width: 600px) {
         .column {
             -ms-flex: 100%;
@@ -134,56 +161,136 @@
             max-width: 100%;
         }
     }
-    /* The Modal (background) */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-    }
-    /* Modal Content (image) */
-	.modal-content {
-    	position: absolute;
-    	top: 0;
-    	bottom: 0;
-    	left: 0;
-    	right: 0;
-    	margin: auto;
-    	max-width: 100%;
-    	max-height: 100%;
-    	width: auto;
-    	height: auto;
-	} 
 
-   	/* The Close Button */
+    /* Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9998;
+        inset: 0;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.9);
+    }
+
+    /* Desktop/default: image centered, arrows at left/right */
+    .modal-inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        max-width: 95vw;
+        max-height: 95vh;
+    }
+
+    .modal-content {
+        display: block;
+        max-width: 95vw;
+        max-height: 80vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        margin: auto;
+    }
+
+    /* Desktop arrows overlay */
+    .carousel-controls {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    .nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        user-select: none;
+        padding: 6px 10px;
+        line-height: 1;
+        pointer-events: auto;
+    }
+
+    .prev {
+        left: -38px;   /* closer to image */
+    }
+
+    .next {
+        right: -38px;  /* closer to image */
+    }
+
+    .nav:hover {
+        color: #FFD700;
+    }
+
+    /* Close button */
     .close {
         position: absolute;
-        top: 15px;
-        right: 35px;
+        top: 12px;
+        right: 22px;
         color: #f1f1f1;
-        font-size: 40px;
+        font-size: 20px;
         font-weight: bold;
         transition: 0.3s;
+        z-index: 10000;
+        cursor: pointer;
+        line-height: 1;
     }
+
     .close:hover,
     .close:focus {
         color: #bbb;
         text-decoration: none;
-        cursor: pointer;
     }
-    /* 100% Image Width on Smaller Screens */
-    @media only screen and (max-width: 700px){
-        .modal-content {width: 100%;}
+
+    /* Mobile: arrows below image */
+    @media only screen and (max-width: 700px) {
+        .modal-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 95vw;
+        }
+
+        .modal-content {
+            max-width: 95vw;
+            max-height: 70vh;
+        }
+
+        .carousel-controls {
+            position: static;
+            inset: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            margin-top: 8px;
+            pointer-events: auto;
+        }
+
+        .nav {
+            position: static;
+            top: auto;
+            transform: none;
+            font-size: 18px;
+            padding: 2px 6px;
+        }
+
+        .prev,
+        .next {
+            left: auto;
+            right: auto;
+        }
+
+        .close {
+            top: 10px;
+            right: 16px;
+            font-size: 22px;
+        }
     }
-    .w3-text-black {font-weight: bold;}
-    .w3-text-white {font-weight: bold;}
-    .photoNo {color: cyan; font-size: 16px; -webkit-text-stroke: 0.5px blue;}
 </style>
 </head>
 
@@ -191,22 +298,28 @@
     <main id="main">
         <button id="myTopBtn" title="Jump to top" onclick="topFunction()"><i class="fa fa-arrow-up"></i></button>  
 
-		<header id="menu_top" class="w3-container header-flex">
-    		<div class="logo-group">
-        		<img id="logo" src="images/HPOI.png" alt="">
-        		<span style="font-size: 10px">2010~2025</span>
-    		</div>
-    		<h3>HPOI 🌻 flowers</h3>
-    		<a id="home" title="Go to Basahon page" href="basahon.html#goHPOI"><i class="fa fa-home"></i></a>
-		</header>
+        <header id="menu_top" class="w3-container header-flex">
+           <div class="logo-group">
+              <img id="logo" src="images/HPOI.png" alt="">
+              <span style="font-size: 10px">2010~2025</span>
+           </div>
+           <h3>HPOI 🌻 flowers</h3>
+           <a id="home" title="Go to Basahon page" href="basahon.html#goHPOI"><i class="fa fa-home"></i></a>
+        </header>
 		
 		<!-- The Modal -->
-        <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="img01" alt="">
-            <div id="caption"></div>
-        </div>
-		<p class="clickImg">Click the image for a full-size view and click again to close.</p>
+		<div id="myModal" class="modal">
+    		<span class="close">&times;</span>
+    		<div class="modal-inner">
+        		<img class="modal-content" id="img01" alt="">
+        		<div class="carousel-controls">
+            		<span class="nav prev" onclick="changeImage(-1)">&#10094;</span>
+            		<span class="nav next" onclick="changeImage(1)">&#10095;</span>
+        		</div>
+    		</div>
+		</div>
+    	<div id="caption"></div>
+		<p class="clickImg">Click the image for a full-size view and double-click to close.</p>
 
         <!-- Photo Grid -->
         <div class="gallery"> 
@@ -528,49 +641,149 @@
         <footer  id="menu_bottom" class="w3-container">
             <p>Photo #1 was from an <em>iPhone 6S+</em> while #2~39 were from <em>Huawei P20 Pro</em>. &nbsp; Can you see the bee in photos #21~26?
 				<span id="posted">C. Ursal Jr., 2026 June 17 |
-  					<a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/HPOI_Flowers-new.htm/">
-					<img id="counter-img" alt="Hits" src="https://hits.sh/junursal2.github.io/junursal2.basahon/HPOI_Flowers-new.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" 
+  					<a id="counter-link" href="https://hits.sh/junursal2.github.io/junursal2.basahon/HPOI_Flowers-carousel.htm/">
+					<img id="counter-img" alt="Hits" src="https://hits.sh/junursal2.github.io/junursal2.basahon/HPOI_Flowers-caroussel.htm.svg?style=flat-square&label=views%3A&labelColor=transparent&color=transparent" 
           			  style="filter: invert(1) brightness(2);"/></a>
 				</span>
 			</p>
-        </footer>
+        </footer>    
 </main>    
 <script>
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction();};
+    // ==========================================
+    // Top Button
+    // ==========================================
+    window.onscroll = scrollFunction;
 
     function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("myTopBtn").style.display = "block";
-        } else {
-            document.getElementById("myTopBtn").style.display = "none";
-        }
+        const btn = document.getElementById("myTopBtn");
+        btn.style.display =
+            (document.body.scrollTop > 20 ||
+             document.documentElement.scrollTop > 20)
+                ? "block"
+                : "none";
     }
-    // When the user clicks on the button, scroll to the top of the document
+
     function topFunction() {
-        document.body.scrollTop = 0; // For Chrome, Safari and Opera 
-        document.documentElement.scrollTop = 0; // For IE and Firefox
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
-    // Get the modal
-    var modal = document.getElementById('myModal');
-    // Get the image and insert it inside the modal
+
+    // ==========================================
+    // Modal / Carousel
+    // ==========================================
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("img01");
+    const closeBtn = document.querySelector(".close");
+    const galleryImages = Array.from(document.querySelectorAll(".thumbnail"));
+
+    let currentIndex = 0;
+    let startX = 0;
+    let startY = 0;
+    let hasSwiped = false;
+
     function image(img) {
+        currentIndex = galleryImages.indexOf(img);
         modal.style.display = "block";
-		modalImg.style.height = "auto";
-		modalImg.style.maxWidth = "100%";
-		modalImg.style.maxHeight = "100%";
-		modalImg.src = img.dataset.full;
+        updateModalImage();
     }
-    var modalImg = document.getElementById("img01");
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() { 
+
+    function updateModalImage() {
+        const currentImg = galleryImages[currentIndex];
+        modalImg.src = currentImg.dataset.full || currentImg.src;
+        modalImg.alt = currentImg.title || "";
+    }
+
+    function changeImage(direction) {
+        currentIndex += direction;
+
+        if (currentIndex < 0) {
+            currentIndex = galleryImages.length - 1;
+        } else if (currentIndex >= galleryImages.length) {
+            currentIndex = 0;
+        }
+
+        updateModalImage();
+    }
+
+    function closeModal() {
         modal.style.display = "none";
     }
-    modalImg.onclick = function() {
-     	modal.style.display = "none";
-    };	
+
+    // ==========================================
+    // Modal Closing
+    // ==========================================
+    closeBtn.addEventListener("click", closeModal);
+
+    // Close when clicking dark background only
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Desktop: double-click image to close
+    modalImg.addEventListener("dblclick", function () {
+        if (window.innerWidth > 700) {
+            closeModal();
+        }
+    });
+
+    // Mobile: single tap image to close
+    modalImg.addEventListener("click", function () {
+        if (window.innerWidth <= 700 && !hasSwiped) {
+            closeModal();
+        }
+        hasSwiped = false;
+    });
+
+    // ==========================================
+    // Keyboard Navigation
+    // ==========================================
+    document.addEventListener("keydown", function (e) {
+        if (modal.style.display !== "block") return;
+
+        switch (e.key) {
+            case "ArrowLeft":
+                changeImage(-1);
+                break;
+            case "ArrowRight":
+                changeImage(1);
+                break;
+            case "Escape":
+                closeModal();
+                break;
+        }
+    });
+
+    // ==========================================
+    // Mobile Swipe Navigation
+    // ==========================================
+    modalImg.addEventListener("touchstart", function (e) {
+        const touch = e.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+        hasSwiped = false;
+    }, { passive: true });
+
+    modalImg.addEventListener("touchend", function (e) {
+        const touch = e.changedTouches[0];
+        const endX = touch.clientX;
+        const endY = touch.clientY;
+
+        const diffX = endX - startX;
+        const diffY = endY - startY;
+
+        // Only treat as swipe if mostly horizontal and long enough
+        if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY)) {
+            hasSwiped = true;
+
+            if (diffX < 0) {
+                changeImage(1);   // swipe left -> next
+            } else {
+                changeImage(-1);  // swipe right -> previous
+            }
+        }
+    }, { passive: true });
 </script>
 
 </body>
