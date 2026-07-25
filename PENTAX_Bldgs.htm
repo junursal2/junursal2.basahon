@@ -51,12 +51,6 @@
         padding: 10px 10px;
     }
 
-    .logo-group {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
     .header-flex h3 {
         margin: 0 auto;
         text-align: center;
@@ -70,7 +64,22 @@
     }
     #home:hover {color: blue;}
     #img01 {cursor: default;}
-    #logo {width: 80px; float: left; margin-top: 0px;}
+	
+    .logo-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }	
+	#logo {
+    	width: 80px;
+    	float: left;
+    	margin-top: 0px;
+    	cursor: pointer;
+	}
+	#logo:hover {
+    	opacity: .8;
+	}
+	
 	#menu_bottom {color: white;}
     #menu_bottom {color: blue;}
     #posted {float: right;}
@@ -346,7 +355,7 @@
  
 	<header id="menu_top" class="w3-container header-flex">
     	   <div class="logo-group">
-              <img id="logo" src="images/PENTAXlogo.png" alt="">
+              <img id="logo" src="images/PENTAXlogo.png" alt="PENTAX logo" onclick="showSlogan()">
     	   </div>
     	   <h3>PENTAX 🏭 buildings</h3>
     	   <a id="home" title="Go to Basahon page" href="basahon.html#goPentax"><i class="fa fa-home"></i></a>
@@ -483,7 +492,18 @@
         modal.style.display = "block";
         updateModalImage();
     }
+	
+	function showSlogan() {
+    	modal.style.display = "block";
 
+    	// Image to display
+    	modalImg.src = "images/PENTAXslogan.png";   // <-- change to your image
+    	modalImg.alt = "PENTAX Slogan";
+
+    	// Caption
+    	captionText.textContent = "PENTAX slogan";
+	}
+	
 function updateModalImage() {
     const currentImg = galleryImages[currentIndex];
     modalImg.src = currentImg.dataset.full || currentImg.src;
