@@ -133,6 +133,8 @@ a:hover {
     padding-bottom: 1px;
 }
 .divPentax {
+    background: url("https://junursal2.github.io/junursal2.basahon/images/PENTAXlogo.png") right bottom no-repeat;
+    background-size: 80px;
     background-color: #ADD8E6;
     padding-top: 0.5px;
     padding-bottom: 1px;    
