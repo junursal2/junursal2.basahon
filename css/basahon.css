@@ -138,6 +138,7 @@ a:hover {
     background-color: #ADD8E6;
     padding-top: 0.5px;
     padding-bottom: 1px;    
+    margin-bottom: 10px;
 }
 .divQuality {
     /* background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/quality.png") right bottom no-repeat;
@@ -151,7 +152,6 @@ a:hover {
     background-color: #ffcccc;
     padding-top: 0.5px;
     padding-bottom: 1px;
-    margin-bottom: 10px;
 }
 .divTrivia {
     background: url("https://junursal2.github.io/junursal2.basahon/images/basahon/brainbulb.png") right bottom no-repeat;
